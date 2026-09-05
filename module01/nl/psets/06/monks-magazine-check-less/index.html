@@ -1,0 +1,1219 @@
+
+<!doctype html>
+<html lang="nl" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Computational Thinking met Python">
+      
+      
+        <meta name="author" content="Jack Henze">
+      
+      
+        <link rel="canonical" href="https://oncparkdreef.github.io/informatica-2627/module01/nl/psets/06/monks-magazine-check-less/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../monks-magazine-check-more/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Monk's Magazine Check - Module 01</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/css/style.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/navigation.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/reference.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/goals.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/test.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/badges.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/details.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/video.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/mermaid.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/homepage.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/week.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/tset.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/pset-index.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/pset.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/understanding.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#monks-magazine-check" class="md-skip">
+          Ga naar inhoud
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Module 01" class="md-header__button md-logo" aria-label="Module 01" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Module 01
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Monk's Magazine Check
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Zoeken" placeholder="Zoeken" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Zoeken">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Leegmaken" aria-label="Leegmaken" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Zoeken initialiseren
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    ﻿<nav class="course-nav" aria-label="Cursusnavigatie">
+
+  <header class="course-nav__header">
+    <a class="course-nav__home" href="../../../..">
+      <strong>Module 01</strong>
+      <span>Computational Thinking met Python</span>
+    </a>
+  </header>
+
+  <div class="course-nav__section">
+    <a href="../../../guide/index.html">Over deze module</a>
+    <a href="../../../guide/software.html">Software</a>
+    <a href="../../../guide/werkwijze.html">Werkwijze</a>
+    <a href="../../../guide/portfolio.html">Portfolio</a>
+    <a href="../../../guide/git-github.html">Git &amp; GitHub</a>
+  </div>
+
+  <div class="course-nav__section course-nav__weeks">
+
+    <a href="../../../weeks/00/">
+      <strong>Week 0</strong>
+      <span>Denken als een computer</span>
+    </a>
+
+    <a href="../../../weeks/01/">
+      <strong>Week 1</strong>
+      <span>Mens en machine</span>
+    </a>
+
+    <a href="../../../weeks/02/">
+      <strong>Week 2</strong>
+      <span>Werken met informatie</span>
+    </a>
+
+    <a href="../../../weeks/03/">
+      <strong>Week 3</strong>
+      <span>Slimme keuzes</span>
+    </a>
+
+    <a href="../../../weeks/04/">
+      <strong>Week 4</strong>
+      <span>Blijven herhalen</span>
+    </a>
+
+    <a href="../../../weeks/05/">
+      <strong>Week 5</strong>
+      <span>Gegevens verzamelen</span>
+    </a>
+
+    <a href="../../../weeks/06/">
+      <strong>Week 6</strong>
+      <span>Patronen ontdekken</span>
+    </a>
+
+    <a href="../../../weeks/07/">
+      <strong>Week 7</strong>
+      <span>Informatie interpreteren</span>
+    </a>
+
+    <a href="../../../weeks/08/">
+      <strong>Week 8</strong>
+      <span>Slimmer structureren</span>
+    </a>
+
+    <a href="../../../weeks/09/">
+      <strong>Week 9</strong>
+      <span>Modulaire systemen</span>
+    </a>
+
+    <a href="../../../weeks/10/">
+      <strong>Week 10</strong>
+      <span>Herinneringen beheren</span>
+    </a>
+
+    <a href="../../../weeks/11/">
+      <strong>Week 11</strong>
+      <span>Schoolexamen</span>
+    </a>
+
+  </div>
+
+  <div class="course-nav__section">
+    <a href="../../../understanding/">
+      <strong>Understanding</strong>
+    </a>
+  </div>
+
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#waar-werk-je-aan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Waar werk je aan?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probleem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Probleem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        for
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#de-loop-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        De loop variable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iteration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iteration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Indentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-en-while" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        for en while
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#een-list-systematisch-doorlopen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Een list systematisch doorlopen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dezelfde-bewerking-voor-ieder-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dezelfde bewerking voor ieder item
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#informatie-tijdens-het-doorlopen-bijhouden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Informatie tijdens het doorlopen bijhouden
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alleen-de-waarde-nodig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alleen de waarde nodig
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ook-de-positie-nodig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ook de positie nodig
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#waarde-of-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Waarde of index?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        range()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#een-begin-en-eindwaarde" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Een begin- en eindwaarde
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range-en-indexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        range() en indexes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niet-altijd-bij-0-beginnen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Niet altijd bij 0 beginnen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range-geeft-posities-niet-de-items-zelf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        range() geeft posities, niet de items zelf
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-indexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List indexes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beschrijven-met-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beschrijven met n
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opdracht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opdracht
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Opdracht">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#specificatie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Specificatie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflectie-op-de-oplossing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reflectie op de oplossing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inleveren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inleveren
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  <div class="module-page pset-page">
+    
+                  
+
+
+
+<h1 id="monks-magazine-check">Monk's Magazine Check</h1>
+<p><span class="badge-choice">minder vertrouwd</span>
+<span class="badge badge-python">
+  <span class="badge-label">Python</span>
+  <span class="badge-value">for loops + itereren over lists</span>
+</span>
+<span class="badge badge-visual">
+  <span class="badge-label">Visual First</span>
+  <span class="badge-value">Trace Table</span>
+</span>
+<span class="badge badge-ct">
+  <span class="badge-label">CT-domein</span>
+  <span class="badge-value">Patroonherkenning</span>
+</span>
+<span class="badge badge-algorithms-efficiency">
+  <span class="badge-label">Algorithms &amp; Efficiency</span>
+  <span class="badge-value">Beschrijven met n</span>
+</span>
+<span class="badge badge-process">
+  <span class="badge-label">CT-proces</span>
+  <span class="badge-value">Formulating the Problem</span>
+</span>
+<span class="badge badge-process">
+  <span class="badge-label">CT-proces</span>
+  <span class="badge-value">Reflecting on the Solution</span>
+</span></p>
+<h2 id="waar-werk-je-aan">Waar werk je aan?</h2>
+<p>In deze Problem Set werk je aan de volgende leerdoelen:</p>
+<ul>
+<li>Ik kan <strong>een volledige verzameling systematisch verwerken zonder elementen over te slaan</strong>.</li>
+<li>Ik kan <strong>tijdens een herhaling relevante informatie over een verzameling bijhouden</strong>.</li>
+<li>Ik kan <strong>met een Trace Table zichtbaar maken hoe de toestand tijdens de verwerking verandert</strong>.</li>
+<li>Ik kan <strong>patronen in de verwerking herkennen en uitleggen wat deze betekenen voor mijn oplossing</strong>.</li>
+</ul>
+<h2 id="probleem">Probleem</h2>
+<p>Monk heeft een verzameling tijdschriften die op dit moment nog niet op volgorde staat.</p>
+<p>Ieder tijdschrift heeft een nummer. Voordat Monk de verzameling kan ordenen, wil hij weten welk tijdschrift het kleinste nummer heeft, welk tijdschrift het grootste nummer heeft en op welke positie beide tijdschriften nu staan.</p>
+<p>Een computersysteem moet daarvoor de volledige verzameling systematisch kunnen verwerken zonder tijdschriften over te slaan of dubbel te behandelen.</p>
+<p><strong>Hoe ontwerp je een algoritme dat een volledige gegevensverzameling systematisch verwerkt?</strong></p>
+<h2 id="understanding">Understanding</h2>
+<h3 id="for"><code>for</code></h3>
+<p>Een <code>for</code>-loop gebruikt Python om dezelfde code uit te voeren voor ieder item uit een verzameling.</p>
+<p>Bijvoorbeeld:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">]</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">colors</span><span class="p">:</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+</code></pre></div>
+<p>De uitvoer is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>red
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>blue
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>green
+</code></pre></div>
+<p>Python verwerkt de list van links naar rechts.</p>
+<p>Bij de eerste iteration krijgt <code>color</code> de waarde <code>"red"</code>, daarna <code>"blue"</code> en daarna <code>"green"</code>.</p>
+<h3 id="de-loop-variable">De loop variable</h3>
+<p>In:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">colors</span><span class="p">:</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+</code></pre></div>
+<p>is <code>color</code> de <strong>loop variable</strong>.</p>
+<p>Tijdens iedere iteration verwijst deze variable naar het item dat op dat moment wordt verwerkt.</p>
+<p>De algemene vorm is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">collection</span><span class="p">:</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="n">action</span>
+</code></pre></div>
+<p>Hierbij gebeurt steeds hetzelfde:</p>
+<ol>
+<li>Python neemt het volgende item uit <code>collection</code>;</li>
+<li>dat item wordt tijdelijk opgeslagen in <code>item</code>;</li>
+<li>de ingesprongen code wordt uitgevoerd;</li>
+<li>Python gaat verder met het volgende item;</li>
+<li>wanneer er geen items meer zijn, gaat Python verder met de code na de <code>for</code>.</li>
+</ol>
+<h3 id="iteration">Iteration</h3>
+<p>Eén uitvoering van de ingesprongen code noemen we een <strong>iteration</strong>.</p>
+<p>Bij:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+</code></pre></div>
+<p>zijn er drie iterations:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Iteration</th>
+<th style="text-align: right;"><code>number</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+</tr>
+</tbody>
+</table>
+<p>Een list met vijf items levert op deze manier vijf iterations op.</p>
+<p>Een lege list levert geen iterations op.</p>
+<h3 id="indentation">Indentation</h3>
+<p>De code die bij de <code>for</code> hoort, staat ingesprongen:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;klaar&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p><code>print(number)</code> wordt tijdens iedere iteration uitgevoerd.</p>
+<p><code>print("klaar")</code> staat niet meer binnen de loop en wordt pas uitgevoerd nadat alle items zijn verwerkt.</p>
+<h3 id="for-en-while"><code>for</code> en <code>while</code></h3>
+<p>Zowel <code>for</code> als <code>while</code> kunnen code herhalen, maar ze gebruiken een ander uitgangspunt.</p>
+<p>Bij een <code>while</code> bepaalt een condition of de volgende iteration plaatsvindt:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">while</span> <span class="n">condition</span><span class="p">:</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="n">action</span>
+</code></pre></div>
+<p>Bij een <code>for</code> bepaalt de verzameling welke items achtereenvolgens worden verwerkt:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">collection</span><span class="p">:</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="n">action</span>
+</code></pre></div>
+<p>Een <code>for</code> is daarom geschikt wanneer je een verzameling systematisch item voor item wilt verwerken.</p>
+<h3 id="een-list-systematisch-doorlopen">Een list systematisch doorlopen</h3>
+<p>Een list bevat meerdere items.</p>
+<p>Met een <code>for</code>-loop kun je ieder item uit die list één voor één verwerken.</p>
+<p>Bijvoorbeeld:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">scores</span><span class="p">:</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
+</code></pre></div>
+<p>Python verwerkt achtereenvolgens:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>12
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>18
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>15
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>9
+</code></pre></div>
+<p>Dit noemen we het <strong>doorlopen</strong> of <strong>itereren over</strong> een list.</p>
+<h3 id="dezelfde-bewerking-voor-ieder-item">Dezelfde bewerking voor ieder item</h3>
+<p>Een belangrijk patroon bij gegevensverwerking is dat ieder item volgens dezelfde werkwijze wordt behandeld.</p>
+<p>Bijvoorbeeld:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">temperatures</span> <span class="o">=</span> <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">19</span><span class="p">]</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">for</span> <span class="n">temperature</span> <span class="ow">in</span> <span class="n">temperatures</span><span class="p">:</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">temperature</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+<p>Dezelfde bewerking wordt uitgevoerd voor ieder item uit de list.</p>
+<p>De code binnen de <code>for</code> hoeft dus niet voor ieder item opnieuw te worden geschreven.</p>
+<h3 id="informatie-tijdens-het-doorlopen-bijhouden">Informatie tijdens het doorlopen bijhouden</h3>
+<p>Tijdens een <code>for</code>-loop kunnen variables veranderen.</p>
+<p>Daardoor kan een programma informatie onthouden over de items die al zijn verwerkt.</p>
+<p>Bijvoorbeeld:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">number</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+</code></pre></div>
+<p>De waarde van <code>total</code> verandert tijdens de iterations:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Verwerkt item</th>
+<th style="text-align: right;"><code>total</code> daarna</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">10</td>
+</tr>
+</tbody>
+</table>
+<p>Na de loop bevat <code>total</code> informatie over de volledige verzameling.</p>
+<p>Dit soort variables beschrijven de <strong>toestand</strong> van het programma tijdens de verwerking.</p>
+<h3 id="alleen-de-waarde-nodig">Alleen de waarde nodig</h3>
+<p>Wanneer je alleen het huidige item nodig hebt, kun je rechtstreeks over de list itereren:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ava&quot;</span><span class="p">,</span> <span class="s2">&quot;Noah&quot;</span><span class="p">,</span> <span class="s2">&quot;Mila&quot;</span><span class="p">]</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</code></pre></div>
+<p>De loop variable bevat dan steeds de huidige waarde.</p>
+<h3 id="ook-de-positie-nodig">Ook de positie nodig</h3>
+<p>Soms is niet alleen de waarde belangrijk, maar ook <strong>waar</strong> die waarde in de list staat.</p>
+<p>Een list gebruikt indexes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>index:   0      1      2
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>waarde: &quot;Ava&quot; &quot;Noah&quot; &quot;Mila&quot;
+</code></pre></div>
+<p>Wanneer je tijdens het itereren ook deze posities nodig hebt, kun je de geldige indexes systematisch doorlopen.</p>
+<p>Daarvoor worden <code>range()</code> en <code>len()</code> gecombineerd:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ava&quot;</span><span class="p">,</span> <span class="s2">&quot;Noah&quot;</span><span class="p">,</span> <span class="s2">&quot;Mila&quot;</span><span class="p">]</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)):</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">names</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</code></pre></div>
+<p>De uitvoer is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>0 Ava
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>1 Noah
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>2 Mila
+</code></pre></div>
+<p>Hier is <code>i</code> tijdens iedere iteration de huidige index.</p>
+<p>Met <code>names[i]</code> lees je het item dat op die positie staat.</p>
+<h3 id="waarde-of-index">Waarde of index?</h3>
+<p>Gebruik:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">collection</span><span class="p">:</span>
+</code></pre></div>
+<p>wanneer je vooral de <strong>waarden</strong> wilt verwerken.</p>
+<p>Gebruik:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">collection</span><span class="p">)):</span>
+</code></pre></div>
+<p>wanneer je tijdens de verwerking ook de <strong>positie</strong> van ieder item nodig hebt.</p>
+<p>In beide gevallen kan een volledige list systematisch worden doorlopen.</p>
+<h3 id="range"><code>range()</code></h3>
+<p><code>range()</code> beschrijft een reeks gehele getallen die een <code>for</code>-loop achtereenvolgens kan gebruiken.</p>
+<p>Bijvoorbeeld:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div>
+<p>De uitvoer is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>0
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>1
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>2
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>3
+</code></pre></div>
+<p><code>range(4)</code> begint dus bij <code>0</code> en stopt <strong>vóór</strong> <code>4</code>.</p>
+<h3 id="een-begin-en-eindwaarde">Een begin- en eindwaarde</h3>
+<p>Je kunt ook aangeven waar de reeks moet beginnen:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div>
+<p>De uitvoer is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>2
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>3
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>4
+</code></pre></div>
+<p>De algemene vormen zijn:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nb">range</span><span class="p">(</span><span class="n">stop</span><span class="p">)</span>
+</code></pre></div>
+<p>en:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">)</span>
+</code></pre></div>
+<p>De <code>stop</code>-waarde zelf hoort niet meer bij de reeks.</p>
+<h3 id="range-en-indexes"><code>range()</code> en indexes</h3>
+<p>Indexes van een list beginnen bij <code>0</code>.</p>
+<p>Bij:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">cities</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Oslo&quot;</span><span class="p">,</span> <span class="s2">&quot;Lima&quot;</span><span class="p">,</span> <span class="s2">&quot;Tokyo&quot;</span><span class="p">]</span>
+</code></pre></div>
+<p>zijn de geldige indexes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>0 1 2
+</code></pre></div>
+<p>De lengte van de list is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nb">len</span><span class="p">(</span><span class="n">cities</span><span class="p">)</span>
+</code></pre></div>
+<p>en heeft de waarde <code>3</code>.</p>
+<p>Daarom geeft:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cities</span><span class="p">))</span>
+</code></pre></div>
+<p>precies de geldige indexes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>0 1 2
+</code></pre></div>
+<p>Dit kan worden gebruikt in een <code>for</code>-loop:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">cities</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Oslo&quot;</span><span class="p">,</span> <span class="s2">&quot;Lima&quot;</span><span class="p">,</span> <span class="s2">&quot;Tokyo&quot;</span><span class="p">]</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cities</span><span class="p">)):</span>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">cities</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</code></pre></div>
+<p>De uitvoer is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>0 Oslo
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>1 Lima
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>2 Tokyo
+</code></pre></div>
+<h3 id="niet-altijd-bij-0-beginnen">Niet altijd bij <code>0</code> beginnen</h3>
+<p>Soms hoeft een verwerking niet bij de eerste positie te beginnen.</p>
+<p>Met:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">cities</span><span class="p">))</span>
+</code></pre></div>
+<p>worden bij dezelfde list de indexes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>1 2
+</code></pre></div>
+<p>doorlopen.</p>
+<p>Welke beginwaarde passend is, hangt af van het probleem dat je oplost.</p>
+<h3 id="range-geeft-posities-niet-de-items-zelf"><code>range()</code> geeft posities, niet de items zelf</h3>
+<p>Vergelijk:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="k">for</span> <span class="n">city</span> <span class="ow">in</span> <span class="n">cities</span><span class="p">:</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">city</span><span class="p">)</span>
+</code></pre></div>
+<p>met:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cities</span><span class="p">)):</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">cities</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</code></pre></div>
+<p>In het eerste voorbeeld bevat de loop variable direct een item uit de list.</p>
+<p>In het tweede voorbeeld bevat de loop variable een index. Met die index kun je vervolgens het bijbehorende item opvragen.</p>
+<p>Gebruik <code>range()</code> dus wanneer een reeks getallen of de posities in een verzameling onderdeel zijn van de verwerking.</p>
+<h3 id="list-indexes">List indexes</h3>
+<p>De items in een list hebben ieder een positie.</p>
+<p>Python gebruikt daarvoor een <strong>index</strong>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Alex&quot;</span><span class="p">,</span> <span class="s2">&quot;Sam&quot;</span><span class="p">,</span> <span class="s2">&quot;Robin&quot;</span><span class="p">]</span>
+</code></pre></div>
+<p>Python begint bij index <code>0</code>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Index</th>
+<th>Item</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><code>0</code></td>
+<td><code>"Alex"</code></td>
+</tr>
+<tr>
+<td style="text-align: right;"><code>1</code></td>
+<td><code>"Sam"</code></td>
+</tr>
+<tr>
+<td style="text-align: right;"><code>2</code></td>
+<td><code>"Robin"</code></td>
+</tr>
+</tbody>
+</table>
+<p>Je kunt een item uit een list opvragen door de index tussen vierkante haken achter de naam van de list te schrijven:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</code></pre></div>
+<p>De uitvoer is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>Sam
+</code></pre></div>
+<p>Python gebruikt <code>1</code> hier als index en haalt het item op dat op die positie in de list staat.</p>
+<p>Omdat de eerste index <code>0</code> is, geldt voor deze list:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="n">names</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</code></pre></div>
+<p>voor respectievelijk <code>"Alex"</code>, <code>"Sam"</code> en <code>"Robin"</code>.</p>
+<p>De index hoort dus bij de <strong>positie van een item in de list</strong>, niet bij het aantal waarmee mensen normaal beginnen te tellen.</p>
+<h3 id="beschrijven-met-n">Beschrijven met n</h3>
+<p>Bij <strong>Bewerkingen tellen</strong> heb je onderzocht hoe vaak een gekozen bewerking tijdens één concrete uitvoering van een algoritme plaatsvindt.</p>
+<p>Een algoritme moet meestal niet alleen voor één vaste hoeveelheid gegevens werken. Daarom gebruiken we de letter <strong>n</strong> om de hoeveelheid gegevens algemeen te beschrijven.</p>
+<p>Bij een lijst betekent:</p>
+<div class="arithmatex">\[
+n = \text{het aantal items in de lijst}
+\]</div>
+<p>Stel dat ieder item precies één keer dezelfde bewerking veroorzaakt.</p>
+<p>Bij vier items wordt die bewerking vier keer uitgevoerd:</p>
+<div class="arithmatex">\[
+4 \text{ items} \rightarrow 4 \text{ bewerkingen}
+\]</div>
+<p>Bij tien items:</p>
+<div class="arithmatex">\[
+10 \text{ items} \rightarrow 10 \text{ bewerkingen}
+\]</div>
+<p>Met <strong>n</strong> kunnen we hetzelfde patroon beschrijven zonder vooraf te weten hoeveel items er zijn:</p>
+<div class="arithmatex">\[
+n \text{ items} \rightarrow n \text{ bewerkingen}
+\]</div>
+<p>Of korter:</p>
+<div class="arithmatex">\[
+\text{aantal bewerkingen} = n
+\]</div>
+<p>De waarde van <strong>n</strong> is dus niet vast. Als de hoeveelheid gegevens verandert, verandert ook de waarde van <code>n</code>.</p>
+<p>Wil je verder onderzoeken hoe je het aantal bewerkingen als functie van <code>n</code> kunt beschrijven?</p>
+<p>Lees dan <a href="../../../understanding/algorithms-efficiency/describing-with-n/operation-count-function/">Aantal bewerkingen als functie van n</a>.</p>
+<h2 id="opdracht">Opdracht</h2>
+<p>Nu ga je deze kennis gebruiken om <strong>Monk's Magazine Check</strong> te maken.</p>
+<p>Gebruik dezelfde verzameling als bij de Thinking Set:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>9 4 7 1 6 0 8 3 5 2
+</code></pre></div>
+<p>Sla deze nummers in Python op in een list.</p>
+<p>Schrijf <strong>voordat je programmeert</strong> pseudocode waarin je beschrijft hoe je de volledige verzameling systematisch gaat verwerken en welke informatie je tijdens dat proces moet onthouden.</p>
+<p>Laat deze pseudocode daarna als comments in je <code>.py</code>-bestand staan en bouw je Python-code eronder of ernaast.</p>
+<p>Maak ook een <strong>Trace Table</strong> waarmee je vóór het uitvoeren van je programma voorspelt hoe de verwerking stap voor stap verloopt. Laat daarin minimaal zien:</p>
+<ul>
+<li>welke index wordt verwerkt;</li>
+<li>welk nummer op die index staat;</li>
+<li>welk kleinste nummer tot dat moment is onthouden en op welke index het staat;</li>
+<li>welk grootste nummer tot dat moment is onthouden en op welke index het staat;</li>
+<li>of deze stap een nieuw minimum, een nieuw maximum of geen verandering oplevert.</li>
+</ul>
+<h3 id="specificatie">Specificatie</h3>
+<p>Je programma gebruikt als eerste verzameling:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="n">magazines</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+</code></pre></div>
+<p>Je programma moet:</p>
+<ul>
+<li>de volledige list met een <code>for</code>-loop systematisch verwerken;</li>
+<li><code>range()</code> en de indexes van de list gebruiken om de posities tijdens de verwerking te kunnen volgen;</li>
+<li>ieder element uit de verzameling precies één keer als onderdeel van de systematische verwerking behandelen;</li>
+<li>bepalen hoeveel tijdschriften in de verzameling staan;</li>
+<li>bepalen welk tijdschrift het kleinste nummer heeft;</li>
+<li>de index van dit kleinste nummer onthouden en tonen;</li>
+<li>bepalen welk tijdschrift het grootste nummer heeft;</li>
+<li>de index van dit grootste nummer onthouden en tonen;</li>
+<li>de resultaten uit de werkelijke inhoud van de list bepalen en dus geen uitkomsten hardcoderen.</li>
+</ul>
+<p>Wanneer je voor een test alleen de inhoud van <code>magazines</code> vervangt door een andere niet-lege list met getallen, moet dezelfde verwerking blijven werken.</p>
+<h3 id="hints">Hints</h3>
+<p>Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.</p>
+<details class="hint">
+<summary>1 — Welke informatie moet je onthouden?</summary>
+<p>Kijk naar wat je aan het einde van de verwerking moet kunnen tonen.</p>
+<p>Welke informatie moet tijdens het doorlopen van de verzameling beschikbaar blijven om dat eindresultaat te kunnen bepalen?</p>
+</details>
+<details class="hint">
+<summary>2 — Waaraan herken je een verandering?</summary>
+<p>Vergelijk in je Trace Table de huidige waarde met wat op dat moment al is onthouden.</p>
+<p>Wanneer moet de onthouden informatie veranderen en wanneer juist niet?</p>
+</details>
+<details class="hint">
+<summary>3 — Welke positie hoort bij een waarde?</summary>
+<p>Een waarde en de plaats waar die waarde staat zijn twee verschillende soorten informatie.</p>
+<p>Welke informatie geeft de huidige index je wanneer een nieuw minimum of maximum wordt gevonden?</p>
+</details>
+<details class="hint">
+<summary>4 — Hoe doorloop je alle posities?</summary>
+<p>Je hebt niet alleen de waarden uit de list nodig, maar ook hun indexes.</p>
+<p>Bekijk in de Understanding hoe <code>range()</code> kan worden gecombineerd met de lengte van een list.</p>
+</details>
+<h3 id="testen">Testen</h3>
+<p>Je programma werkt pas betrouwbaar wanneer het voor verschillende verzamelingen de juiste waarden én de juiste indexes oplevert.</p>
+<p>Voer minimaal de volgende tests uit.</p>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>List</th>
+<th>Verwacht aantal</th>
+<th>Verwacht kleinste + index</th>
+<th>Verwacht grootste + index</th>
+<th>Werkelijke uitkomst</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>[9, 4, 7, 1, 6, 0, 8, 3, 5, 2]</code></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>[6, 2, 9, 4, 1, 7]</code></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>[1, 5, 3, 8]</code></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Bepaal <strong>vooraf</strong> de verwachte uitkomst van iedere test.</p>
+<p>Maak voor test 1 een volledige Trace Table en controleer daarin ook of iedere index van <code>0</code> tot en met <code>9</code> precies één keer als verwerkte positie voorkomt.</p>
+<p>Controleer na iedere test:</p>
+<ul>
+<li>of het juiste aantal items wordt getoond;</li>
+<li>of het juiste kleinste nummer met de juiste index wordt getoond;</li>
+<li>of het juiste grootste nummer met de juiste index wordt getoond;</li>
+<li>of geen positie tijdens de systematische verwerking wordt overgeslagen of dubbel behandeld.</li>
+</ul>
+<p><strong>Kun je met deze testgevallen aantonen dat je programma ieder element systematisch verwerkt en voor verschillende verzamelingen de juiste resultaten oplevert?</strong></p>
+<p>Als de werkelijke uitvoer niet overeenkomt met je voorspelling, onderzoek dan waardoor het verschil ontstaat en pas je pseudocode en programma waar nodig aan.</p>
+<h2 id="reflectie-op-de-oplossing">Reflectie op de oplossing</h2>
+<p>Bekijk je <strong>pseudocode</strong>, je <strong>Trace Table</strong> en je uiteindelijke <strong>Python-programma</strong>.</p>
+<p>Kies één stap uit je Trace Table waarin het onthouden minimum of maximum verandert. Leg met dit concrete voorbeeld uit welke informatie je programma tijdens de verwerking moet onthouden en waarom jouw oplossingsrichting geschikt is om de volledige verzameling systematisch te verwerken.</p>
+<h2 id="inleveren">Inleveren</h2>
+<p>Controleer voordat je inlevert of:</p>
+<ul>
+<li>je programma voldoet aan de specificatie;</li>
+<li>je pseudocode als comments in je <code>.py</code>-bestand staat;</li>
+<li>je Trace Table is toegevoegd;</li>
+<li>je programma met verschillende lists is getest;</li>
+<li>je verwachte en werkelijke testresultaten zijn vastgelegd;</li>
+<li>je reflectie is uitgewerkt;</li>
+<li>je laatste wijzigingen zijn gecommit en gepusht naar Git.</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+  </div>
+
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tracking", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
