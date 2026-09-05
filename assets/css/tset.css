@@ -1,0 +1,46 @@
+/* =========================================================
+   THINKING SET
+   Alleen styling die specifiek is voor Thinking Sets.
+
+   Algemene typografie komt uit style.css.
+   ========================================================= */
+
+
+/* =========================================================
+   EERSTE SECTIE
+   Iets dichter bij de metadata onder de titel.
+   ========================================================= */
+
+.tset-page .page-meta + h2 {
+  margin-top: 0.9rem;
+}
+
+
+/* =========================================================
+   AFBEELDINGEN / DIAGRAMMEN
+   ========================================================= */
+
+.tset-page img:not(.mermaid-image) {
+  display: block;
+
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+
+  margin: 0.65rem 0 0.75rem;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   Alleen layout verandert.
+   Typografie komt uit style.css.
+   ========================================================= */
+
+@media screen and (max-width: 800px) {
+
+  .tset-page img,
+  .tset-page .mermaid {
+    max-width: 100%;
+  }
+}

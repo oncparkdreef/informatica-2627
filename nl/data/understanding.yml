@@ -1,0 +1,192 @@
+visual-first:
+  flowcharts-basics:
+    id: visual-first.flowcharts-basics
+    title: Flowcharts
+    source: nl/understanding/_content/visual-first/flowcharts/basics.md
+
+  flowcharts-decisions-branches:
+    id: visual-first.flowcharts-decisions-branches
+    title: Flowcharts — Decisions & Branches
+    source: nl/understanding/_content/visual-first/flowcharts/decisions-branches.md
+
+  flowcharts-while-loop:
+    id: visual-first.flowcharts-while-loop
+    title: Flowcharts — While Loops
+    source: nl/understanding/_content/visual-first/flowcharts/while-loop.md
+
+  ipo:
+    id: visual-first.ipo
+    title: IPO
+    source: nl/understanding/_content/visual-first/ipo.md
+
+  pseudocode-basics:
+    id: visual-first.pseudocode-basics
+    title: Pseudocode
+    source: nl/understanding/_content/visual-first/pseudocode/basics.md
+
+  pseudocode-repetition:
+    id: visual-first.pseudocode-repetition
+    title: Pseudocode — Herhaling
+    source: nl/understanding/_content/visual-first/pseudocode/pseudocode-repetition.md
+
+  data-structure-diagrams-basics:
+    id: visual-first.data-structure-diagrams-basics
+    title: Datastructuurdiagram
+    source: nl/understanding/_content/visual-first/data-structure-diagrams/basics.md
+
+  trace-tables-basics:
+    id: visual-first.trace-tables-basics
+    title: Trace Table
+    source: nl/understanding/_content/visual-first/trace-tables/basics.md
+
+algorithms-efficiency:
+  counting-operations-basics:
+    id: algorithms-efficiency.counting-operations-basics
+    title: Bewerkingen tellen
+    source: nl/understanding/_content/algorithms-efficiency/counting-operations/counting-operations-basics.md
+
+  counting-operations-repeated-operations:
+    id: algorithms-efficiency.counting-operations-repeated-operations
+    title: Herhaalde bewerkingen
+    source: nl/understanding/_content/algorithms-efficiency/counting-operations/repeated-operations.md
+
+  describing-with-n-basics:
+    id: algorithms-efficiency.describing-with-n-basics
+    title: Beschrijven met n
+    source: nl/understanding/_content/algorithms-efficiency/describing-with-n/describing-with-n-basics.md
+
+  describing-with-n-operation-count-function:
+    id: algorithms-efficiency.describing-with-n-operation-count-function
+    title: Aantal bewerkingen als functie van n
+    source: nl/understanding/_content/algorithms-efficiency/describing-with-n/operation-count-function.md
+
+  repeated-processing-with-n-basics:
+    id: algorithms-efficiency.repeated-processing-with-n-basics
+    title: Herhaalde verwerking met n
+    source: nl/understanding/_content/algorithms-efficiency/repeated-processing-with-n/repeated-processing-with-n-basics.md
+
+  repeated-processing-with-n-operation-count-with-repetition:
+    id: algorithms-efficiency.repeated-processing-with-n-operation-count-with-repetition
+    title: Aantal bewerkingen bij herhaling
+    source: nl/understanding/_content/algorithms-efficiency/repeated-processing-with-n/operation-count-with-repetition.md
+
+python:
+  sequential-execution:
+    id: python.sequential-execution
+    title: Sequential execution
+    source: nl/understanding/_content/python/sequential-execution.md
+
+  variables:
+    id: python.variables
+    title: Variables
+    source: nl/understanding/_content/python/variables.md
+
+  arithmetic-expressions:
+    id: python.arithmetic-expressions
+    title: Expressions
+    source: nl/understanding/_content/python/arithmetic-expressions.md
+
+  boolean-expressions:
+    id: python.boolean-expressions
+    title: Boolean Expressions
+    source: nl/understanding/_content/python/boolean-expressions.md
+
+  comparison-operators:
+    id: python.comparison-operators
+    title: Comparison Operators
+    source: nl/understanding/_content/python/comparison-operators.md
+
+  conditions:
+    id: python.conditions
+    title: Conditions
+    source: nl/understanding/_content/python/conditions.md
+
+  if:
+    id: python.if
+    title: if
+    source: nl/understanding/_content/python/if.md
+
+  else:
+    id: python.else
+    title: else
+    source: nl/understanding/_content/python/else.md
+
+  elif:
+    id: python.elif
+    title: elif
+    source: nl/understanding/_content/python/elif.md
+
+  indentation:
+    id: python.indentation
+    title: Indentation
+    source: nl/understanding/_content/python/indentation.md
+
+  branches:
+    id: python.branches
+    title: Branches
+    source: nl/understanding/_content/python/branches.md
+
+  and:
+    id: python.and
+    title: and
+    source: nl/understanding/_content/python/and.md
+
+  or:
+    id: python.or
+    title: or
+    source: nl/understanding/_content/python/or.md
+
+  while-loops:
+    id: python.while-loops
+    title: while loops
+    source: nl/understanding/_content/python/while-loops.md
+
+  input-validation:
+    id: python.input-validation
+    title: Input validation
+    source: nl/understanding/_content/python/input-validation.md
+
+  lists:
+    id: python.lists
+    title: Lists
+    source: nl/understanding/_content/python/lists.md
+
+  list-indexes:
+    id: python.list-indexes
+    title: List Indexes
+    source: nl/understanding/_content/python/list-indexes.md
+
+  adding-list-items:
+    id: python.adding-list-items
+    title: Adding List Items
+    source: nl/understanding/_content/python/adding-list-items.md
+
+  list-information:
+    id: python.list-information
+    title: List Information
+    source: nl/understanding/_content/python/list-information.md
+
+  lists-and-conditions:
+    id: python.lists-and-conditions
+    title: Lists and Conditions
+    source: nl/understanding/_content/python/lists-and-conditions.md
+
+  for-loops:
+    id: python.for-loops
+    title: for loops
+    source: nl/understanding/_content/python/for-loops.md
+
+  iterating-lists:
+    id: python.iterating-lists
+    title: Iterating over Lists
+    source: nl/understanding/_content/python/iterating-lists.md
+
+  range:
+    id: python.range
+    title: range()
+    source: nl/understanding/_content/python/range.md
+
+  changing-list-items:
+    id: python.changing-list-items
+    title: Changing List Items
+    source: nl/understanding/_content/python/changing-list-items.md

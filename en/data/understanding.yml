@@ -1,0 +1,71 @@
+﻿visual-first:
+  flowcharts-basics:
+    id: visual-first.flowcharts-basics
+    title: Flowcharts
+    source: en/understanding/_content/visual-first/flowcharts/basics.md
+
+  flowcharts-decisions-branches:
+    id: visual-first.flowcharts-decisions-branches
+    title: Flowcharts â€” Decisions & Branches
+    source: en/understanding/_content/visual-first/flowcharts/decisions-branches.md
+
+  ipo:
+    id: visual-first.ipo
+    title: IPO
+    source: en/understanding/_content/visual-first/ipo.md
+    
+python:
+  boolean-expressions:
+    id: python.boolean-expressions
+    title: Boolean Expressions
+    source: en/understanding/_content/python/boolean-expressions.md
+
+  comparison-operators:
+    id: python.comparison-operators
+    title: Comparison Operators
+    source: en/understanding/_content/python/comparison-operators.md
+
+  conditions:
+    id: python.conditions
+    title: Conditions
+    source: en/understanding/_content/python/conditions.md
+
+  if:
+    id: python.if
+    title: if
+    source: en/understanding/_content/python/if.md
+
+  else:
+    id: python.else
+    title: else
+    source: en/understanding/_content/python/else.md
+
+  elif:
+    id: python.elif
+    title: elif
+    source: en/understanding/_content/python/elif.md
+
+  indentation:
+    id: python.indentation
+    title: Indentation
+    source: en/understanding/_content/python/indentation.md
+
+  branches:
+    id: python.branches
+    title: Branches
+    source: en/understanding/_content/python/branches.md
+
+  sequential-execution:
+    id: python.sequential-execution
+    title: Sequential execution
+    source: en/understanding/_content/python/sequential-execution.md
+
+  variables:
+    id: python.variables
+    title: Variables
+    source: en/understanding/_content/python/variables.md
+
+  arithmetic-expressions:
+    id: python.arithmetic-expressions
+    title: Expressions
+    source: en/understanding/_content/python/arithmetic-expressions.md    

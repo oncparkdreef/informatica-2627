@@ -1,0 +1,825 @@
+
+<!doctype html>
+<html lang="nl" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Computational Thinking met Python">
+      
+      
+        <meta name="author" content="Jack Henze">
+      
+      
+        <link rel="canonical" href="https://jhenze-dev.github.io/module01/nl/psets/06/monks-perfect-order-less/">
+      
+      
+        <link rel="prev" href="../monks-magazine-check-more/">
+      
+      
+        <link rel="next" href="../monks-perfect-order-more/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Monk's Perfect Order - Module 01</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/css/style.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/navigation.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/reference.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/goals.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/test.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/badges.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/details.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/video.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/mermaid.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/homepage.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/week.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/tset.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/pset-index.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/pset.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/understanding.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#monks-perfect-order" class="md-skip">
+          Ga naar inhoud
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Module 01" class="md-header__button md-logo" aria-label="Module 01" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Module 01
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Monk's Perfect Order
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Zoeken" placeholder="Zoeken" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Zoeken">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Leegmaken" aria-label="Leegmaken" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Zoeken initialiseren
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    ﻿<nav class="course-nav" aria-label="Cursusnavigatie">
+
+  <header class="course-nav__header">
+    <a class="course-nav__home" href="../../../..">
+      <strong>Module 01</strong>
+      <span>Computational Thinking met Python</span>
+    </a>
+  </header>
+
+  <div class="course-nav__section">
+    <a href="../../../guide/index.html">Over deze module</a>
+    <a href="../../../guide/software.html">Software</a>
+    <a href="../../../guide/werkwijze.html">Werkwijze</a>
+    <a href="../../../guide/portfolio.html">Portfolio</a>
+    <a href="../../../guide/git-github.html">Git &amp; GitHub</a>
+  </div>
+
+  <div class="course-nav__section course-nav__weeks">
+
+    <a href="../../../weeks/00/">
+      <strong>Week 0</strong>
+      <span>Denken als een computer</span>
+    </a>
+
+    <a href="../../../weeks/01/">
+      <strong>Week 1</strong>
+      <span>Mens en machine</span>
+    </a>
+
+    <a href="../../../weeks/02/">
+      <strong>Week 2</strong>
+      <span>Werken met informatie</span>
+    </a>
+
+    <a href="../../../weeks/03/">
+      <strong>Week 3</strong>
+      <span>Slimme keuzes</span>
+    </a>
+
+    <a href="../../../weeks/04/">
+      <strong>Week 4</strong>
+      <span>Blijven herhalen</span>
+    </a>
+
+    <a href="../../../weeks/05/">
+      <strong>Week 5</strong>
+      <span>Gegevens verzamelen</span>
+    </a>
+
+    <a href="../../../weeks/06/">
+      <strong>Week 6</strong>
+      <span>Patronen ontdekken</span>
+    </a>
+
+    <a href="../../../weeks/07/">
+      <strong>Week 7</strong>
+      <span>Informatie interpreteren</span>
+    </a>
+
+    <a href="../../../weeks/08/">
+      <strong>Week 8</strong>
+      <span>Slimmer structureren</span>
+    </a>
+
+    <a href="../../../weeks/09/">
+      <strong>Week 9</strong>
+      <span>Modulaire systemen</span>
+    </a>
+
+    <a href="../../../weeks/10/">
+      <strong>Week 10</strong>
+      <span>Herinneringen beheren</span>
+    </a>
+
+    <a href="../../../weeks/11/">
+      <strong>Week 11</strong>
+      <span>Schoolexamen</span>
+    </a>
+
+  </div>
+
+  <div class="course-nav__section">
+    <a href="../../../understanding/">
+      <strong>Understanding</strong>
+    </a>
+  </div>
+
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#waar-werk-je-aan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Waar werk je aan?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probleem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Probleem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#een-bestaand-list-item-veranderen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Een bestaand list-item veranderen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lezen-en-veranderen-gebruiken-dezelfde-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lezen en veranderen gebruiken dezelfde index
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#een-waarde-bewaren-voordat-je-haar-vervangt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Een waarde bewaren voordat je haar vervangt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#twee-posities-verwisselen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Twee posities verwisselen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herhaalde-verwerking-met-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Herhaalde verwerking met n
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opdracht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opdracht
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Opdracht">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#specificatie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Specificatie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflectie-op-de-oplossing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reflectie op de oplossing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inleveren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inleveren
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  <div class="module-page pset-page">
+    
+                  
+
+
+
+<h1 id="monks-perfect-order">Monk's Perfect Order</h1>
+<p><span class="badge-choice">minder vertrouwd</span>
+<span class="badge badge-python">
+  <span class="badge-label">Python</span>
+  <span class="badge-value">for loops + itereren over lists</span>
+</span>
+<span class="badge badge-visual">
+  <span class="badge-label">Visual First</span>
+  <span class="badge-value">Trace Table</span>
+</span>
+<span class="badge badge-ct">
+  <span class="badge-label">CT-domein</span>
+  <span class="badge-value">Algoritmen</span>
+</span>
+<span class="badge badge-algorithms-efficiency">
+  <span class="badge-label">Algorithms &amp; Efficiency</span>
+  <span class="badge-value">Herhaalde verwerking met n</span>
+</span>
+<span class="badge badge-process">
+  <span class="badge-label">CT-proces</span>
+  <span class="badge-value">Expressing the Solution</span>
+</span>
+<span class="badge badge-process">
+  <span class="badge-label">CT-proces</span>
+  <span class="badge-value">Reflecting on the Solution</span>
+</span></p>
+<h2 id="waar-werk-je-aan">Waar werk je aan?</h2>
+<p>In deze Problem Set werk je aan de volgende leerdoelen:</p>
+<ul>
+<li>Ik kan <strong>beredeneren hoe opeenvolgende stappen logisch samenhangen in een algoritme</strong>.</li>
+<li>Ik kan <strong>een algoritmische oplossing uitdrukken in pseudocode en Python</strong>.</li>
+<li>Ik kan <strong>met een Trace Table zichtbaar maken hoe een verzameling stap voor stap wordt geordend</strong>.</li>
+<li>Ik kan <strong>met testresultaten uitleggen waarom mijn gekozen strategie werkt</strong>.</li>
+</ul>
+<h2 id="probleem">Probleem</h2>
+<p>Monk wil zijn volledige verzameling tijdschriften op nummer ordenen.</p>
+<p>Hij gebruikt daarvoor een vaste werkwijze: hij bekijkt steeds <strong>twee tijdschriften die naast elkaar staan</strong>. Staan ze in de verkeerde volgorde, dan verwisselt hij ze. Daarna gaat hij verder met het volgende paar.</p>
+<p>Eén ronde langs de verzameling is niet altijd genoeg. Een tijdschrift kan meerdere rondes nodig hebben om uiteindelijk op de juiste plaats terecht te komen.</p>
+<p>Een computer moet deze werkwijze systematisch kunnen uitvoeren totdat de volledige verzameling van klein naar groot staat.</p>
+<p><strong>Hoe ontwerp je een algoritme dat een verzameling systematisch ordent?</strong></p>
+<h2 id="understanding">Understanding</h2>
+<h3 id="een-bestaand-list-item-veranderen">Een bestaand list-item veranderen</h3>
+<p>Een item dat al in een list staat, kan worden vervangen door een nieuwe waarde.</p>
+<p>Daarvoor gebruik je de index van dat item.</p>
+<p>Bijvoorbeeld:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">numbers</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">9</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+</code></pre></div>
+<p>De uitvoer is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[4, 9, 2]
+</code></pre></div>
+<p>De waarde op index <code>1</code> was eerst <code>7</code>.</p>
+<p>Door:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">numbers</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">9</span>
+</code></pre></div>
+<p>wordt die bestaande waarde vervangen door <code>9</code>.</p>
+<p>De lengte van de list verandert daarbij niet.</p>
+<h3 id="lezen-en-veranderen-gebruiken-dezelfde-index">Lezen en veranderen gebruiken dezelfde index</h3>
+<p>Met:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">numbers</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div>
+<p>lees je de waarde op index <code>1</code>.</p>
+<p>Met:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">numbers</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">9</span>
+</code></pre></div>
+<p>verander je de waarde op index <code>1</code>.</p>
+<p>De index bepaalt dus op welke positie in de list Python werkt.</p>
+<h3 id="een-waarde-bewaren-voordat-je-haar-vervangt">Een waarde bewaren voordat je haar vervangt</h3>
+<p>Soms wil je twee waarden in een list van plaats laten wisselen.</p>
+<p>Daarbij is de volgorde van de assignments belangrijk.</p>
+<p>Bekijk deze list:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">]</span>
+</code></pre></div>
+<p>Stel dat de waarden op index <code>0</code> en index <code>2</code> moeten wisselen.</p>
+<p>Als je meteen schrijft:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">colors</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</code></pre></div>
+<p>dan wordt <code>"red"</code> vervangen door <code>"green"</code>.</p>
+<p>De oorspronkelijke waarde <code>"red"</code> is dan niet meer op index <code>0</code> beschikbaar.</p>
+<p>Daarom kun je die waarde eerst tijdelijk bewaren:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">temporary</span> <span class="o">=</span> <span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">colors</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">colors</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">temporary</span>
+</code></pre></div>
+<p>Daarna bevat de list:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>[&quot;green&quot;, &quot;blue&quot;, &quot;red&quot;]
+</code></pre></div>
+<p>De variable <code>temporary</code> bewaart dus een waarde terwijl de twee posities worden aangepast.</p>
+<h3 id="twee-posities-verwisselen">Twee posities verwisselen</h3>
+<p>Het algemene patroon is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">temporary</span> <span class="o">=</span> <span class="n">collection</span><span class="p">[</span><span class="n">first_index</span><span class="p">]</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">collection</span><span class="p">[</span><span class="n">first_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">collection</span><span class="p">[</span><span class="n">second_index</span><span class="p">]</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">collection</span><span class="p">[</span><span class="n">second_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">temporary</span>
+</code></pre></div>
+<p>Na deze drie assignments:</p>
+<ul>
+<li>staat de oorspronkelijke waarde van <code>second_index</code> op <code>first_index</code>;</li>
+<li>staat de oorspronkelijke waarde van <code>first_index</code> op <code>second_index</code>;</li>
+<li>blijven de andere items in de list hetzelfde.</li>
+</ul>
+<p>Welke twee indexes je gebruikt, hangt af van het probleem dat je oplost.</p>
+<h3 id="herhaalde-verwerking-met-n">Herhaalde verwerking met n</h3>
+<p>Bij <strong>Beschrijven met n</strong> heb je gezien dat je de hoeveelheid gegevens algemeen kunt beschrijven met <strong>n</strong>.</p>
+<p>Wanneer ieder van de <code>n</code> items één keer dezelfde bewerking veroorzaakt, geldt bijvoorbeeld:</p>
+<div class="arithmatex">\[
+\text{aantal bewerkingen} = n
+\]</div>
+<p>Sommige algoritmes verwerken dezelfde verzameling echter <strong>meerdere keren</strong>.</p>
+<p>Stel dat één volledige verwerking van <code>n</code> items uit <code>n</code> getelde bewerkingen bestaat.</p>
+<p>Bij één volledige verwerking:</p>
+<div class="arithmatex">\[
+n
+\]</div>
+<p>Bij twee volledige verwerkingen:</p>
+<div class="arithmatex">\[
+n + n = 2n
+\]</div>
+<p>Bij drie volledige verwerkingen:</p>
+<div class="arithmatex">\[
+n + n + n = 3n
+\]</div>
+<p>De hoeveelheid werk hangt dan niet alleen af van het aantal items, maar ook van <strong>hoe vaak de volledige verwerking wordt herhaald</strong>.</p>
+<p>De factor vóór <code>n</code> laat zien hoeveel volledige verwerkingen zijn uitgevoerd.</p>
+<p>Wil je ook onderzoeken hoe je het aantal bewerkingen algemeen kunt beschrijven wanneer een verwerking meerdere keren wordt herhaald?</p>
+<p>Lees dan <a href="../../../understanding/algorithms-efficiency/repeated-processing-with-n/operation-count-with-repetition/">Aantal bewerkingen bij herhaling</a>.</p>
+<h2 id="opdracht">Opdracht</h2>
+<p>Maak <strong>Monk's Perfect Order</strong>.</p>
+<p>Gebruik dezelfde verzameling tijdschriftnummers:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">magazines</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+</code></pre></div>
+<p>Ontwerp eerst in <strong>pseudocode</strong> hoe één ronde door de verzameling verloopt en hoe meerdere rondes samen tot een volledig geordende list leiden.</p>
+<p>Laat je pseudocode daarna als comments in je <code>.py</code>-bestand staan.</p>
+<p>Voordat je programmeert, traceer je de strategie met deze kleinere list:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>[4, 1, 3, 2]
+</code></pre></div>
+<p>Maak een <strong>Trace Table</strong> waarin je per vergelijking minimaal noteert:</p>
+<ul>
+<li>de ronde;</li>
+<li>de twee indexes die worden vergeleken;</li>
+<li>de twee waarden vóór de vergelijking;</li>
+<li>of er wordt gewisseld;</li>
+<li>de list na deze stap.</li>
+</ul>
+<p>Gebruik je Trace Table daarna als ontwerp voor je Python-programma.</p>
+<h3 id="specificatie">Specificatie</h3>
+<p>Je programma gebruikt als eerste verzameling:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">magazines</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+</code></pre></div>
+<p>Je programma moet:</p>
+<ul>
+<li>de verzameling ordenen van het kleinste naar het grootste nummer;</li>
+<li>de ordening uitvoeren door de list in meerdere rondes systematisch te verwerken;</li>
+<li>binnen iedere ronde met een <code>for</code>-loop, <code>range()</code> en indexes steeds twee <strong>naast elkaar staande</strong> items vergelijken;</li>
+<li>binnen een ronde de paren van links naar rechts verwerken;</li>
+<li>twee items alleen verwisselen wanneer het linker nummer groter is dan het rechter nummer;</li>
+<li>voor een list met <code>n</code> items <code>n - 1</code> volledige rondes uitvoeren;</li>
+<li>bij het verwisselen de waarden in de bestaande list aanpassen;</li>
+<li>na de laatste ronde de volledig geordende list tonen;</li>
+<li>dezelfde code blijven gebruiken wanneer alleen de inhoud van <code>magazines</code> wordt vervangen door een andere niet-lege list met getallen.</li>
+</ul>
+<p>Je mag voor het ordenen <strong>geen</strong> <code>.sort()</code> of <code>sorted()</code> gebruiken.</p>
+<h3 id="hints">Hints</h3>
+<p>Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.</p>
+<details class="hint">
+<summary>1 — Wat gebeurt er in één ronde?</summary>
+<p>Kijk eerst alleen naar één ronde.</p>
+<p>Welke paren worden achtereenvolgens vergeleken wanneer je van links naar rechts door een list gaat?</p>
+</details>
+<details class="hint">
+<summary>2 — Welke indexes horen bij één vergelijking?</summary>
+<p>Wanneer de linker positie index <code>i</code> heeft, welke index heeft het item dat er direct rechts naast staat?</p>
+</details>
+<details class="hint">
+<summary>3 — Wat gebeurt er na een wisseling?</summary>
+<p>Twee waarden veranderen van positie, maar de lengte van de list verandert niet.</p>
+<p>Bekijk in de Understanding hoe je twee bestaande list-items met behulp van een tijdelijke variable kunt verwisselen.</p>
+</details>
+<details class="hint">
+<summary>4 — Waarom zijn meerdere rondes nodig?</summary>
+<p>Gebruik je Trace Table van <code>[4, 1, 3, 2]</code>.</p>
+<p>Kijk na de eerste ronde welke waarden al goed staan en welke waarde nog meer dan één positie moet opschuiven.</p>
+</details>
+<h3 id="testen">Testen</h3>
+<p>Voorspel eerst voor iedere test hoe de list er na alle rondes uit moet zien.</p>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>List</th>
+<th>Verwachte geordende list</th>
+<th>Werkelijke geordende list</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>[9, 4, 7, 1, 6, 0, 8, 3, 5, 2]</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>[0, 1, 2, 3, 4]</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>[4, 3, 2, 1, 0]</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>[3, 1, 3, 2]</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Controleer daarnaast met je Trace Table van <code>[4, 1, 3, 2]</code>:</p>
+<ul>
+<li>of binnen iedere ronde alleen naast elkaar staande items worden vergeleken;</li>
+<li>of alleen wordt gewisseld wanneer het linker nummer groter is;</li>
+<li>of de list na iedere stap overeenkomt met je voorspelling;</li>
+<li>of de volledige list na de laatste ronde geordend is.</li>
+</ul>
+<p><strong>Kun je met deze tests aantonen dat dezelfde strategie ook werkt voor een al geordende list, een omgekeerd geordende list en een list waarin een waarde vaker voorkomt?</strong></p>
+<p>Als een werkelijke uitkomst niet overeenkomt met je voorspelling, onderzoek dan in welke vergelijking of ronde het verschil ontstaat en pas je pseudocode en programma waar nodig aan.</p>
+<h2 id="reflectie-op-de-oplossing">Reflectie op de oplossing</h2>
+<p>Bekijk je <strong>pseudocode</strong>, je <strong>Trace Table</strong> en je testresultaten.</p>
+<p>Kies één concrete wisseling uit je Trace Table en leg uit waarom die wisseling volgens jouw algoritme nodig was.</p>
+<p>Leg daarna uit waarom meerdere rondes nodig kunnen zijn om de volledige verzameling te ordenen en gebruik daarbij een concreet voorbeeld uit je eigen Trace Table of testresultaten.</p>
+<h2 id="inleveren">Inleveren</h2>
+<p>Controleer voordat je inlevert of:</p>
+<ul>
+<li>je programma voldoet aan de specificatie;</li>
+<li>je pseudocode als comments in je <code>.py</code>-bestand staat;</li>
+<li>je Trace Table van <code>[4, 1, 3, 2]</code> is toegevoegd;</li>
+<li>alle vier de tests zijn uitgevoerd;</li>
+<li>je verwachte en werkelijke testresultaten zijn vastgelegd;</li>
+<li>je reflectie is uitgewerkt;</li>
+<li>je laatste wijzigingen zijn gecommit en gepusht naar Git.</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+  </div>
+
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tracking", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

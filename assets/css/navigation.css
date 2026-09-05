@@ -1,0 +1,328 @@
+/* =========================================================
+   NAVIGATION
+   Algemene applicatielayout en linker cursusnavigatie
+   ========================================================= */
+
+
+/* =========================================================
+   INSTELLINGEN
+   ========================================================= */
+
+:root {
+
+  /* Content */
+  --content-padding-top: 0.8rem;
+  --content-padding-right: 3rem;
+  --content-padding-bottom: 2rem;
+  --content-padding-left: 3rem;
+
+  /* Navigatie */
+  --course-nav-width: 18rem;
+
+  --course-nav-padding-top: 0.8rem;
+  --course-nav-padding-right: 1.4rem;
+  --course-nav-padding-bottom: 1rem;
+  --course-nav-padding-left: 1.4rem;
+
+  /* Kleuren */
+  --course-nav-background: #000;
+  --course-nav-text: #fff;
+
+  /* CS50 weekomschrijving */
+  --course-nav-muted: rgba(255, 255, 255, 0.5);
+
+  --course-nav-hover: #c7c7c7;
+  --course-nav-muted-hover: #ddd;
+  --course-nav-divider: #292929;
+
+  /* =======================================================
+     TYPOGRAFIE
+
+     Gewone CS50 navigatielinks:
+     15.75px / 23.625px / 400
+
+     CS50 weeklinks:
+     18px / 27px / 400
+     ======================================================= */
+
+  --course-nav-font-size: 15.75px;
+  --course-nav-line-height: 23.625px;
+
+  --course-nav-week-size: 18px;
+  --course-nav-week-line-height: 27px;
+
+  /* Nog niet opnieuw gemeten bij CS50 */
+  --course-nav-title-size: 1.5rem;
+  --course-nav-title-line-height: 1.05;
+
+  --course-nav-subtitle-size: 0.88rem;
+  --course-nav-subtitle-line-height: 1.25;
+
+  --course-nav-section-title-size: 0.86rem;
+
+  /* Afstanden */
+  --course-nav-header-bottom: 0.9rem;
+  --course-nav-section-padding: 0.9rem;
+  --course-nav-link-padding: 0.08rem;
+  --course-nav-week-gap: 0.25rem;
+}
+
+
+/* =========================================================
+   ALGEMENE PAGINALAYOUT
+   ========================================================= */
+
+.md-grid {
+  max-width: none;
+
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+.md-main__inner {
+  margin-top: 0;
+}
+
+
+.md-content {
+  max-width: none;
+}
+
+
+.md-content__inner {
+  max-width: none;
+
+  margin: 0;
+
+  padding:
+    var(--content-padding-top)
+    var(--content-padding-right)
+    var(--content-padding-bottom)
+    var(--content-padding-left);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.md-header {
+  display: none;
+}
+
+
+.md-container {
+  padding-top: 0;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.md-footer {
+  display: none;
+}
+
+
+/* =========================================================
+   LINKER SIDEBAR
+   ========================================================= */
+
+.md-sidebar--primary {
+  width: var(--course-nav-width);
+  height: 100vh;
+
+  top: 0;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  background: var(--course-nav-background);
+}
+
+
+.md-sidebar--primary .md-sidebar__scrollwrap {
+  top: 0;
+
+  height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  background: var(--course-nav-background);
+}
+
+
+.md-sidebar--primary .md-sidebar__inner {
+  height: 100%;
+
+  padding: 0;
+
+  background: var(--course-nav-background);
+}
+
+
+/* =========================================================
+   CURSUSNAVIGATIE
+
+   Algemene navigatietypografie gebaseerd op gemeten CS50:
+   15.75px / 23.625px / 400
+   ========================================================= */
+
+.course-nav {
+  box-sizing: border-box;
+
+  min-height: 100%;
+
+  padding:
+    var(--course-nav-padding-top)
+    var(--course-nav-padding-right)
+    var(--course-nav-padding-bottom)
+    var(--course-nav-padding-left);
+
+  background: var(--course-nav-background);
+  color: var(--course-nav-text);
+
+  font-family: "PT Sans", sans-serif;
+  font-size: var(--course-nav-font-size);
+  font-weight: 400;
+  line-height: var(--course-nav-line-height);
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+.course-nav a {
+  display: block;
+
+  color: var(--course-nav-text);
+
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 400;
+  line-height: inherit;
+
+  text-decoration: none;
+  text-underline-offset: 4px;
+}
+
+
+.course-nav a:hover,
+.course-nav a:focus-visible {
+  color: var(--course-nav-hover);
+}
+
+
+/* =========================================================
+   NAVIGATIEKOP
+
+   Bestaande schaal behouden totdat we hiervoor eventueel
+   afzonderlijke CS50-metingen hebben.
+   ========================================================= */
+
+.course-nav__header {
+  padding-bottom: var(--course-nav-header-bottom);
+}
+
+
+.course-nav__home strong {
+  display: block;
+
+  margin-bottom: 0.18rem;
+
+  font-size: var(--course-nav-title-size);
+  line-height: var(--course-nav-title-line-height);
+}
+
+
+.course-nav__home span {
+  display: block;
+
+  max-width: 14rem;
+
+  font-size: var(--course-nav-subtitle-size);
+  line-height: var(--course-nav-subtitle-line-height);
+}
+
+
+/* =========================================================
+   NAVIGATIESECTIES
+   ========================================================= */
+
+.course-nav__section {
+  padding: var(--course-nav-section-padding) 0;
+
+  border-top: 1px solid var(--course-nav-divider);
+}
+
+
+.course-nav__section a {
+  padding: var(--course-nav-link-padding) 0;
+}
+
+
+.course-nav__section h2 {
+  margin: 0 0 0.3rem;
+
+  color: var(--course-nav-text);
+
+  font-size: var(--course-nav-section-title-size);
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   WEEKNAVIGATIE
+
+   CS50-referentie:
+   18px / 27px / 400
+
+   Weekomschrijving:
+   rgba(255, 255, 255, 0.5)
+   ========================================================= */
+
+.course-nav__weeks a {
+  display: flex;
+  align-items: baseline;
+
+  gap: var(--course-nav-week-gap);
+
+  padding-top: 0.05rem;
+  padding-bottom: 0.05rem;
+
+  font-size: var(--course-nav-week-size);
+  font-weight: 400;
+  line-height: var(--course-nav-week-line-height);
+}
+
+
+/* Weeknummer */
+
+.course-nav__weeks strong {
+  flex: 0 0 auto;
+
+  font-weight: 400;
+}
+
+
+/* Weekomschrijving */
+
+.course-nav__weeks span {
+  color: var(--course-nav-muted);
+
+  font-weight: 400;
+}
+
+
+/* Hover */
+
+.course-nav__weeks a:hover span,
+.course-nav__weeks a:focus-visible span {
+  color: var(--course-nav-muted-hover);
+}

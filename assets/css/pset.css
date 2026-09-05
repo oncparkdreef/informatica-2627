@@ -1,0 +1,56 @@
+/* =========================================================
+   PROBLEM SET
+   Alleen styling die specifiek is voor individuele PSETs.
+
+   Algemene typografie komt uit style.css.
+   ========================================================= */
+
+
+/* =========================================================
+   UNDERSTANDING
+   ========================================================= */
+
+.pset-page .understanding-link {
+  display: inline-block;
+
+  margin-top: 0.15rem;
+}
+
+
+/* =========================================================
+   STARTCODE
+   Voor later gebruik
+   ========================================================= */
+
+.pset-page .starter-code {
+  width: 100%;
+
+  margin: 0.5rem 0 0.8rem;
+}
+
+
+/* =========================================================
+   DEMO
+   Voor later gebruik
+   ========================================================= */
+
+.pset-page .demo {
+  width: 100%;
+
+  margin: 0.5rem 0 0.8rem;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+
+   Geen kleinere PSET-typografie.
+   De 16px bodytekst blijft ook op smallere schermen behouden.
+   ========================================================= */
+
+@media screen and (max-width: 800px) {
+
+  .pset-page details.hint {
+    width: 100%;
+  }
+}

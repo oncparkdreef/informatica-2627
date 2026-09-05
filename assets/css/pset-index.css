@@ -1,0 +1,128 @@
+/* =========================================================
+   PROBLEM SET INDEX
+   Alleen styling die specifiek is voor de overzichtspagina.
+
+   Algemene typografie komt uit style.css.
+   ========================================================= */
+
+
+/* =========================================================
+   VERANTWOORD LEREN
+   Compact informatievlak
+   ========================================================= */
+
+.pset-index-page .admonition.learning {
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 16px 0;
+  padding: 0;
+
+  border: 1px solid #b8c7da;
+  border-radius: 4px;
+
+  background: #eef3f8;
+
+  box-shadow: none;
+}
+
+
+/* ---------------------------------------------------------
+   Titel
+   Zelfde grootte als bodytekst, maar bold
+   --------------------------------------------------------- */
+
+.pset-index-page .admonition.learning > .admonition-title {
+  margin: 0;
+  padding: 8px 12px 4px 32px;
+
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+
+  color: rgb(33, 37, 41);
+}
+
+
+/* ---------------------------------------------------------
+   Icoon
+   --------------------------------------------------------- */
+
+.pset-index-page .admonition.learning > .admonition-title::before {
+  background-color: #5f6f80;
+}
+
+
+/* ---------------------------------------------------------
+   Tekst
+
+   Zelfde basistypografie als gewone paginatekst.
+   --------------------------------------------------------- */
+
+.pset-index-page .admonition.learning > p {
+  width: 100%;
+
+  margin: 0;
+  padding: 0 12px;
+
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+
+  color: rgb(33, 37, 41);
+}
+
+
+/* Kleine ruimte na de titel */
+
+.pset-index-page .admonition.learning > p:first-of-type {
+  padding-top: 4px;
+}
+
+
+/* Ruimte tussen alinea's */
+
+.pset-index-page .admonition.learning > p + p {
+  margin-top: 8px;
+}
+
+
+/* Ruimte onder laatste alinea */
+
+.pset-index-page .admonition.learning > p:last-child {
+  padding-bottom: 12px;
+}
+
+
+/* =========================================================
+   GENUMMERDE WERKLIJST
+   Bijvoorbeeld: Wat moet je doen?
+
+   Typografie komt volledig uit style.css.
+   Hier regelen we alleen de lijst-layout.
+   ========================================================= */
+
+.pset-index-page ol {
+  width: 100%;
+
+  margin: 16px 0;
+
+  padding-left: 1.5rem;
+}
+
+
+.pset-index-page ol li {
+  margin-bottom: 8px;
+  padding-left: 0.15rem;
+}
+
+
+.pset-index-page ol li:last-child {
+  margin-bottom: 0;
+}

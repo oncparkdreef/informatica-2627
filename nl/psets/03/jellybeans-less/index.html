@@ -1,0 +1,995 @@
+
+<!doctype html>
+<html lang="nl" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Computational Thinking met Python">
+      
+      
+        <meta name="author" content="Jack Henze">
+      
+      
+        <link rel="canonical" href="https://jhenze-dev.github.io/module01/nl/psets/03/jellybeans-less/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../jellybeans-more/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Jellybeans in a Jar - Module 01</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/css/style.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/navigation.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/reference.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/goals.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/test.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/badges.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/details.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/video.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/mermaid.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/homepage.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/week.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/tset.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/pset-index.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/pset.css">
+    
+      <link rel="stylesheet" href="../../../../assets/css/understanding.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#jellybeans-in-a-jar" class="md-skip">
+          Ga naar inhoud
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Module 01" class="md-header__button md-logo" aria-label="Module 01" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Module 01
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Jellybeans in a Jar
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Zoeken" placeholder="Zoeken" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Zoeken">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Leegmaken" aria-label="Leegmaken" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Zoeken initialiseren
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    ﻿<nav class="course-nav" aria-label="Cursusnavigatie">
+
+  <header class="course-nav__header">
+    <a class="course-nav__home" href="../../../..">
+      <strong>Module 01</strong>
+      <span>Computational Thinking met Python</span>
+    </a>
+  </header>
+
+  <div class="course-nav__section">
+    <a href="../../../guide/index.html">Over deze module</a>
+    <a href="../../../guide/software.html">Software</a>
+    <a href="../../../guide/werkwijze.html">Werkwijze</a>
+    <a href="../../../guide/portfolio.html">Portfolio</a>
+    <a href="../../../guide/git-github.html">Git &amp; GitHub</a>
+  </div>
+
+  <div class="course-nav__section course-nav__weeks">
+
+    <a href="../../../weeks/00/">
+      <strong>Week 0</strong>
+      <span>Denken als een computer</span>
+    </a>
+
+    <a href="../../../weeks/01/">
+      <strong>Week 1</strong>
+      <span>Mens en machine</span>
+    </a>
+
+    <a href="../../../weeks/02/">
+      <strong>Week 2</strong>
+      <span>Werken met informatie</span>
+    </a>
+
+    <a href="../../../weeks/03/">
+      <strong>Week 3</strong>
+      <span>Slimme keuzes</span>
+    </a>
+
+    <a href="../../../weeks/04/">
+      <strong>Week 4</strong>
+      <span>Blijven herhalen</span>
+    </a>
+
+    <a href="../../../weeks/05/">
+      <strong>Week 5</strong>
+      <span>Gegevens verzamelen</span>
+    </a>
+
+    <a href="../../../weeks/06/">
+      <strong>Week 6</strong>
+      <span>Patronen ontdekken</span>
+    </a>
+
+    <a href="../../../weeks/07/">
+      <strong>Week 7</strong>
+      <span>Informatie interpreteren</span>
+    </a>
+
+    <a href="../../../weeks/08/">
+      <strong>Week 8</strong>
+      <span>Slimmer structureren</span>
+    </a>
+
+    <a href="../../../weeks/09/">
+      <strong>Week 9</strong>
+      <span>Modulaire systemen</span>
+    </a>
+
+    <a href="../../../weeks/10/">
+      <strong>Week 10</strong>
+      <span>Herinneringen beheren</span>
+    </a>
+
+    <a href="../../../weeks/11/">
+      <strong>Week 11</strong>
+      <span>Schoolexamen</span>
+    </a>
+
+  </div>
+
+  <div class="course-nav__section">
+    <a href="../../../understanding/">
+      <strong>Understanding</strong>
+    </a>
+  </div>
+
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#waar-werk-je-aan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Waar werk je aan?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probleem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Probleem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Demo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boolean-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boolean expressions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison operators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conditions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        if
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#else" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        else
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elif" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        elif
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Indentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Branches
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opdracht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opdracht
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Opdracht">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#specificatie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Specificatie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inleveren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inleveren
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  <div class="module-page pset-page">
+    
+                  
+
+
+
+<h1 id="jellybeans-in-a-jar">Jellybeans in a Jar</h1>
+<p><span class="badge-choice">minder vertrouwd</span>
+<span class="badge badge-python">
+  <span class="badge-label">Python</span>
+  <span class="badge-value">if · elif · else</span>
+</span>
+<span class="badge badge-visual">
+  <span class="badge-label">Visual First</span>
+  <span class="badge-value">Flowchart</span>
+</span>
+<span class="badge badge-ct">
+  <span class="badge-label">CT-domein</span>
+  <span class="badge-value">Algoritmen</span>
+</span>
+<span class="badge badge-process">
+  <span class="badge-label">CT-proces</span>
+  <span class="badge-value">Expressing the Solution</span>
+</span></p>
+<h2 id="waar-werk-je-aan">Waar werk je aan?</h2>
+<p>Met deze Problem Set werk je aan de volgende leerdoelen:</p>
+<ul>
+<li>Ik kan <strong>beredeneren</strong> hoe stappen en beslissingen logisch met elkaar samenhangen.</li>
+<li>Ik kan <strong>een algoritmische oplossing ontwerpen</strong> voor een probleem met verschillende mogelijke situaties.</li>
+<li>Ik kan <strong>een oplossing automatiseren</strong> door voorwaarden en bijbehorende acties vast te leggen.</li>
+<li>Ik kan <strong>een algoritmische oplossing programmeren</strong> met <code>if</code>, <code>elif</code> en <code>else</code>.</li>
+</ul>
+<h2 id="probleem">Probleem</h2>
+<p>In een pot zit een onbekend aantal jellybeans.</p>
+<p>De gebruiker voert een gok in. Een computersysteem moet deze ingevoerde gok vergelijken met het geheime aantal en op basis daarvan automatisch bepalen welke terugkoppeling aan de gebruiker wordt gegeven:</p>
+<ul>
+<li><strong>te laag</strong>;</li>
+<li><strong>te hoog</strong>;</li>
+<li><strong>precies goed</strong>.</li>
+</ul>
+<p>Een computer kan alleen de juiste beslissing nemen wanneer <strong>alle mogelijke situaties expliciet zijn beschreven met voorwaarden en bijbehorende acties</strong>.</p>
+<p><strong>Hoe ontwerp je een systeem dat op basis van voorwaarden automatisch bepaalt welke feedback aan een gebruiker wordt gegeven?</strong></p>
+<h2 id="demo">Demo</h2>
+<!--
+PAS LATER INVULLEN.
+
+Wordt gemaakt wanneer de solution gereed is.
+
+Doel:
+- leerling kan het gewenste gedrag ervaren;
+- laat zien WAT het programma doet;
+- laat niet zien HOE het programma is gebouwd.
+-->
+
+<h2 id="understanding">Understanding</h2>
+<h3 id="boolean-expressions">Boolean expressions</h3>
+<p>Een <strong>Boolean expression</strong> is een expression die als resultaat één van
+twee <strong>Boolean values</strong> heeft:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kc">True</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kc">False</span>
+</code></pre></div>
+<p>Een Boolean expression kun je bijvoorbeeld maken door twee waarden met
+elkaar te vergelijken:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">temperature</span> <span class="o">=</span> <span class="mi">18</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">)</span>
+</code></pre></div>
+<p>De uitvoer is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>False
+</code></pre></div>
+<p>De expression:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">20</span>
+</code></pre></div>
+<p>wordt door Python geëvalueerd. Omdat <code>18</code> niet groter is dan <code>20</code>, is
+het resultaat <code>False</code>.</p>
+<p>Wanneer we de waarde veranderen:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">temperature</span> <span class="o">=</span> <span class="mi">24</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">)</span>
+</code></pre></div>
+<p>is de uitvoer:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>True
+</code></pre></div>
+<p>Een Boolean expression beschrijft dus iets waarvan Python kan bepalen of
+het <code>True</code> of <code>False</code> is.</p>
+<h3 id="comparison-operators">Comparison operators</h3>
+<p>Om waarden met elkaar te vergelijken gebruikt Python <strong>comparison
+operators</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Betekenis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>==</code></td>
+<td>gelijk aan</td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>niet gelijk aan</td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>kleiner dan</td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>groter dan</td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>kleiner dan of gelijk aan</td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>groter dan of gelijk aan</td>
+</tr>
+</tbody>
+</table>
+<p>Bijvoorbeeld:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">8</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="mi">8</span><span class="p">)</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<p>De uitvoer is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>True
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>True
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>False
+</code></pre></div>
+<p>Let goed op het verschil tussen <code>=</code> en <code>==</code>.</p>
+<p>Met:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">8</span>
+</code></pre></div>
+<p>ken je de waarde <code>8</code> toe aan de variable <code>x</code>. Dit is een <strong>assignment</strong>.</p>
+<p>Met:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">x</span> <span class="o">==</span> <span class="mi">8</span>
+</code></pre></div>
+<p>vergelijk je twee waarden. Dit is een <strong>comparison</strong> en levert <code>True</code> of
+<code>False</code> op.</p>
+<h3 id="conditions">Conditions</h3>
+<p>Een Boolean expression kan als <strong>condition</strong> worden gebruikt.</p>
+<p>Een condition bepaalt of bepaalde code wel of niet wordt uitgevoerd.</p>
+<p>Bijvoorbeeld:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">temperature</span> <span class="o">&lt;</span> <span class="mi">20</span>
+</code></pre></div>
+<p>Python kan deze condition evalueren.</p>
+<p>Het resultaat is altijd één van twee Boolean values:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kc">True</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kc">False</span>
+</code></pre></div>
+<p>Een condition kan vervolgens worden gebruikt om te bepalen welke
+instructies een programma moet uitvoeren.</p>
+<h3 id="if"><code>if</code></h3>
+<p>Met een <code>if statement</code> kan Python een condition controleren.</p>
+<p>Bijvoorbeeld:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">temperature</span> <span class="o">=</span> <span class="mi">18</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="k">if</span> <span class="n">temperature</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Neem een jas mee&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Python evalueert eerst de condition:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">temperature</span> <span class="o">&lt;</span> <span class="mi">20</span>
+</code></pre></div>
+<p>Is de condition <code>True</code>, dan wordt de ingesprongen code uitgevoerd.</p>
+<p>Is de condition <code>False</code>, dan wordt deze code overgeslagen.</p>
+<p>Een <code>if statement</code> maakt het dus mogelijk om instructies alleen uit te
+voeren wanneer aan een bepaalde condition wordt voldaan.</p>
+<h3 id="else"><code>else</code></h3>
+<p>Soms moet een programma iets anders doen wanneer de condition bij een
+<code>if</code> niet <code>True</code> is.</p>
+<p>Daarvoor gebruikt Python <code>else</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    <span class="n">action_a</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    <span class="n">action_b</span>
+</code></pre></div>
+<p>Python controleert eerst de condition bij <code>if</code>.</p>
+<p>Is de condition <code>True</code>, dan wordt <code>action_a</code> uitgevoerd.</p>
+<p>Is de condition <code>False</code>, dan wordt <code>action_b</code> uitgevoerd.</p>
+<p>Een <code>else</code> heeft zelf geen condition. De code bij <code>else</code> wordt uitgevoerd
+wanneer de condition bij de bijbehorende <code>if</code> <code>False</code> is.</p>
+<h3 id="elif"><code>elif</code></h3>
+<p>Een probleem kan meer dan twee mogelijke situaties bevatten.</p>
+<p>Met <code>elif</code> kun je na een <code>if</code> een volgende condition laten controleren.</p>
+<p>Bijvoorbeeld:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">if</span> <span class="n">condition_1</span><span class="p">:</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    <span class="n">action_1</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="k">elif</span> <span class="n">condition_2</span><span class="p">:</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    <span class="n">action_2</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>    <span class="n">action_3</span>
+</code></pre></div>
+<p>Python controleert de conditions van boven naar beneden.</p>
+<ol>
+<li>Eerst wordt <code>condition_1</code> geëvalueerd.</li>
+<li>Als deze <code>True</code> is, wordt <code>action_1</code> uitgevoerd.</li>
+<li>Als deze <code>False</code> is, wordt <code>condition_2</code> geëvalueerd.</li>
+<li>Als deze <code>True</code> is, wordt <code>action_2</code> uitgevoerd.</li>
+<li>Als geen van de eerdere conditions <code>True</code> is, wordt de <code>else</code> uitgevoerd.</li>
+</ol>
+<p>Zodra Python een condition vindt die <code>True</code> is, wordt de bijbehorende
+code uitgevoerd. De volgende conditions van dezelfde conditional worden
+dan niet meer gecontroleerd.</p>
+<p>Je kunt meerdere <code>elif</code> statements gebruiken wanneer er meer situaties
+onderscheiden moeten worden.</p>
+<h3 id="indentation">Indentation</h3>
+<p>Bij een <code>if statement</code> horen een dubbele punt <code>:</code> en <strong>indentation</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    <span class="n">action</span>
+</code></pre></div>
+<p>De indentation geeft aan welke instructies bij het <code>if statement</code> horen.</p>
+<p>Bijvoorbeeld:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">temperature</span> <span class="o">=</span> <span class="mi">18</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="k">if</span> <span class="n">temperature</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Neem een jas mee&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Het is buiten fris.&quot;</span><span class="p">)</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fijne dag!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>De eerste twee <code>print()</code> statements horen bij de <code>if</code> en worden alleen
+uitgevoerd wanneer de condition <code>True</code> is.</p>
+<p>De laatste <code>print()</code> staat niet meer binnen de <code>if</code> en wordt daarom
+altijd uitgevoerd.</p>
+<h3 id="branches">Branches</h3>
+<p>Bij een conditional kunnen verschillende mogelijke uitvoerpaden ontstaan.</p>
+<p>Zo'n mogelijk uitvoerpad noemen we een <strong>branch</strong>.</p>
+<p>Bijvoorbeeld:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>    <span class="n">action_a</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>    <span class="n">action_b</span>
+</code></pre></div>
+<p>Hier zijn twee branches:</p>
+<ul>
+<li>wanneer de condition <code>True</code> is, wordt de eerste branch uitgevoerd;</li>
+<li>wanneer de condition <code>False</code> is, wordt de tweede branch uitgevoerd.</li>
+</ul>
+<p>Van deze twee branches wordt dus precies één uitgevoerd.</p>
+<p>Met <code>elif</code> kunnen meer branches worden toegevoegd:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">if</span> <span class="n">condition_1</span><span class="p">:</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>    <span class="n">action_1</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="k">elif</span> <span class="n">condition_2</span><span class="p">:</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>    <span class="n">action_2</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>    <span class="n">action_3</span>
+</code></pre></div>
+<p>Python controleert de conditions van boven naar beneden. Zodra een
+condition <code>True</code> is, wordt de bijbehorende branch uitgevoerd.</p>
+<p>Bij het werken met conditionals zijn dus twee begrippen belangrijk:</p>
+<ul>
+<li>een <strong>condition</strong> die Python kan evalueren als <code>True</code> of <code>False</code>;</li>
+<li>een <strong>branch</strong> met instructies die afhankelijk van een condition
+  wordt uitgevoerd.</li>
+</ul>
+<p>Met <code>if</code>, <code>elif</code> en <code>else</code> kun je deze conditions en branches in Python
+uitdrukken.</p>
+<p>Welke conditions nodig zijn, hoeveel branches er zijn en welke actions
+daarbij horen, hangt af van het probleem dat je probeert op te lossen.</p>
+<h2 id="opdracht">Opdracht</h2>
+<p>Nu ga je deze kennis gebruiken om het probleem van <strong>Jellybeans in a Jar</strong> op te lossen.</p>
+<h3 id="specificatie">Specificatie</h3>
+<p>Je programma moet:</p>
+<ul>
+<li>het geheime aantal jellybeans in een variabele bewaren;</li>
+<li>de gebruiker vragen om een geheel getal;</li>
+<li>de ingevoerde gok vergelijken met het geheime aantal;</li>
+<li><code>Te laag</code> tonen wanneer de gok lager is dan het geheime aantal;</li>
+<li><code>Te hoog</code> tonen wanneer de gok hoger is dan het geheime aantal;</li>
+<li><code>Precies goed</code> tonen wanneer de gok gelijk is aan het geheime aantal.</li>
+</ul>
+<p>Gebruik voor de beslisstructuur <code>if</code>, <code>elif</code> en <code>else</code>.</p>
+<p>Voor iedere mogelijke gok moet het programma <strong>precies één</strong> van de drie mogelijke reacties geven.</p>
+<p>Gebruik als invoer een <strong>geheel getal</strong>. Dat is in deze Problem Set geldige invoer.</p>
+<p>Andere invoer hoef je in deze Problem Set niet af te handelen.</p>
+<h3 id="hints">Hints</h3>
+<p>Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.</p>
+<details class="hint">
+<summary>1 — Welke situaties moet je programma herkennen?</summary>
+<p>Begin nog niet met programmeren. Kijk naar de relatie tussen de <strong>gok</strong> en het <strong>geheime aantal</strong>.</p>
+<p>Welke verschillende situaties zijn mogelijk? Schrijf voor iedere situatie op:</p>
+<ul>
+<li>welke <strong>voorwaarde</strong> geldt;</li>
+<li>welke <strong>actie</strong> het programma dan moet uitvoeren.</li>
+</ul>
+<p>Controleer daarna of je hiermee <strong>alle mogelijke situaties</strong> hebt beschreven.</p>
+</details>
+<details class="hint">
+<summary>2 — Hoe kun je de beslissingen zichtbaar maken?</summary>
+<p>Zet je voorwaarden en acties om in een <strong>flowchart</strong>. Begin bij de ingevoerde gok en laat daarna zien welke beslissingen het programma moet nemen.</p>
+<p>Denk bij iedere beslissing na over twee vragen:</p>
+<ul>
+<li>Welke voorwaarde wordt hier gecontroleerd?</li>
+<li>Waar gaat het algoritme verder als de voorwaarde wel of niet waar is?</li>
+</ul>
+<p>Controleer je flowchart voordat je verdergaat: kan iedere mogelijke gok via één route bij de juiste feedback uitkomen?</p>
+</details>
+<details class="hint">
+<summary>3 — Hoe zet je je flowchart om in pseudocode?</summary>
+<p>Gebruik je flowchart als ontwerp en beschrijf dezelfde oplossing nu als <strong>pseudocode</strong>.</p>
+<p>Schrijf de logica als een geordende reeks stappen en beslissingen.</p>
+<p>Let erop dat:</p>
+<ul>
+<li>iedere regel één logische actie beschrijft;</li>
+<li>je de stappen nummert;</li>
+<li>stappen die bij een beslissing horen duidelijk zijn ingesprongen;</li>
+<li>je beschrijft <strong>wat</strong> er moet gebeuren, zonder Python-code te schrijven.</li>
+</ul>
+<p>Controleer daarna: beschrijven je flowchart en pseudocode dezelfde oplossing?</p>
+</details>
+<details class="hint">
+<summary>4 — Hoe vertaal je je pseudocode naar Python?</summary>
+<p>Gebruik nu je pseudocode als ontwerp voor je programma. Een beslissing uit je pseudocode kun je in Python uitdrukken met een voorwaarde:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">if</span> <span class="n">voorwaarde</span><span class="p">:</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>    <span class="n">actie</span>
+</code></pre></div>
+<p>Voor meerdere mogelijke situaties kun je beslissingen combineren met <code>if</code>, <code>elif</code> en <code>else</code>.</p>
+<p>Kijk opnieuw naar je eigen pseudocode:</p>
+<ul>
+<li>welke beslissing hoort bij <code>if</code>?</li>
+<li>welke volgende mogelijkheid hoort bij <code>elif</code>?</li>
+<li>welke situatie blijft daarna over voor <code>else</code>?</li>
+</ul>
+<p>Programmeer vanuit je ontwerp verder.</p>
+</details>
+<h3 id="testen">Testen</h3>
+<p>Een programma is pas betrouwbaar als je controleert of <strong>alle mogelijke situaties correct worden afgehandeld</strong>.</p>
+<p>Noteer eerst welk geheime aantal je in je programma gebruikt.</p>
+<p>Kies daarna voor iedere situatie een passende gok en bepaal <strong>vooraf</strong> welke uitkomst je verwacht.</p>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Situatie</th>
+<th>Gok</th>
+<th>Verwachte uitkomst</th>
+<th>Werkelijke uitkomst</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>lager dan het geheime aantal</td>
+<td></td>
+<td><code>Te laag</code></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>hoger dan het geheime aantal</td>
+<td></td>
+<td><code>Te hoog</code></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>gelijk aan het geheime aantal</td>
+<td></td>
+<td><code>Precies goed</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Voer daarna iedere test uit.</p>
+<p>Controleer bij iedere test:</p>
+<ul>
+<li>of de werkelijke uitkomst overeenkomt met de verwachte uitkomst;</li>
+<li>of de juiste situatie wordt herkend;</li>
+<li>of het programma <strong>precies één</strong> reactie toont.</li>
+</ul>
+<p>Een test is geslaagd wanneer:</p>
+<p><strong>werkelijke uitkomst = verwachte uitkomst</strong></p>
+<p>Als dat niet zo is, onderzoek dan welke stap of beslissing in je algoritme niet doet wat je had verwacht en pas je programma waar nodig aan.</p>
+<p><strong>Kun je met deze drie testgevallen aantonen dat iedere mogelijke situatie correct wordt afgehandeld en iedere gok precies één reactie oplevert?</strong></p>
+<h3 id="inleveren">Inleveren</h3>
+<p>Controleer voordat je de Problem Set afrondt:</p>
+<ul>
+<li>je programma voldoet aan de <strong>specificatie</strong>;</li>
+<li>je hebt voor iedere mogelijke situatie een <strong>testgeval</strong> uitgevoerd;</li>
+<li>de werkelijke uitkomst van je tests komt overeen met de <strong>verwachte uitkomst</strong>;</li>
+<li>je kunt uitleggen hoe je vanuit het probleem tot je <strong>beslisstructuur</strong> bent gekomen;</li>
+<li>je kunt uitleggen hoe je vanuit je flowchart via pseudocode tot <code>if</code>, <code>elif</code> en <code>else</code> bent gekomen;</li>
+<li>je hebt tijdens het werken regelmatig gecommit;</li>
+<li>je laatste versie staat in Git.</li>
+</ul>
+<p>Werk daarna <strong>Portfolio 3</strong> bij.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+  </div>
+
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tracking", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
