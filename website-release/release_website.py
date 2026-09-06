@@ -1395,17 +1395,17 @@ def main():
         print("RELEASE AFGEBROKEN")
         print()
         print(error)
-        return
+        raise SystemExit(1)
 
     if not SOURCE_ROOT.is_dir():
         print("Fout: ONC-bron niet gevonden:")
         print(SOURCE_ROOT)
-        return
+        raise SystemExit(1)
 
     if not RELEASE_PLAN_FILE.is_file():
         print("Fout: website.csv niet gevonden:")
         print(RELEASE_PLAN_FILE)
-        return
+        raise SystemExit(1)
 
     try:
         understanding_catalog = (
@@ -1413,7 +1413,7 @@ def main():
         )
     except RuntimeError as error:
         print(f"Fout: {error}")
-        return
+        raise SystemExit(1)
 
     with RELEASE_PLAN_FILE.open(
         "r",
@@ -1426,7 +1426,7 @@ def main():
 
     if not fieldnames:
         print("Fout: website.csv bevat geen header.")
-        return
+        raise SystemExit(1)
 
     required_columns = {
         "slug",
@@ -1450,7 +1450,7 @@ def main():
         ):
             print(f"- {column}")
 
-        return
+        raise SystemExit(1)
 
     today = date.today()
     found = False
@@ -1641,7 +1641,7 @@ def main():
         print("PUBLICATIEPAKKET AFGEBROKEN")
         print()
         print(error)
-        return
+        raise SystemExit(1)
 
     publication_modules = {
         parse_slug(slug)[0]
@@ -1654,7 +1654,7 @@ def main():
             "Fout: het publicatiepakket moet precies "
             "één module bevatten."
         )
-        return
+        raise SystemExit(1)
 
     publication_module = next(
         iter(publication_modules)
@@ -1669,7 +1669,7 @@ def main():
         print("BUILD AFGEBROKEN")
         print()
         print(error)
-        return
+        raise SystemExit(1)
 
     if not DRY_RUN:
         try:
@@ -1681,7 +1681,7 @@ def main():
             print("PUBLICATIE AFGEBROKEN")
             print()
             print(error)
-            return
+            raise SystemExit(1)
 
         newly_published_slugs = {
             slug
