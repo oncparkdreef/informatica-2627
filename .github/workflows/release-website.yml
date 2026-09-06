@@ -1,0 +1,124 @@
+﻿name: Release website
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout year repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12.10"
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.20.0"
+
+      - name: Prepare source deploy key
+        shell: pwsh
+        env:
+          SOURCE_DEPLOY_KEY: ${{ secrets.INFORMATICA_SOURCE_DEPLOY_KEY }}
+        run: |
+          $sshDir = Join-Path $HOME ".ssh"
+
+          New-Item `
+            -ItemType Directory `
+            -Path $sshDir `
+            -Force | Out-Null
+
+          $keyPath = Join-Path `
+            $sshDir `
+            "onc_informatica_2627_source"
+
+          [System.IO.File]::WriteAllText(
+            $keyPath,
+            $env:SOURCE_DEPLOY_KEY,
+            [System.Text.UTF8Encoding]::new($false)
+          )
+
+          icacls `
+            $keyPath `
+            /inheritance:r `
+            /grant:r "$($env:USERNAME):(R)" |
+            Out-Null
+
+          ssh-keyscan github.com 2>$null |
+            Set-Content `
+              -Path (Join-Path $sshDir "known_hosts") `
+              -Encoding ascii
+
+      - name: Prepare exporter deploy key
+        shell: pwsh
+        env:
+          EXPORT_DEPLOY_KEY: ${{ secrets.INFORMATICA_EXPORT_DEPLOY_KEY }}
+        run: |
+          $sshDir = Join-Path $HOME ".ssh"
+
+          $keyPath = Join-Path `
+            $sshDir `
+            "onc_informatica_export"
+
+          [System.IO.File]::WriteAllText(
+            $keyPath,
+            $env:EXPORT_DEPLOY_KEY,
+            [System.Text.UTF8Encoding]::new($false)
+          )
+
+          icacls `
+            $keyPath `
+            /inheritance:r `
+            /grant:r "$($env:USERNAME):(R)" |
+            Out-Null
+
+      - name: Install informatica exporter
+        shell: pwsh
+        run: |
+          $exportKey = Join-Path `
+            $HOME `
+            ".ssh\onc_informatica_export"
+
+          $env:GIT_SSH_COMMAND = `
+            "ssh -i `"$exportKey`" -o IdentitiesOnly=yes"
+
+          python -m pip install `
+            "git+ssh://git@github.com/oncparkdreef/informatica-export.git@main"
+
+          informatica-export --help
+
+      - name: Install Module01 Python dependencies
+        shell: pwsh
+        run: |
+          $sourceKey = Join-Path `
+            $HOME `
+            ".ssh\onc_informatica_2627_source"
+
+          $env:GIT_SSH_COMMAND = `
+            "ssh -i `"$sourceKey`" -o IdentitiesOnly=yes"
+
+          $dependencySource = Join-Path `
+            $env:RUNNER_TEMP `
+            "informatica-source-dependencies"
+
+          git clone `
+            --branch main `
+            --single-branch `
+            --depth 1 `
+            git@github.com:oncparkdreef/informatica-2627-source.git `
+            $dependencySource
+
+          python -m pip install `
+            -r "$dependencySource\module01\requirements.txt"
+
+          python -m mkdocs --version
+
+      - name: Build website release
+        shell: pwsh
+        run: |
+          python website-release/release_website.py
