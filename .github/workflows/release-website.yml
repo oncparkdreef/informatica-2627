@@ -82,9 +82,18 @@ jobs:
             $sshDir `
             "onc_informatica_export"
 
+          $keyText = $env:EXPORT_DEPLOY_KEY.Replace(
+            "`r`n",
+            "`n"
+          )
+
+          if (-not $keyText.EndsWith("`n")) {
+            $keyText += "`n"
+          }
+
           [System.IO.File]::WriteAllText(
             $keyPath,
-            $env:EXPORT_DEPLOY_KEY,
+            $keyText,
             [System.Text.UTF8Encoding]::new($false)
           )
 
