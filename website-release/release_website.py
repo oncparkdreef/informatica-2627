@@ -1081,6 +1081,11 @@ def prepare_publication_package(
         exist_ok=True,
     )
 
+    shutil.copy2(
+        UNDERSTANDING_ROOT / "index.md",
+        package_understanding_root / "index.md",
+    )
+
     for source_path in all_dependencies:
         relative_path = (
             source_path.resolve()
