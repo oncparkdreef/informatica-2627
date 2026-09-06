@@ -486,7 +486,7 @@ def get_content_path_for_wrapper(wrapper_path):
 
     try:
         relative = wrapper_path.relative_to(
-            UNDERSTANDING_ROOT
+            UNDERSTANDING_ROOT.resolve()
         )
     except ValueError:
         return None
