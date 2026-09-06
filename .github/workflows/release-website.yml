@@ -38,9 +38,18 @@ jobs:
             $sshDir `
             "onc_informatica_2627_source"
 
+          $keyText = $env:SOURCE_DEPLOY_KEY.Replace(
+            "`r`n",
+            "`n"
+          )
+
+          if (-not $keyText.EndsWith("`n")) {
+            $keyText += "`n"
+          }
+
           [System.IO.File]::WriteAllText(
             $keyPath,
-            $env:SOURCE_DEPLOY_KEY,
+            $keyText,
             [System.Text.UTF8Encoding]::new($false)
           )
 
