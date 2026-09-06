@@ -157,3 +157,20 @@ jobs:
         shell: pwsh
         run: |
           python website-release/release_website.py
+
+      - name: Verify website release output
+        shell: pwsh
+        run: |
+          $moduleIndex = "public-site\module01\index.html"
+          $errorPage = "public-site\404.html"
+
+          if (-not (Test-Path $moduleIndex)) {
+            throw "Ontbreekt: $moduleIndex"
+          }
+
+          if (-not (Test-Path $errorPage)) {
+            throw "Ontbreekt: $errorPage"
+          }
+
+          Write-Host "Gevonden: $moduleIndex"
+          Write-Host "Gevonden: $errorPage"
