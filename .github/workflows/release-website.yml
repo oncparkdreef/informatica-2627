@@ -198,3 +198,8 @@ jobs:
 
           Write-Host "Klaar voor publicatie: module01"
           Write-Host "Klaar voor publicatie: 404.html"
+
+      - name: Show publication changes
+        shell: pwsh
+        run: |
+          git status --short
