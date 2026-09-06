@@ -25,6 +25,7 @@ jobs:
         shell: pwsh
         env:
           SOURCE_DEPLOY_KEY: ${{ secrets.INFORMATICA_SOURCE_DEPLOY_KEY }}
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           $sshDir = Join-Path $HOME ".ssh"
 
@@ -51,8 +52,16 @@ jobs:
 
           $knownHosts = Join-Path $sshDir "known_hosts"
 
+          $headers = @{
+            Authorization = "Bearer $env:GITHUB_TOKEN"
+            Accept = "application/vnd.github+json"
+            "X-GitHub-Api-Version" = "2022-11-28"
+            "User-Agent" = "informatica-2627-release"
+          }
+
           $githubMeta = Invoke-RestMethod `
-            -Uri "https://api.github.com/meta"
+            -Uri "https://api.github.com/meta" `
+            -Headers $headers
 
           $githubMeta.ssh_keys |
             ForEach-Object {
