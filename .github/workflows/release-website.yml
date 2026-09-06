@@ -49,17 +49,18 @@ jobs:
             /grant:r "$($env:USERNAME):(R)" |
             Out-Null
 
-          Write-Host "icacls exit code: $LASTEXITCODE"
-
           $knownHosts = Join-Path $sshDir "known_hosts"
 
-          ssh-keyscan github.com 2>$null |
+          $githubMeta = Invoke-RestMethod `
+            -Uri "https://api.github.com/meta"
+
+          $githubMeta.ssh_keys |
+            ForEach-Object {
+              "github.com $_"
+            } |
             Set-Content `
               -Path $knownHosts `
               -Encoding ascii
-
-          Write-Host "ssh-keyscan exit code: $LASTEXITCODE"
-          Write-Host "known_hosts exists: $(Test-Path $knownHosts)"
 
       - name: Prepare exporter deploy key
         shell: pwsh
