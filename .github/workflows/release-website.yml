@@ -177,3 +177,24 @@ jobs:
 
           Write-Host "Gevonden: $moduleIndex"
           Write-Host "Gevonden: $errorPage"
+
+      - name: Prepare website files for publication
+        shell: pwsh
+        run: |
+          Remove-Item "module01" `
+            -Recurse `
+            -Force `
+            -ErrorAction SilentlyContinue
+
+          Copy-Item `
+            "public-site\module01" `
+            "module01" `
+            -Recurse
+
+          Copy-Item `
+            "public-site\404.html" `
+            "404.html" `
+            -Force
+
+          Write-Host "Klaar voor publicatie: module01"
+          Write-Host "Klaar voor publicatie: 404.html"
