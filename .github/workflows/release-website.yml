@@ -203,3 +203,24 @@ jobs:
         shell: pwsh
         run: |
           git status --short
+
+      - name: Publish website release
+        shell: pwsh
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -- `
+            "module01" `
+            "404.html" `
+            "website-release/release-plans/website.csv"
+
+          $changes = git diff --cached --name-only
+
+          if (-not $changes) {
+            Write-Host "Geen publicatiewijzigingen om te committen."
+            exit 0
+          }
+
+          git commit -m "Release website"
+          git push origin HEAD:main
