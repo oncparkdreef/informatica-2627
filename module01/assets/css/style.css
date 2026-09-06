@@ -1,0 +1,342 @@
+/* =========================================================
+   FONT
+   PT Sans — zelfde fontfamilie als CS50
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;600;700&display=swap");
+
+:root {
+  --module-font: "PT Sans", sans-serif;
+}
+
+
+/* =========================================================
+   MODULE — ALGEMENE PAGINASTIJL
+   Gedeeld door Week, Thinking Set en Problem Set
+   ========================================================= */
+
+
+/* =========================================================
+   PAGINA
+   ========================================================= */
+
+.module-page {
+  width: 100%;
+  max-width: 1000px;
+
+  font-family: var(--module-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+
+  color: rgb(33, 37, 41);
+}
+
+
+/* =========================================================
+   PAGINATITEL — H1
+   CS50-referentie:
+   28.1px / 33.7px / 700
+   ========================================================= */
+
+.md-content .module-page h1 {
+  width: 100%;
+
+  margin: 0 0 16px;
+  padding: 16px 0 8px;
+
+  border-bottom: 1px solid rgb(233, 236, 239);
+
+  font-family: var(--module-font);
+  font-size: 28px !important;
+  font-weight: 700;
+  line-height: 33.6px;
+
+  color: rgb(33, 37, 41);
+}
+
+.md-content .module-page h1 em {
+  margin-left: 0.2rem;
+
+  font-style: normal;
+  font-weight: 600;
+
+  color: var(--md-default-fg-color--light);
+}
+
+
+/* =========================================================
+   PAGINA-METADATA
+   Eigen modulecomponent
+   ========================================================= */
+
+.module-page .page-meta {
+  width: 100%;
+
+  margin: 0 0 16px;
+
+  font-family: var(--module-font);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+
+  color: rgb(33, 37, 41);
+}
+
+.module-page .page-meta strong {
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   SECTIEKOPPEN — H2
+   CS50-referentie:
+   28px / 33.6px / 700
+   ========================================================= */
+
+.md-content .module-page h2 {
+  width: 100%;
+
+  margin: 0 0 16px;
+  padding: 16px 0 8px;
+
+  border-bottom: 1px solid rgb(233, 236, 239);
+
+  font-family: var(--module-font);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 33.6px;
+
+  color: rgb(33, 37, 41);
+}
+
+
+/* =========================================================
+   SUBKOPPEN — H3
+   CS50-referentie:
+   22.7px / 27.2px / 700
+   ========================================================= */
+
+.md-content .module-page h3 {
+  width: 100%;
+
+  margin: 0 0 16px;
+  padding-top: 16px;
+
+  font-family: var(--module-font);
+  font-size: 22.7px;
+  font-weight: 700;
+  line-height: 27.2px;
+
+  color: rgb(33, 37, 41);
+}
+
+
+/* =========================================================
+   SUBKOPPEN — H4
+   CS50-referentie:
+   20px / 24px / 700
+   ========================================================= */
+
+.md-content .module-page h4 {
+  width: 100%;
+
+  margin: 0 0 16px;
+  padding-top: 16px;
+
+  font-family: var(--module-font);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+
+  color: rgb(33, 37, 41);
+}
+
+
+/* =========================================================
+   NORMALE TEKST
+   CS50-referentie:
+   16px / 24px / 400
+   ========================================================= */
+
+.module-page p {
+  width: 100%;
+
+  margin: 16px 0;
+
+  font-family: var(--module-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+
+  color: rgb(33, 37, 41);
+}
+
+.module-page p strong {
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   LIJSTEN
+   Zelfde basistypografie als bodytekst
+   ========================================================= */
+
+.module-page ul,
+.module-page ol {
+  width: 100%;
+
+  margin: 16px 0;
+  padding-left: 1.5rem;
+
+  font-family: var(--module-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+
+  color: rgb(33, 37, 41);
+}
+
+.module-page li {
+  margin-bottom: 0;
+}
+
+.module-page li strong {
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   LINKS
+   Eigen sitekleur behouden
+   ========================================================= */
+
+.module-page a {
+  color: var(--md-primary-fg-color);
+  text-decoration: none;
+}
+
+.module-page a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.module-page a:focus-visible {
+  outline: 2px solid var(--md-primary-fg-color);
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   INLINE CODE
+   CS50-referentie:
+   14px / 21px / 700
+   ========================================================= */
+
+.module-page code {
+  font-family:
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
+    "Courier New",
+    monospace;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+
+/* =========================================================
+   BLOCKQUOTES
+   Eigen modulecomponent
+   ========================================================= */
+
+.module-page blockquote {
+  width: 100%;
+
+  margin: 16px 0;
+  padding: 8px 12px;
+
+  border-left: 2px solid var(--md-default-fg-color--light);
+  background: var(--md-default-fg-color--lightest);
+
+  font-family: var(--module-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+
+  color: rgb(33, 37, 41);
+}
+
+.module-page blockquote p {
+  margin: 0;
+
+  font-size: inherit;
+  line-height: inherit;
+}
+
+
+/* =========================================================
+   CODEBLOKKEN
+   CS50-referentie:
+   14px / 17.5px / 400
+   background #f8f8f8
+   border #dee2e6
+   padding 8px 12px
+   ========================================================= */
+
+.module-page pre {
+  width: 100%;
+
+  margin: 0 0 16px;
+  padding: 8px 12px;
+
+  border: 1px solid rgb(222, 226, 230);
+  background: rgb(248, 248, 248);
+
+  font-family:
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
+    "Courier New",
+    monospace;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17.5px;
+
+  color: rgb(33, 37, 41);
+
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+
+/* Code binnen een codeblok */
+
+.module-page pre code {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 400;
+  line-height: inherit;
+
+  color: inherit;
+}
+
+/* =========================================================
+   RESPONSIVE
+   Alleen breedte aanpassen.
+   Typografie blijft bewust gelijk.
+   ========================================================= */
+
+@media screen and (max-width: 800px) {
+
+  .module-page {
+    max-width: 100%;
+  }
+}

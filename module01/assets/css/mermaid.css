@@ -1,0 +1,21 @@
+/* =========================================================
+   MERMAID
+
+   Mermaid-diagrammen worden op 3× resolutie gerenderd
+   voor een scherpe weergave.
+
+   De build zet de HTML-breedte en -hoogte terug naar
+   1/3 van de PNG-afmetingen.
+
+   CSS vergroot deze afmetingen niet en verkleint het
+   diagram alleen wanneer de beschikbare ruimte kleiner is.
+   ========================================================= */
+
+.mermaid-image {
+  display: block;
+
+  max-width: 100%;
+  height: auto;
+
+  margin: 0.65rem 0 0.75rem;
+}

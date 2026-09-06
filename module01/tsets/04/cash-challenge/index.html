@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="nl">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Computational Thinking met Python" name="description"/>
+<meta content="Jack Henze" name="author"/>
+<link href="https://oncparkdreef.github.io/informatica-2627/module01/tsets/04/cash-challenge/" rel="canonical"/>
+<link href="../../03/guess-the-number/" rel="prev"/>
+<link href="../../05/hogwarts-houses/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.6" name="generator"/>
+<title>Cash Challenge - Module 01</title>
+<link href="../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../assets/css/style.css" rel="stylesheet"/>
+<link href="../../../assets/css/navigation.css" rel="stylesheet"/>
+<link href="../../../assets/css/reference.css" rel="stylesheet"/>
+<link href="../../../assets/css/goals.css" rel="stylesheet"/>
+<link href="../../../assets/css/test.css" rel="stylesheet"/>
+<link href="../../../assets/css/badges.css" rel="stylesheet"/>
+<link href="../../../assets/css/details.css" rel="stylesheet"/>
+<link href="../../../assets/css/video.css" rel="stylesheet"/>
+<link href="../../../assets/css/mermaid.css" rel="stylesheet"/>
+<link href="../../../assets/css/homepage.css" rel="stylesheet"/>
+<link href="../../../assets/css/week.css" rel="stylesheet"/>
+<link href="../../../assets/css/tset.css" rel="stylesheet"/>
+<link href="../../../assets/css/pset-index.css" rel="stylesheet"/>
+<link href="../../../assets/css/pset.css" rel="stylesheet"/>
+<link href="../../../assets/css/understanding.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#thinking-set-4-cash-challenge">
+          Ga naar inhoud
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Module 01" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Module 01">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Module 01
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Cash Challenge
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Zoeken" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Zoeken" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Zoeken" class="md-search__options">
+<button aria-label="Leegmaken" class="md-search__icon md-icon" tabindex="-1" title="Leegmaken" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Zoeken initialiseren
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+                    ﻿<nav aria-label="Cursusnavigatie" class="course-nav">
+<header class="course-nav__header">
+<a class="course-nav__home" href="../../..">
+<strong>Module 01</strong>
+<span>Computational Thinking met Python</span>
+</a>
+</header>
+<div class="course-nav__section">
+<a href="../../../guide/index.html">Over deze module</a>
+<a href="../../../guide/software.html">Software</a>
+<a href="../../../guide/werkwijze.html">Werkwijze</a>
+<a href="../../../guide/portfolio.html">Portfolio</a>
+<a href="../../../guide/git-github.html">Git &amp; GitHub</a>
+</div>
+<div class="course-nav__section course-nav__weeks">
+<a href="../../../weeks/00/">
+<strong>Week 0</strong>
+<span>Denken als een computer</span>
+</a>
+<a href="../../../weeks/01/">
+<strong>Week 1</strong>
+<span>Mens en machine</span>
+</a>
+<a href="../../../weeks/02/">
+<strong>Week 2</strong>
+<span>Werken met informatie</span>
+</a>
+<a href="../../../weeks/03/">
+<strong>Week 3</strong>
+<span>Slimme keuzes</span>
+</a>
+<a href="../../../weeks/04/">
+<strong>Week 4</strong>
+<span>Blijven herhalen</span>
+</a>
+<a href="../../../weeks/05/">
+<strong>Week 5</strong>
+<span>Gegevens verzamelen</span>
+</a>
+<a href="../../../weeks/06/">
+<strong>Week 6</strong>
+<span>Patronen ontdekken</span>
+</a>
+<a href="../../../weeks/07/">
+<strong>Week 7</strong>
+<span>Informatie interpreteren</span>
+</a>
+<a href="../../../weeks/08/">
+<strong>Week 8</strong>
+<span>Slimmer structureren</span>
+</a>
+<a href="../../../weeks/09/">
+<strong>Week 9</strong>
+<span>Modulaire systemen</span>
+</a>
+<a href="../../../weeks/10/">
+<strong>Week 10</strong>
+<span>Herinneringen beheren</span>
+</a>
+<a href="../../../weeks/11/">
+<strong>Week 11</strong>
+<span>Schoolexamen</span>
+</a>
+</div>
+<div class="course-nav__section">
+<a href="../../../understanding/">
+<strong>Understanding</strong>
+</a>
+</div>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Inhoudsopgave" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#waar-werk-je-aan">
+<span class="md-ellipsis">
+      
+        Waar werk je aan?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#de-challenge">
+<span class="md-ellipsis">
+      
+        De challenge
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#maak-je-denken-zichtbaar">
+<span class="md-ellipsis">
+      
+        Maak je denken zichtbaar
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#understanding">
+<span class="md-ellipsis">
+      
+        Understanding
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#test-jullie-oplossing">
+<span class="md-ellipsis">
+      
+        Test jullie oplossing
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<div class="module-page tset-page">
+<h1 id="thinking-set-4-cash-challenge">Thinking Set 4 <em>Cash Challenge</em></h1>
+<p><span class="badge badge-ct">
+<span class="badge-label">CT-domein</span>
+<span class="badge-value">Algoritmen</span>
+</span>
+<span class="badge badge-process">
+<span class="badge-label">CT-proces</span>
+<span class="badge-value">Expressing the Solution</span>
+</span></p>
+<h2 id="waar-werk-je-aan">Waar werk je aan?</h2>
+<p>In deze Thinking Set werk je aan de volgende leerdoelen:</p>
+<ul>
+<li>Ik kan <strong>beredeneren</strong> hoe opeenvolgende stappen logisch samenhangen.</li>
+<li>Ik kan <strong>één of meerdere algoritmische oplossingen genereren</strong>.</li>
+</ul>
+<h2 id="de-challenge">De challenge</h2>
+<p>Kevin betaalt meer voor zijn pizza dan nodig is. De pizzabezorger accepteert het geld en zegt: "Keep the change."</p>
+<p>Mensen moeten een bedrag systematisch kunnen omzetten in een verzameling munten of biljetten, waarbij dezelfde handeling net zo lang wordt herhaald totdat het volledige wisselgeld is teruggegeven.</p>
+<p><strong>Hoe ontwerp je een systeem dat een herhalende handeling blijft uitvoeren totdat een vooraf bepaalde eindtoestand is bereikt?</strong></p>
+<h2 id="maak-je-denken-zichtbaar">Maak je denken zichtbaar</h2>
+<p>Werk jullie oplossing uit als een <strong>flowchart</strong>.</p>
+<p>Een flowchart maakt zichtbaar welke stappen worden herhaald en onder welke voorwaarde het proces doorgaat of stopt.</p>
+<p><img alt="Diagram keep-the-change-01" class="mermaid-image" data-mermaid-id="keep-the-change-01" height="475" src="../../../assets/generated/mermaid/sets/keep-the-change-01.png" width="181"/>
+Zet daarna <strong>dezelfde oplossing</strong> om in pseudocode.</p>
+<p>Een herhalend proces kan er in pseudocode bijvoorbeeld zo uitzien:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>1. Bepaal de beginsituatie
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>2. Zolang het doel nog niet is bereikt
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>   2.1 Voer de volgende stap uit
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>   2.2 Werk de toestand bij
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>3. Toon het resultaat
+</code></pre></div>
+<p>Maak in jullie pseudocode zichtbaar:</p>
+<ul>
+<li>welke stappen worden herhaald;</li>
+<li>wanneer de herhaling doorgaat;</li>
+<li>wat tijdens iedere herhaling verandert;</li>
+<li>en wanneer het proces stopt.</li>
+</ul>
+<p>Gebruik gewone taal en beschrijf <strong>wat er logisch moet gebeuren</strong>, zonder Python-code te schrijven.</p>
+<h2 id="understanding">Understanding</h2>
+<p><a href="../../../understanding/visual-first/flowcharts/while-loop/">Flowcharts — While Loops</a></p>
+<p><a href="../../../understanding/visual-first/pseudocode/pseudocode-repetition/">Pseudocode — Herhaling</a></p>
+<h2 id="test-jullie-oplossing">Test jullie oplossing</h2>
+<p>Geef jullie <strong>flowchart en pseudocode</strong> aan een andere groep.</p>
+<p>Laat hen verschillende bedragen door jullie systeem doorlopen.</p>
+<p><strong>Geeft het systeem voor verschillende bedragen steeds het juiste wisselgeld terug en stopt het precies wanneer er geen wisselgeld meer over is?</strong></p>
+<p><strong>Beschrijven jullie flowchart en pseudocode daarbij dezelfde oplossing?</strong></p>
+</div>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tracking", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+<script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

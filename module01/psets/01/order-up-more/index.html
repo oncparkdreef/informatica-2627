@@ -1,0 +1,731 @@
+
+<!doctype html>
+<html lang="nl" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Computational Thinking met Python">
+      
+      
+        <meta name="author" content="Jack Henze">
+      
+      
+        <link rel="canonical" href="https://oncparkdreef.github.io/informatica-2627/module01/psets/01/order-up-more/">
+      
+      
+        <link rel="prev" href="../order-up-less/">
+      
+      
+        <link rel="next" href="../../02/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Order Up! - Module 01</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/css/style.css">
+    
+      <link rel="stylesheet" href="../../../assets/css/navigation.css">
+    
+      <link rel="stylesheet" href="../../../assets/css/reference.css">
+    
+      <link rel="stylesheet" href="../../../assets/css/goals.css">
+    
+      <link rel="stylesheet" href="../../../assets/css/test.css">
+    
+      <link rel="stylesheet" href="../../../assets/css/badges.css">
+    
+      <link rel="stylesheet" href="../../../assets/css/details.css">
+    
+      <link rel="stylesheet" href="../../../assets/css/video.css">
+    
+      <link rel="stylesheet" href="../../../assets/css/mermaid.css">
+    
+      <link rel="stylesheet" href="../../../assets/css/homepage.css">
+    
+      <link rel="stylesheet" href="../../../assets/css/week.css">
+    
+      <link rel="stylesheet" href="../../../assets/css/tset.css">
+    
+      <link rel="stylesheet" href="../../../assets/css/pset-index.css">
+    
+      <link rel="stylesheet" href="../../../assets/css/pset.css">
+    
+      <link rel="stylesheet" href="../../../assets/css/understanding.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#order-up" class="md-skip">
+          Ga naar inhoud
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Module 01" class="md-header__button md-logo" aria-label="Module 01" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Module 01
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Order Up!
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Zoeken" placeholder="Zoeken" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Zoeken">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Leegmaken" aria-label="Leegmaken" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Zoeken initialiseren
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    ﻿<nav class="course-nav" aria-label="Cursusnavigatie">
+
+  <header class="course-nav__header">
+    <a class="course-nav__home" href="../../..">
+      <strong>Module 01</strong>
+      <span>Computational Thinking met Python</span>
+    </a>
+  </header>
+
+  <div class="course-nav__section">
+    <a href="../../../guide/index.html">Over deze module</a>
+    <a href="../../../guide/software.html">Software</a>
+    <a href="../../../guide/werkwijze.html">Werkwijze</a>
+    <a href="../../../guide/portfolio.html">Portfolio</a>
+    <a href="../../../guide/git-github.html">Git &amp; GitHub</a>
+  </div>
+
+  <div class="course-nav__section course-nav__weeks">
+
+    <a href="../../../weeks/00/">
+      <strong>Week 0</strong>
+      <span>Denken als een computer</span>
+    </a>
+
+    <a href="../../../weeks/01/">
+      <strong>Week 1</strong>
+      <span>Mens en machine</span>
+    </a>
+
+    <a href="../../../weeks/02/">
+      <strong>Week 2</strong>
+      <span>Werken met informatie</span>
+    </a>
+
+    <a href="../../../weeks/03/">
+      <strong>Week 3</strong>
+      <span>Slimme keuzes</span>
+    </a>
+
+    <a href="../../../weeks/04/">
+      <strong>Week 4</strong>
+      <span>Blijven herhalen</span>
+    </a>
+
+    <a href="../../../weeks/05/">
+      <strong>Week 5</strong>
+      <span>Gegevens verzamelen</span>
+    </a>
+
+    <a href="../../../weeks/06/">
+      <strong>Week 6</strong>
+      <span>Patronen ontdekken</span>
+    </a>
+
+    <a href="../../../weeks/07/">
+      <strong>Week 7</strong>
+      <span>Informatie interpreteren</span>
+    </a>
+
+    <a href="../../../weeks/08/">
+      <strong>Week 8</strong>
+      <span>Slimmer structureren</span>
+    </a>
+
+    <a href="../../../weeks/09/">
+      <strong>Week 9</strong>
+      <span>Modulaire systemen</span>
+    </a>
+
+    <a href="../../../weeks/10/">
+      <strong>Week 10</strong>
+      <span>Herinneringen beheren</span>
+    </a>
+
+    <a href="../../../weeks/11/">
+      <strong>Week 11</strong>
+      <span>Schoolexamen</span>
+    </a>
+
+  </div>
+
+  <div class="course-nav__section">
+    <a href="../../../understanding/">
+      <strong>Understanding</strong>
+    </a>
+  </div>
+
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#waar-werk-je-aan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Waar werk je aan?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probleem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Probleem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Demo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sequential-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sequential execution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opdracht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opdracht
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Opdracht">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#specificatie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Specificatie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inleveren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inleveren
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  <div class="module-page pset-page">
+    
+                  
+
+
+
+<h1 id="order-up">Order Up!</h1>
+<p><span class="badge-choice">meer vertrouwd</span>
+<span class="badge badge-python">
+  <span class="badge-label">Python</span>
+  <span class="badge-value">print() + input() + sequence</span>
+</span>
+<span class="badge badge-visual">
+  <span class="badge-label">Visual First</span>
+  <span class="badge-value">Flowchart</span>
+</span>
+<span class="badge badge-ct">
+  <span class="badge-label">CT-domein</span>
+  <span class="badge-value">Algoritmen</span>
+</span>
+<span class="badge badge-process">
+  <span class="badge-label">CT-proces</span>
+  <span class="badge-value">Expressing the Solution</span>
+</span></p>
+<h2 id="waar-werk-je-aan">Waar werk je aan?</h2>
+<p>Met deze Problem Set werk je aan de volgende leerdoelen:</p>
+<ul>
+<li>Ik kan <strong>een geordende reeks instructies formuleren</strong> om een probleem op te lossen.</li>
+<li>Ik kan <strong>een interactie tussen gebruiker en systeem structureren</strong>.</li>
+<li>Ik kan <strong>een geordende reeks instructies uitdrukken in Python</strong>.</li>
+</ul>
+<h2 id="probleem">Probleem</h2>
+<p>Een restaurant wil een digitale bestelzuil gebruiken voor tafels met meerdere personen.</p>
+<p>Aan een tafel zitten vier personen. Iedere persoon moet zelfstandig dezelfde vaste bestelroute kunnen doorlopen.</p>
+<p>De bestelzuil moet steeds duidelijk maken wie aan de beurt is en iedere persoon stap voor stap door het bestelproces leiden.</p>
+<p><strong>Hoe ontwerp en programmeer je een bestelzuil waarmee vier personen achter elkaar zelfstandig dezelfde bestelroute kunnen doorlopen?</strong></p>
+<h2 id="demo">Demo</h2>
+<p>[DEMO LATER TOEVOEGEN]</p>
+<h2 id="understanding">Understanding</h2>
+<h3 id="sequential-execution">Sequential execution</h3>
+<p>Python voert statements standaard uit in de volgorde waarin ze in het
+programma staan: van boven naar beneden.</p>
+<p>Bijvoorbeeld:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;First&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Second&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Third&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>De uitvoer is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>First
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Second
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Third
+</code></pre></div>
+<p>Deze uitvoering van statements in een vaste volgorde noemen we
+<strong>sequential execution</strong>.</p>
+<p>Ook wanneer <code>print()</code> en <code>input()</code> worden gecombineerd, blijft deze
+volgorde bestaan:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;First&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Press Enter to continue &quot;</span><span class="p">)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Second&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Python:</p>
+<ol>
+<li>voert het eerste statement uit;</li>
+<li>wacht bij het tweede statement op invoer;</li>
+<li>gaat daarna verder met het derde statement.</li>
+</ol>
+<p>De volgorde van statements bepaalt dus de volgorde waarin het programma
+wordt uitgevoerd.</p>
+<p>Welke statements nodig zijn en in welke volgorde ze moeten staan, hangt af
+van het probleem dat je probeert op te lossen.</p>
+<h2 id="opdracht">Opdracht</h2>
+<p>Nu ga je deze kennis gebruiken om het probleem van <strong>Order Up!</strong> op te lossen.</p>
+<p>Ontwerp en programmeer een digitale bestelzuil voor een tafel van vier personen.</p>
+<h3 id="specificatie">Specificatie</h3>
+<p>Je programma moet:</p>
+<ul>
+<li>duidelijk maken wanneer de bestelroute begint;</li>
+<li>vier personen achter elkaar dezelfde vaste bestelroute laten doorlopen;</li>
+<li>steeds duidelijk maken welke persoon aan de beurt is;</li>
+<li>iedere persoon minimaal <strong>drie opeenvolgende invoermomenten</strong> laten doorlopen;</li>
+<li>bij ieder invoermoment duidelijk maken welke informatie moet worden ingevoerd;</li>
+<li>met <code>input()</code> wachten op een reactie voordat het programma verdergaat;</li>
+<li>na iedere invoer logisch doorgaan naar de volgende stap;</li>
+<li>duidelijk maken wanneer de bestelroute van een persoon is afgerond;</li>
+<li>daarna doorgaan met de volgende persoon;</li>
+<li>aan het einde duidelijk maken dat de volledige tafel klaar is met bestellen.</li>
+</ul>
+<p>Iedere persoon doorloopt <strong>dezelfde bestelroute in dezelfde vaste en logische volgorde</strong>.</p>
+<p>De antwoorden van een persoon veranderen deze volgorde niet. Ongeacht wat wordt ingevoerd, gaat het programma steeds door naar dezelfde volgende stap van de bestelroute.</p>
+<p>Pas nadat een persoon de volledige route heeft doorlopen, begint de route van de volgende persoon.</p>
+<p>Gebruik in Python <code>print()</code> en <code>input()</code>.</p>
+<h3 id="hints">Hints</h3>
+<p>Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.</p>
+<details class="hint">
+<summary>1 — Eén persoon eerst</summary>
+<p>Kijk nog niet naar alle vier de personen tegelijk.</p>
+<p>Ontwerp eerst één volledige bestelroute.</p>
+<p>Welke stappen doorloopt één persoon vanaf het begin tot het einde?</p>
+<p>Controleer of iedere stap logisch volgt op de vorige.</p>
+</details>
+<details class="hint">
+<summary>2 — Van één persoon naar vier</summary>
+<p>Bekijk nu wat er moet gebeuren nadat de eerste persoon klaar is.</p>
+<p>Welke delen van de interactie komen terug voor persoon 2, 3 en 4?</p>
+<p>Zorg dat het systeem steeds duidelijk maakt wie aan de beurt is en wanneer iemand klaar is.</p>
+</details>
+<details class="hint">
+<summary>3 — Controleer de volledige volgorde</summary>
+<p>Loop de volledige interactie van begin tot eind door.</p>
+<p>Controleer:</p>
+<ul>
+<li>begint iedere persoon op het juiste moment;</li>
+<li>is steeds duidelijk wie aan de beurt is;</li>
+<li>krijgt iedere persoon dezelfde bestelroute;</li>
+<li>gaat het programma pas naar de volgende persoon als de vorige klaar is;</li>
+<li>eindigt het programma pas nadat alle vier personen klaar zijn?</li>
+</ul>
+</details>
+<details class="hint">
+<summary>4 — Van ontwerp naar Python</summary>
+<p>Bekijk je ontworpen gebruikersflow stap voor stap.</p>
+<p>Met <code>print()</code> kan het systeem informatie tonen:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Persoon 1&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Met <code>input()</code> kan het programma wachten op een reactie:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Maak een keuze: &quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Vertaal nu je eigen ontwerp in dezelfde volgorde naar Python.</p>
+</details>
+<h3 id="testen">Testen</h3>
+<p>Je bestelzuil werkt pas goed als alle vier personen dezelfde volledige bestelroute achter elkaar in de juiste volgorde kunnen doorlopen.</p>
+<p>Noteer eerst welke route één persoon moet volgen:</p>
+<ol>
+<li>het begin van de route;</li>
+<li>de opeenvolgende invoermomenten;</li>
+<li>het einde van de route.</li>
+</ol>
+<p>Ontwerp daarna minimaal drie tests met verschillende antwoorden voor de vier personen.</p>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Invoer / antwoorden</th>
+<th>Verwachte route</th>
+<th>Werkelijke route</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Bepaal <strong>vooraf</strong> bij iedere test welke volledige route je verwacht.</p>
+<p>Omdat het programma een vaste sequentie uitvoert, moeten verschillende antwoorden steeds dezelfde volgorde opleveren:</p>
+<p><strong>persoon 1 → persoon 2 → persoon 3 → persoon 4 → tafel afgerond</strong></p>
+<p>Voer daarna iedere test uit.</p>
+<p>Controleer bij iedere test:</p>
+<ul>
+<li>of persoon 1 als eerste begint;</li>
+<li>of steeds duidelijk is welke persoon aan de beurt is;</li>
+<li>of iedere persoon alle ontworpen invoermomenten in dezelfde volgorde doorloopt;</li>
+<li>of het programma bij ieder invoermoment met <code>input()</code> wacht op een reactie;</li>
+<li>of de bestelroute van een persoon wordt afgerond voordat de volgende persoon begint;</li>
+<li>of persoon 2 pas na persoon 1 begint;</li>
+<li>of persoon 3 pas na persoon 2 begint;</li>
+<li>of persoon 4 pas na persoon 3 begint;</li>
+<li>of verschillende antwoorden de vaste bestelroute niet veranderen;</li>
+<li>of de melding dat de volledige tafel klaar is pas verschijnt nadat persoon 4 klaar is.</li>
+</ul>
+<p>Vergelijk daarna de werkelijke route met de verwachte route.</p>
+<p>Een test is geslaagd wanneer:</p>
+<p><strong>werkelijke route = verwachte route</strong></p>
+<p>Als dat niet zo is, onderzoek dan welke stap in je sequentie niet op het verwachte moment wordt uitgevoerd en pas je programma waar nodig aan.</p>
+<p><strong>Kun je met je drie tests aantonen dat vier personen achter elkaar dezelfde vaste bestelroute doorlopen en dat de volledige tafel pas na persoon 4 wordt afgerond?</strong></p>
+<h3 id="inleveren">Inleveren</h3>
+<p>Controleer voordat je de Problem Set afrondt:</p>
+<ul>
+<li>je programma voldoet aan de <strong>specificatie</strong>;</li>
+<li>vier personen doorlopen achter elkaar dezelfde vaste bestelroute;</li>
+<li>steeds is duidelijk wie aan de beurt is;</li>
+<li>de interactie verloopt in een <strong>vaste en logische volgorde</strong>;</li>
+<li>je gebruikt <code>print()</code> en <code>input()</code> om met de gebruikers te communiceren;</li>
+<li>je hebt met verschillende antwoorden gecontroleerd dat alle vier personen <strong>dezelfde vaste bestelroute</strong> doorlopen;</li>
+<li>je kunt uitleggen hoe je ontworpen volgorde is vertaald naar Python;</li>
+<li>je hebt tijdens het werken regelmatig gecommit;</li>
+<li>je laatste versie staat in Git.</li>
+</ul>
+<p>Werk daarna <strong>Portfolio 1</strong> bij.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+  </div>
+
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tracking", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
