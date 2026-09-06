@@ -1,0 +1,80 @@
+{% extends "main.html" %}
+
+{% block content %}
+  <h1
+    id="error-message"
+    style="font-size: 2rem; line-height: 1.2; margin-bottom: 1rem;"
+  >
+    {% if config.theme.language == "en" %}
+      Page not found
+    {% else %}
+      Pagina niet gevonden
+    {% endif %}
+  </h1>
+
+  <p id="error-detail">
+    {% if config.theme.language == "en" %}
+      The requested page does not exist or is not available.
+    {% else %}
+      De gevraagde pagina bestaat niet of is niet beschikbaar.
+    {% endif %}
+  </p>  
+
+  <div style="text-align: center;">
+    <img
+      id="error-image"
+      src=""
+      alt="Grumpy Cat 404"
+      style="width: 100%; max-width: 620px; height: auto;"
+    >
+  </div>
+
+  <script>
+    const releaseDates = __RELEASE_DATES__;
+    const isEnglish = "{{ config.theme.language }}" === "en";
+
+    const path = window.location.pathname;
+    const errorMessage = document.getElementById("error-message");
+    const errorDetail = document.getElementById("error-detail");
+
+    const siteRootMatch = path.match(
+      /^(.*\/module\d{2}\/)(?:(nl|en)\/)?/
+    );
+
+    if (siteRootMatch) {
+      const moduleRoot = siteRootMatch[1];
+      const languagePrefix = siteRootMatch[2]
+        ? `${siteRootMatch[2]}/`
+        : "";
+
+      document.getElementById("error-image").src =
+        `${moduleRoot}${languagePrefix}assets/images/404.png`;
+    }
+
+    const match = path.match(
+      /\/(?:weeks|tsets|psets|pdf-resources)\/(\d{2})(?:\/|$)/
+    );
+
+    if (match) {
+      const week = Number(match[1]);
+      const releaseDate = releaseDates[String(week)];
+
+      if (releaseDate) {
+        errorMessage.textContent = isEnglish
+          ? `Module 1 · Week ${week} · Available from ${releaseDate}`
+          : `Module 1 · Week ${week} · Beschikbaar vanaf ${releaseDate}`;
+      } else {
+        errorMessage.textContent =
+          `Module 1 · Week ${week}`;
+      }
+
+      errorDetail.textContent = "";
+    } else if (path.includes("/understanding/")) {
+      errorMessage.textContent = isEnglish
+        ? "This Understanding will be published later"
+        : "Deze Understanding wordt later gepubliceerd";
+
+      errorDetail.textContent = "";
+    }
+  </script>
+{% endblock %}
