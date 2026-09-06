@@ -1,11 +1,11 @@
 ﻿slug,release_date,ready,published
 m1-w00,,false,false
-m1-w01,,true,true
-m1-w02,,true,true
-m1-w03,,true,true
-m1-w04,,true,true
-m1-w05,,true,true
-m1-w06,03-09-2026,true,true
+m1-w01,06-09-2026,true,false
+m1-w02,06-09-2026,true,false
+m1-w03,06-09-2026,true,false
+m1-w04,06-09-2026,true,false
+m1-w05,06-09-2026,true,false
+m1-w06,06-09-2026,true,false
 m1-w07,,false,false
 m1-w08,,false,false
 m1-w09,,false,false
