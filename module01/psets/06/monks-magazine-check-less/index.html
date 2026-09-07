@@ -72,6 +72,8 @@
     
       <link rel="stylesheet" href="../../../assets/css/homepage.css">
     
+      <link rel="stylesheet" href="../../../assets/css/guide.css">
+    
       <link rel="stylesheet" href="../../../assets/css/week.css">
     
       <link rel="stylesheet" href="../../../assets/css/tset.css">
@@ -309,20 +311,28 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
   
+
   
-  
+
+  <nav class="md-nav md-nav--secondary page-toc-managed" aria-label="Inhoudsopgave">
+
     
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Inhoudsopgave
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    
+
+    
       
-        <li class="md-nav__item">
+    
+
+    
+      <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        Inhoudsopgave
+      </label>
+
+      <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+          <li class="md-nav__item">
   <a href="#waar-werk-je-aan" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -332,8 +342,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#probleem" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -343,8 +353,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#understanding" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -354,6 +364,18 @@
   </a>
   
     <nav class="md-nav" aria-label="Understanding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Python">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -543,6 +565,23 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithms-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithms &amp; Efficiency
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Algorithms &amp; Efficiency">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#beschrijven-met-n" class="md-nav__link">
     <span class="md-ellipsis">
@@ -558,8 +597,13 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#opdracht" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -593,6 +637,11 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#testen" class="md-nav__link">
     <span class="md-ellipsis">
@@ -604,12 +653,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#reflectie-op-de-oplossing" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -619,8 +663,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#inleveren" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -630,10 +674,13 @@
   </a>
   
 </li>
-      
-    </ul>
-  
-</nav>
+        
+      </ul>
+    
+
+  </nav>
+
+
                   </div>
                 </div>
               </div>
@@ -676,7 +723,7 @@
   <span class="badge-label">CT-proces</span>
   <span class="badge-value">Reflecting on the Solution</span>
 </span></p>
-<h2 id="waar-werk-je-aan">Waar werk je aan?</h2>
+<h2 class="page-toc" id="waar-werk-je-aan">Waar werk je aan?</h2>
 <p>In deze Problem Set werk je aan de volgende leerdoelen:</p>
 <ul>
 <li>Ik kan <strong>een volledige verzameling systematisch verwerken zonder elementen over te slaan</strong>.</li>
@@ -684,13 +731,15 @@
 <li>Ik kan <strong>met een Trace Table zichtbaar maken hoe de toestand tijdens de verwerking verandert</strong>.</li>
 <li>Ik kan <strong>patronen in de verwerking herkennen en uitleggen wat deze betekenen voor mijn oplossing</strong>.</li>
 </ul>
-<h2 id="probleem">Probleem</h2>
+<h2 class="page-toc" id="probleem">Probleem</h2>
 <p>Monk heeft een verzameling tijdschriften die op dit moment nog niet op volgorde staat.</p>
 <p>Ieder tijdschrift heeft een nummer. Voordat Monk de verzameling kan ordenen, wil hij weten welk tijdschrift het kleinste nummer heeft, welk tijdschrift het grootste nummer heeft en op welke positie beide tijdschriften nu staan.</p>
 <p>Een computersysteem moet daarvoor de volledige verzameling systematisch kunnen verwerken zonder tijdschriften over te slaan of dubbel te behandelen.</p>
 <p><strong>Hoe ontwerp je een algoritme dat een volledige gegevensverzameling systematisch verwerkt?</strong></p>
-<h2 id="understanding">Understanding</h2>
-<h3 id="for"><code>for</code></h3>
+<h2 class="page-toc" id="understanding">Understanding</h2>
+<section class="section-understanding">
+<h3 class="page-toc" id="python">Python</h3>
+<h4 id="for"><code>for</code></h4>
 <p>Een <code>for</code>-loop gebruikt Python om dezelfde code uit te voeren voor ieder item uit een verzameling.</p>
 <p>Bijvoorbeeld:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">]</span>
@@ -705,7 +754,7 @@
 </code></pre></div>
 <p>Python verwerkt de list van links naar rechts.</p>
 <p>Bij de eerste iteration krijgt <code>color</code> de waarde <code>"red"</code>, daarna <code>"blue"</code> en daarna <code>"green"</code>.</p>
-<h3 id="de-loop-variable">De loop variable</h3>
+<h4 id="de-loop-variable">De loop variable</h4>
 <p>In:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">colors</span><span class="p">:</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
@@ -724,7 +773,7 @@
 <li>Python gaat verder met het volgende item;</li>
 <li>wanneer er geen items meer zijn, gaat Python verder met de code na de <code>for</code>.</li>
 </ol>
-<h3 id="iteration">Iteration</h3>
+<h4 id="iteration">Iteration</h4>
 <p>Eén uitvoering van de ingesprongen code noemen we een <strong>iteration</strong>.</p>
 <p>Bij:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
@@ -757,7 +806,7 @@
 </table>
 <p>Een list met vijf items levert op deze manier vijf iterations op.</p>
 <p>Een lege list levert geen iterations op.</p>
-<h3 id="indentation">Indentation</h3>
+<h4 id="indentation">Indentation</h4>
 <p>De code die bij de <code>for</code> hoort, staat ingesprongen:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
@@ -766,7 +815,7 @@
 </code></pre></div>
 <p><code>print(number)</code> wordt tijdens iedere iteration uitgevoerd.</p>
 <p><code>print("klaar")</code> staat niet meer binnen de loop en wordt pas uitgevoerd nadat alle items zijn verwerkt.</p>
-<h3 id="for-en-while"><code>for</code> en <code>while</code></h3>
+<h4 id="for-en-while"><code>for</code> en <code>while</code></h4>
 <p>Zowel <code>for</code> als <code>while</code> kunnen code herhalen, maar ze gebruiken een ander uitgangspunt.</p>
 <p>Bij een <code>while</code> bepaalt een condition of de volgende iteration plaatsvindt:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">while</span> <span class="n">condition</span><span class="p">:</span>
@@ -777,7 +826,7 @@
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="n">action</span>
 </code></pre></div>
 <p>Een <code>for</code> is daarom geschikt wanneer je een verzameling systematisch item voor item wilt verwerken.</p>
-<h3 id="een-list-systematisch-doorlopen">Een list systematisch doorlopen</h3>
+<h4 id="een-list-systematisch-doorlopen">Een list systematisch doorlopen</h4>
 <p>Een list bevat meerdere items.</p>
 <p>Met een <code>for</code>-loop kun je ieder item uit die list één voor één verwerken.</p>
 <p>Bijvoorbeeld:</p>
@@ -793,7 +842,7 @@
 <a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>9
 </code></pre></div>
 <p>Dit noemen we het <strong>doorlopen</strong> of <strong>itereren over</strong> een list.</p>
-<h3 id="dezelfde-bewerking-voor-ieder-item">Dezelfde bewerking voor ieder item</h3>
+<h4 id="dezelfde-bewerking-voor-ieder-item">Dezelfde bewerking voor ieder item</h4>
 <p>Een belangrijk patroon bij gegevensverwerking is dat ieder item volgens dezelfde werkwijze wordt behandeld.</p>
 <p>Bijvoorbeeld:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">temperatures</span> <span class="o">=</span> <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">19</span><span class="p">]</span>
@@ -803,7 +852,7 @@
 </code></pre></div>
 <p>Dezelfde bewerking wordt uitgevoerd voor ieder item uit de list.</p>
 <p>De code binnen de <code>for</code> hoeft dus niet voor ieder item opnieuw te worden geschreven.</p>
-<h3 id="informatie-tijdens-het-doorlopen-bijhouden">Informatie tijdens het doorlopen bijhouden</h3>
+<h4 id="informatie-tijdens-het-doorlopen-bijhouden">Informatie tijdens het doorlopen bijhouden</h4>
 <p>Tijdens een <code>for</code>-loop kunnen variables veranderen.</p>
 <p>Daardoor kan een programma informatie onthouden over de items die al zijn verwerkt.</p>
 <p>Bijvoorbeeld:</p>
@@ -840,7 +889,7 @@
 </table>
 <p>Na de loop bevat <code>total</code> informatie over de volledige verzameling.</p>
 <p>Dit soort variables beschrijven de <strong>toestand</strong> van het programma tijdens de verwerking.</p>
-<h3 id="alleen-de-waarde-nodig">Alleen de waarde nodig</h3>
+<h4 id="alleen-de-waarde-nodig">Alleen de waarde nodig</h4>
 <p>Wanneer je alleen het huidige item nodig hebt, kun je rechtstreeks over de list itereren:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ava&quot;</span><span class="p">,</span> <span class="s2">&quot;Noah&quot;</span><span class="p">,</span> <span class="s2">&quot;Mila&quot;</span><span class="p">]</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
@@ -848,7 +897,7 @@
 <a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 </code></pre></div>
 <p>De loop variable bevat dan steeds de huidige waarde.</p>
-<h3 id="ook-de-positie-nodig">Ook de positie nodig</h3>
+<h4 id="ook-de-positie-nodig">Ook de positie nodig</h4>
 <p>Soms is niet alleen de waarde belangrijk, maar ook <strong>waar</strong> die waarde in de list staat.</p>
 <p>Een list gebruikt indexes:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>index:   0      1      2
@@ -868,7 +917,7 @@
 </code></pre></div>
 <p>Hier is <code>i</code> tijdens iedere iteration de huidige index.</p>
 <p>Met <code>names[i]</code> lees je het item dat op die positie staat.</p>
-<h3 id="waarde-of-index">Waarde of index?</h3>
+<h4 id="waarde-of-index">Waarde of index?</h4>
 <p>Gebruik:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">collection</span><span class="p">:</span>
 </code></pre></div>
@@ -878,7 +927,7 @@
 </code></pre></div>
 <p>wanneer je tijdens de verwerking ook de <strong>positie</strong> van ieder item nodig hebt.</p>
 <p>In beide gevallen kan een volledige list systematisch worden doorlopen.</p>
-<h3 id="range"><code>range()</code></h3>
+<h4 id="range"><code>range()</code></h4>
 <p><code>range()</code> beschrijft een reeks gehele getallen die een <code>for</code>-loop achtereenvolgens kan gebruiken.</p>
 <p>Bijvoorbeeld:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
@@ -891,7 +940,7 @@
 <a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>3
 </code></pre></div>
 <p><code>range(4)</code> begint dus bij <code>0</code> en stopt <strong>vóór</strong> <code>4</code>.</p>
-<h3 id="een-begin-en-eindwaarde">Een begin- en eindwaarde</h3>
+<h4 id="een-begin-en-eindwaarde">Een begin- en eindwaarde</h4>
 <p>Je kunt ook aangeven waar de reeks moet beginnen:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
 <a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
@@ -908,7 +957,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">)</span>
 </code></pre></div>
 <p>De <code>stop</code>-waarde zelf hoort niet meer bij de reeks.</p>
-<h3 id="range-en-indexes"><code>range()</code> en indexes</h3>
+<h4 id="range-en-indexes"><code>range()</code> en indexes</h4>
 <p>Indexes van een list beginnen bij <code>0</code>.</p>
 <p>Bij:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">cities</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Oslo&quot;</span><span class="p">,</span> <span class="s2">&quot;Lima&quot;</span><span class="p">,</span> <span class="s2">&quot;Tokyo&quot;</span><span class="p">]</span>
@@ -937,7 +986,7 @@
 <a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>1 Lima
 <a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>2 Tokyo
 </code></pre></div>
-<h3 id="niet-altijd-bij-0-beginnen">Niet altijd bij <code>0</code> beginnen</h3>
+<h4 id="niet-altijd-bij-0-beginnen">Niet altijd bij <code>0</code> beginnen</h4>
 <p>Soms hoeft een verwerking niet bij de eerste positie te beginnen.</p>
 <p>Met:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">cities</span><span class="p">))</span>
@@ -947,7 +996,7 @@
 </code></pre></div>
 <p>doorlopen.</p>
 <p>Welke beginwaarde passend is, hangt af van het probleem dat je oplost.</p>
-<h3 id="range-geeft-posities-niet-de-items-zelf"><code>range()</code> geeft posities, niet de items zelf</h3>
+<h4 id="range-geeft-posities-niet-de-items-zelf"><code>range()</code> geeft posities, niet de items zelf</h4>
 <p>Vergelijk:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="k">for</span> <span class="n">city</span> <span class="ow">in</span> <span class="n">cities</span><span class="p">:</span>
 <a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">city</span><span class="p">)</span>
@@ -959,7 +1008,7 @@
 <p>In het eerste voorbeeld bevat de loop variable direct een item uit de list.</p>
 <p>In het tweede voorbeeld bevat de loop variable een index. Met die index kun je vervolgens het bijbehorende item opvragen.</p>
 <p>Gebruik <code>range()</code> dus wanneer een reeks getallen of de posities in een verzameling onderdeel zijn van de verwerking.</p>
-<h3 id="list-indexes">List indexes</h3>
+<h4 id="list-indexes">List indexes</h4>
 <p>De items in een list hebben ieder een positie.</p>
 <p>Python gebruikt daarvoor een <strong>index</strong>.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Alex&quot;</span><span class="p">,</span> <span class="s2">&quot;Sam&quot;</span><span class="p">,</span> <span class="s2">&quot;Robin&quot;</span><span class="p">]</span>
@@ -1001,7 +1050,10 @@
 </code></pre></div>
 <p>voor respectievelijk <code>"Alex"</code>, <code>"Sam"</code> en <code>"Robin"</code>.</p>
 <p>De index hoort dus bij de <strong>positie van een item in de list</strong>, niet bij het aantal waarmee mensen normaal beginnen te tellen.</p>
-<h3 id="beschrijven-met-n">Beschrijven met n</h3>
+</section>
+<section class="section-understanding">
+<h3 class="page-toc" id="algorithms-efficiency">Algorithms &amp; Efficiency</h3>
+<h4 id="beschrijven-met-n">Beschrijven met n</h4>
 <p>Bij <strong>Bewerkingen tellen</strong> heb je onderzocht hoe vaak een gekozen bewerking tijdens één concrete uitvoering van een algoritme plaatsvindt.</p>
 <p>Een algoritme moet meestal niet alleen voor één vaste hoeveelheid gegevens werken. Daarom gebruiken we de letter <strong>n</strong> om de hoeveelheid gegevens algemeen te beschrijven.</p>
 <p>Bij een lijst betekent:</p>
@@ -1028,7 +1080,8 @@ n \text{ items} \rightarrow n \text{ bewerkingen}
 <p>De waarde van <strong>n</strong> is dus niet vast. Als de hoeveelheid gegevens verandert, verandert ook de waarde van <code>n</code>.</p>
 <p>Wil je verder onderzoeken hoe je het aantal bewerkingen als functie van <code>n</code> kunt beschrijven?</p>
 <p>Lees dan <a href="../../../understanding/algorithms-efficiency/describing-with-n/operation-count-function/">Aantal bewerkingen als functie van n</a>.</p>
-<h2 id="opdracht">Opdracht</h2>
+</section>
+<h2 class="page-toc" id="opdracht">Opdracht</h2>
 <p>Nu ga je deze kennis gebruiken om <strong>Monk's Magazine Check</strong> te maken.</p>
 <p>Gebruik dezelfde verzameling als bij de Thinking Set:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>9 4 7 1 6 0 8 3 5 2
@@ -1044,7 +1097,7 @@ n \text{ items} \rightarrow n \text{ bewerkingen}
 <li>welk grootste nummer tot dat moment is onthouden en op welke index het staat;</li>
 <li>of deze stap een nieuw minimum, een nieuw maximum of geen verandering oplevert.</li>
 </ul>
-<h3 id="specificatie">Specificatie</h3>
+<h3 class="page-toc" id="specificatie">Specificatie</h3>
 <p>Je programma gebruikt als eerste verzameling:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="n">magazines</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
 </code></pre></div>
@@ -1061,7 +1114,7 @@ n \text{ items} \rightarrow n \text{ bewerkingen}
 <li>de resultaten uit de werkelijke inhoud van de list bepalen en dus geen uitkomsten hardcoderen.</li>
 </ul>
 <p>Wanneer je voor een test alleen de inhoud van <code>magazines</code> vervangt door een andere niet-lege list met getallen, moet dezelfde verwerking blijven werken.</p>
-<h3 id="hints">Hints</h3>
+<h3 class="page-toc" id="hints">Hints</h3>
 <p>Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.</p>
 <details class="hint">
 <summary>1 — Welke informatie moet je onthouden?</summary>
@@ -1083,7 +1136,7 @@ n \text{ items} \rightarrow n \text{ bewerkingen}
 <p>Je hebt niet alleen de waarden uit de list nodig, maar ook hun indexes.</p>
 <p>Bekijk in de Understanding hoe <code>range()</code> kan worden gecombineerd met de lengte van een list.</p>
 </details>
-<h3 id="testen">Testen</h3>
+<h2 class="page-toc" id="testen">Testen</h2>
 <p>Je programma werkt pas betrouwbaar wanneer het voor verschillende verzamelingen de juiste waarden én de juiste indexes oplevert.</p>
 <p>Voer minimaal de volgende tests uit.</p>
 <table>
@@ -1135,10 +1188,10 @@ n \text{ items} \rightarrow n \text{ bewerkingen}
 </ul>
 <p><strong>Kun je met deze testgevallen aantonen dat je programma ieder element systematisch verwerkt en voor verschillende verzamelingen de juiste resultaten oplevert?</strong></p>
 <p>Als de werkelijke uitvoer niet overeenkomt met je voorspelling, onderzoek dan waardoor het verschil ontstaat en pas je pseudocode en programma waar nodig aan.</p>
-<h2 id="reflectie-op-de-oplossing">Reflectie op de oplossing</h2>
+<h2 class="page-toc" id="reflectie-op-de-oplossing">Reflectie op de oplossing</h2>
 <p>Bekijk je <strong>pseudocode</strong>, je <strong>Trace Table</strong> en je uiteindelijke <strong>Python-programma</strong>.</p>
 <p>Kies één stap uit je Trace Table waarin het onthouden minimum of maximum verandert. Leg met dit concrete voorbeeld uit welke informatie je programma tijdens de verwerking moet onthouden en waarom jouw oplossingsrichting geschikt is om de volledige verzameling systematisch te verwerken.</p>
-<h2 id="inleveren">Inleveren</h2>
+<h2 class="page-toc" id="inleveren">Inleveren</h2>
 <p>Controleer voordat je inlevert of:</p>
 <ul>
 <li>je programma voldoet aan de specificatie;</li>
@@ -1209,6 +1262,8 @@ n \text{ items} \rightarrow n \text{ bewerkingen}
     
     
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../assets/js/page-toc.js"></script>
       
         <script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
       

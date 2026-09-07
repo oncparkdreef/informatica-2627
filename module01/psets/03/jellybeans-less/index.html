@@ -72,6 +72,8 @@
     
       <link rel="stylesheet" href="../../../assets/css/homepage.css">
     
+      <link rel="stylesheet" href="../../../assets/css/guide.css">
+    
       <link rel="stylesheet" href="../../../assets/css/week.css">
     
       <link rel="stylesheet" href="../../../assets/css/tset.css">
@@ -309,20 +311,28 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
   
+
   
-  
+
+  <nav class="md-nav md-nav--secondary page-toc-managed" aria-label="Inhoudsopgave">
+
     
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Inhoudsopgave
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    
+
+    
       
-        <li class="md-nav__item">
+    
+
+    
+      <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        Inhoudsopgave
+      </label>
+
+      <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+          <li class="md-nav__item">
   <a href="#waar-werk-je-aan" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -332,8 +342,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#probleem" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -343,8 +353,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#demo" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -354,8 +364,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#understanding" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -365,6 +375,18 @@
   </a>
   
     <nav class="md-nav" aria-label="Understanding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Python">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -459,8 +481,13 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#opdracht" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -494,6 +521,11 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#testen" class="md-nav__link">
     <span class="md-ellipsis">
@@ -517,13 +549,11 @@
 </li>
         
       </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+    
+
+  </nav>
+
+
                   </div>
                 </div>
               </div>
@@ -558,7 +588,7 @@
   <span class="badge-label">CT-proces</span>
   <span class="badge-value">Expressing the Solution</span>
 </span></p>
-<h2 id="waar-werk-je-aan">Waar werk je aan?</h2>
+<h2 class="page-toc" id="waar-werk-je-aan">Waar werk je aan?</h2>
 <p>Met deze Problem Set werk je aan de volgende leerdoelen:</p>
 <ul>
 <li>Ik kan <strong>beredeneren</strong> hoe stappen en beslissingen logisch met elkaar samenhangen.</li>
@@ -566,7 +596,7 @@
 <li>Ik kan <strong>een oplossing automatiseren</strong> door voorwaarden en bijbehorende acties vast te leggen.</li>
 <li>Ik kan <strong>een algoritmische oplossing programmeren</strong> met <code>if</code>, <code>elif</code> en <code>else</code>.</li>
 </ul>
-<h2 id="probleem">Probleem</h2>
+<h2 class="page-toc" id="probleem">Probleem</h2>
 <p>In een pot zit een onbekend aantal jellybeans.</p>
 <p>De gebruiker voert een gok in. Een computersysteem moet deze ingevoerde gok vergelijken met het geheime aantal en op basis daarvan automatisch bepalen welke terugkoppeling aan de gebruiker wordt gegeven:</p>
 <ul>
@@ -576,7 +606,7 @@
 </ul>
 <p>Een computer kan alleen de juiste beslissing nemen wanneer <strong>alle mogelijke situaties expliciet zijn beschreven met voorwaarden en bijbehorende acties</strong>.</p>
 <p><strong>Hoe ontwerp je een systeem dat op basis van voorwaarden automatisch bepaalt welke feedback aan een gebruiker wordt gegeven?</strong></p>
-<h2 id="demo">Demo</h2>
+<h2 class="page-toc" id="demo">Demo</h2>
 <!--
 PAS LATER INVULLEN.
 
@@ -588,8 +618,10 @@ Doel:
 - laat niet zien HOE het programma is gebouwd.
 -->
 
-<h2 id="understanding">Understanding</h2>
-<h3 id="boolean-expressions">Boolean expressions</h3>
+<h2 class="page-toc" id="understanding">Understanding</h2>
+<section class="section-understanding">
+<h3 class="page-toc" id="python">Python</h3>
+<h4 id="boolean-expressions">Boolean expressions</h4>
 <p>Een <strong>Boolean expression</strong> is een expression die als resultaat één van
 twee <strong>Boolean values</strong> heeft:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kc">True</span>
@@ -619,7 +651,7 @@ het resultaat <code>False</code>.</p>
 </code></pre></div>
 <p>Een Boolean expression beschrijft dus iets waarvan Python kan bepalen of
 het <code>True</code> of <code>False</code> is.</p>
-<h3 id="comparison-operators">Comparison operators</h3>
+<h4 id="comparison-operators">Comparison operators</h4>
 <p>Om waarden met elkaar te vergelijken gebruikt Python <strong>comparison
 operators</strong>.</p>
 <table>
@@ -678,7 +710,7 @@ operators</strong>.</p>
 </code></pre></div>
 <p>vergelijk je twee waarden. Dit is een <strong>comparison</strong> en levert <code>True</code> of
 <code>False</code> op.</p>
-<h3 id="conditions">Conditions</h3>
+<h4 id="conditions">Conditions</h4>
 <p>Een Boolean expression kan als <strong>condition</strong> worden gebruikt.</p>
 <p>Een condition bepaalt of bepaalde code wel of niet wordt uitgevoerd.</p>
 <p>Bijvoorbeeld:</p>
@@ -691,7 +723,7 @@ operators</strong>.</p>
 </code></pre></div>
 <p>Een condition kan vervolgens worden gebruikt om te bepalen welke
 instructies een programma moet uitvoeren.</p>
-<h3 id="if"><code>if</code></h3>
+<h4 id="if"><code>if</code></h4>
 <p>Met een <code>if statement</code> kan Python een condition controleren.</p>
 <p>Bijvoorbeeld:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">temperature</span> <span class="o">=</span> <span class="mi">18</span>
@@ -706,7 +738,7 @@ instructies een programma moet uitvoeren.</p>
 <p>Is de condition <code>False</code>, dan wordt deze code overgeslagen.</p>
 <p>Een <code>if statement</code> maakt het dus mogelijk om instructies alleen uit te
 voeren wanneer aan een bepaalde condition wordt voldaan.</p>
-<h3 id="else"><code>else</code></h3>
+<h4 id="else"><code>else</code></h4>
 <p>Soms moet een programma iets anders doen wanneer de condition bij een
 <code>if</code> niet <code>True</code> is.</p>
 <p>Daarvoor gebruikt Python <code>else</code>:</p>
@@ -720,7 +752,7 @@ voeren wanneer aan een bepaalde condition wordt voldaan.</p>
 <p>Is de condition <code>False</code>, dan wordt <code>action_b</code> uitgevoerd.</p>
 <p>Een <code>else</code> heeft zelf geen condition. De code bij <code>else</code> wordt uitgevoerd
 wanneer de condition bij de bijbehorende <code>if</code> <code>False</code> is.</p>
-<h3 id="elif"><code>elif</code></h3>
+<h4 id="elif"><code>elif</code></h4>
 <p>Een probleem kan meer dan twee mogelijke situaties bevatten.</p>
 <p>Met <code>elif</code> kun je na een <code>if</code> een volgende condition laten controleren.</p>
 <p>Bijvoorbeeld:</p>
@@ -744,7 +776,7 @@ code uitgevoerd. De volgende conditions van dezelfde conditional worden
 dan niet meer gecontroleerd.</p>
 <p>Je kunt meerdere <code>elif</code> statements gebruiken wanneer er meer situaties
 onderscheiden moeten worden.</p>
-<h3 id="indentation">Indentation</h3>
+<h4 id="indentation">Indentation</h4>
 <p>Bij een <code>if statement</code> horen een dubbele punt <code>:</code> en <strong>indentation</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
 <a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    <span class="n">action</span>
@@ -763,7 +795,7 @@ onderscheiden moeten worden.</p>
 uitgevoerd wanneer de condition <code>True</code> is.</p>
 <p>De laatste <code>print()</code> staat niet meer binnen de <code>if</code> en wordt daarom
 altijd uitgevoerd.</p>
-<h3 id="branches">Branches</h3>
+<h4 id="branches">Branches</h4>
 <p>Bij een conditional kunnen verschillende mogelijke uitvoerpaden ontstaan.</p>
 <p>Zo'n mogelijk uitvoerpad noemen we een <strong>branch</strong>.</p>
 <p>Bijvoorbeeld:</p>
@@ -798,9 +830,10 @@ condition <code>True</code> is, wordt de bijbehorende branch uitgevoerd.</p>
 uitdrukken.</p>
 <p>Welke conditions nodig zijn, hoeveel branches er zijn en welke actions
 daarbij horen, hangt af van het probleem dat je probeert op te lossen.</p>
-<h2 id="opdracht">Opdracht</h2>
+</section>
+<h2 class="page-toc" id="opdracht">Opdracht</h2>
 <p>Nu ga je deze kennis gebruiken om het probleem van <strong>Jellybeans in a Jar</strong> op te lossen.</p>
-<h3 id="specificatie">Specificatie</h3>
+<h3 class="page-toc" id="specificatie">Specificatie</h3>
 <p>Je programma moet:</p>
 <ul>
 <li>het geheime aantal jellybeans in een variabele bewaren;</li>
@@ -814,7 +847,7 @@ daarbij horen, hangt af van het probleem dat je probeert op te lossen.</p>
 <p>Voor iedere mogelijke gok moet het programma <strong>precies één</strong> van de drie mogelijke reacties geven.</p>
 <p>Gebruik als invoer een <strong>geheel getal</strong>. Dat is in deze Problem Set geldige invoer.</p>
 <p>Andere invoer hoef je in deze Problem Set niet af te handelen.</p>
-<h3 id="hints">Hints</h3>
+<h3 class="page-toc" id="hints">Hints</h3>
 <p>Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.</p>
 <details class="hint">
 <summary>1 — Welke situaties moet je programma herkennen?</summary>
@@ -864,7 +897,7 @@ daarbij horen, hangt af van het probleem dat je probeert op te lossen.</p>
 </ul>
 <p>Programmeer vanuit je ontwerp verder.</p>
 </details>
-<h3 id="testen">Testen</h3>
+<h2 class="page-toc" id="testen">Testen</h2>
 <p>Een programma is pas betrouwbaar als je controleert of <strong>alle mogelijke situaties correct worden afgehandeld</strong>.</p>
 <p>Noteer eerst welk geheime aantal je in je programma gebruikt.</p>
 <p>Kies daarna voor iedere situatie een passende gok en bepaal <strong>vooraf</strong> welke uitkomst je verwacht.</p>
@@ -913,7 +946,7 @@ daarbij horen, hangt af van het probleem dat je probeert op te lossen.</p>
 <p><strong>werkelijke uitkomst = verwachte uitkomst</strong></p>
 <p>Als dat niet zo is, onderzoek dan welke stap of beslissing in je algoritme niet doet wat je had verwacht en pas je programma waar nodig aan.</p>
 <p><strong>Kun je met deze drie testgevallen aantonen dat iedere mogelijke situatie correct wordt afgehandeld en iedere gok precies één reactie oplevert?</strong></p>
-<h3 id="inleveren">Inleveren</h3>
+<h2 class="page-toc" id="inleveren">Inleveren</h2>
 <p>Controleer voordat je de Problem Set afrondt:</p>
 <ul>
 <li>je programma voldoet aan de <strong>specificatie</strong>;</li>
@@ -985,6 +1018,8 @@ daarbij horen, hangt af van het probleem dat je probeert op te lossen.</p>
     
     
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../assets/js/page-toc.js"></script>
       
         <script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
       

@@ -72,6 +72,8 @@
     
       <link rel="stylesheet" href="../../../assets/css/homepage.css">
     
+      <link rel="stylesheet" href="../../../assets/css/guide.css">
+    
       <link rel="stylesheet" href="../../../assets/css/week.css">
     
       <link rel="stylesheet" href="../../../assets/css/tset.css">
@@ -309,20 +311,28 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
   
+
   
-  
+
+  <nav class="md-nav md-nav--secondary page-toc-managed" aria-label="Inhoudsopgave">
+
     
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Inhoudsopgave
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    
+
+    
       
-        <li class="md-nav__item">
+    
+
+    
+      <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        Inhoudsopgave
+      </label>
+
+      <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+          <li class="md-nav__item">
   <a href="#waar-werk-je-aan" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -332,8 +342,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#probleem" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -343,8 +353,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#demo" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -354,8 +364,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#understanding" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -365,6 +375,18 @@
   </a>
   
     <nav class="md-nav" aria-label="Understanding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Python">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -426,8 +448,13 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#opdracht" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -461,6 +488,11 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#testen" class="md-nav__link">
     <span class="md-ellipsis">
@@ -484,13 +516,11 @@
 </li>
         
       </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+    
+
+  </nav>
+
+
                   </div>
                 </div>
               </div>
@@ -525,7 +555,7 @@
   <span class="badge-label">CT-proces</span>
   <span class="badge-value">Expressing the Solution</span>
 </span></p>
-<h2 id="waar-werk-je-aan">Waar werk je aan?</h2>
+<h2 class="page-toc" id="waar-werk-je-aan">Waar werk je aan?</h2>
 <p>Met deze Problem Set werk je aan de volgende leerdoelen:</p>
 <ul>
 <li>Ik kan <strong>beredeneren</strong> hoe een herhalend proces stap voor stap verandert.</li>
@@ -533,16 +563,18 @@
 <li>Ik kan <strong>een oplossing automatiseren</strong> door herhalende stappen en een stopvoorwaarde vast te leggen.</li>
 <li>Ik kan <strong>een algoritmische oplossing programmeren</strong> met een <code>while</code>-loop.</li>
 </ul>
-<h2 id="probleem">Probleem</h2>
+<h2 class="page-toc" id="probleem">Probleem</h2>
 <p>In <em>Home Alone</em> betaalt een klant meer voor zijn pizza dan nodig is.</p>
 <p>De pizzabezorger moet het juiste wisselgeld teruggeven. Daarbij moet het systeem bepalen welke munten samen het bedrag vormen.</p>
 <p>Een computersysteem moet het wisselgeld niet in één keer bepalen. Het moet het proces stap voor stap uitvoeren en na iedere stap opnieuw bepalen hoeveel wisselgeld nog over is.</p>
 <p>Het proces gaat door totdat het volledige bedrag is teruggegeven.</p>
 <p><strong>Hoe ontwerp je een systeem dat stap voor stap wisselgeld teruggeeft en weet wanneer het klaar is?</strong></p>
-<h2 id="demo">Demo</h2>
+<h2 class="page-toc" id="demo">Demo</h2>
 <p>[DEMO LATER TOEVOEGEN]</p>
-<h2 id="understanding">Understanding</h2>
-<h3 id="while"><code>while</code></h3>
+<h2 class="page-toc" id="understanding">Understanding</h2>
+<section class="section-understanding">
+<h3 class="page-toc" id="python">Python</h3>
+<h4 id="while"><code>while</code></h4>
 <p>Soms moet een programma een handeling meerdere keren uitvoeren.</p>
 <p>Een <code>if</code> controleert een condition en voert de bijbehorende code hoogstens één keer uit. Met <code>while</code> kan Python dezelfde code blijven uitvoeren zolang een condition <code>True</code> is.</p>
 <p>Bijvoorbeeld:</p>
@@ -582,7 +614,7 @@
 </code></pre></div>
 <p>evalueert, is de uitkomst <code>False</code>.</p>
 <p>De code binnen de <code>while</code> wordt dan niet opnieuw uitgevoerd.</p>
-<h3 id="iteration">Iteration</h3>
+<h4 id="iteration">Iteration</h4>
 <p>Een enkele uitvoering van de code binnen een <code>while</code> noemen we een <strong>iteration</strong>.</p>
 <p>Bij iedere iteration:</p>
 <ol>
@@ -592,7 +624,7 @@
 <li>dit gaat door totdat de condition <code>False</code> is.</li>
 </ol>
 <p>De condition bepaalt dus of de volgende iteration plaatsvindt.</p>
-<h3 id="toestand-veranderen">Toestand veranderen</h3>
+<h4 id="toestand-veranderen">Toestand veranderen</h4>
 <p>Bij een <code>while</code> kan de situatie tijdens het uitvoeren van het programma veranderen.</p>
 <p>In het voorbeeld verandert de waarde van <code>count</code> iedere keer:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span>
@@ -600,7 +632,7 @@
 <p>De volgende evaluatie van de condition gebruikt daardoor een nieuwe waarde.</p>
 <p>De variable die bepaalt of de <code>while</code> verdergaat, moet daarom op een bepaald moment kunnen veranderen.</p>
 <p>Zonder zo'n verandering kan een condition <code>True</code> blijven en blijft de <code>while</code> doorgaan.</p>
-<h3 id="algemene-structuur">Algemene structuur</h3>
+<h4 id="algemene-structuur">Algemene structuur</h4>
 <p>De algemene vorm van een <code>while</code> is:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">while</span> <span class="n">condition</span><span class="p">:</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="n">action</span>
@@ -608,7 +640,7 @@
 <p>Python evalueert steeds dezelfde <code>condition</code>.</p>
 <p>Zolang deze <code>True</code> is, wordt <code>action</code> uitgevoerd.</p>
 <p>Wanneer de condition <code>False</code> wordt, gaat Python verder met de code na de <code>while</code>.</p>
-<h3 id="if-en-while"><code>if</code> en <code>while</code></h3>
+<h4 id="if-en-while"><code>if</code> en <code>while</code></h4>
 <p>Een <code>while</code> gebruikt, net als een <code>if</code>, een condition.</p>
 <p>Bijvoorbeeld:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
@@ -622,12 +654,13 @@
 <p>Bij een <code>if</code> wordt de condition gecontroleerd om te bepalen of <code>action</code> wordt uitgevoerd.</p>
 <p>Bij een <code>while</code> wordt de condition steeds opnieuw gecontroleerd om te bepalen of de volgende iteration wordt uitgevoerd.</p>
 <p>Dezelfde code kan daardoor meerdere keren worden uitgevoerd.</p>
-<h2 id="opdracht">Opdracht</h2>
+</section>
+<h2 class="page-toc" id="opdracht">Opdracht</h2>
 <p>Nu ga je deze kennis gebruiken om het probleem van <strong>Keep the Change</strong> op te lossen.</p>
 <p>Ontwerp en programmeer een systeem dat wisselgeld stap voor stap teruggeeft.</p>
 <p>Werk je oplossing eerst uit als een <strong>loop-flowchart</strong>.</p>
 <p>Zet daarna dezelfde oplossing om in <strong>pseudocode</strong>. Schrijf je pseudocode als genummerde comments in je <code>.py</code>-bestand en bouw daarna de Python-code bij deze stappen.</p>
-<h3 id="specificatie">Specificatie</h3>
+<h3 class="page-toc" id="specificatie">Specificatie</h3>
 <p>Je programma moet:</p>
 <ul>
 <li>een bedrag aan wisselgeld vragen;</li>
@@ -642,7 +675,7 @@
 <p>Het programma moet het wisselgeld teruggeven met <strong>zo groot mogelijke munten</strong>.</p>
 <p>Gebruik als invoer een <strong>positief geheel aantal centen dat een veelvoud van 5 is</strong>. Dat is in deze Problem Set een geldig bedrag.</p>
 <p>Andere bedragen hoef je in deze Problem Set niet af te handelen.</p>
-<h3 id="hints">Hints</h3>
+<h3 class="page-toc" id="hints">Hints</h3>
 <p>Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.</p>
 <details class="hint">
 <summary>1 — Wat verandert er tijdens het proces?</summary>
@@ -701,7 +734,7 @@
 </ul>
 <p>Programmeer vanuit je eigen ontwerp verder.</p>
 </details>
-<h3 id="testen">Testen</h3>
+<h2 class="page-toc" id="testen">Testen</h2>
 <p>Een programma is pas betrouwbaar als je controleert of <strong>het wisselgeld voor verschillende bedragen correct en volledig wordt teruggegeven</strong>.</p>
 <p>Test minimaal de volgende situaties:</p>
 <table>
@@ -756,7 +789,7 @@ Gebruik daarna de werkelijk getoonde munten om het resterende bedrag na iedere s
 <p>Controleer of dit werkelijke verloop overeenkomt met je voorspelling en uiteindelijk eindigt bij <code>0</code>.</p>
 <p><strong>Kun je met deze testgevallen aantonen dat je programma het volledige wisselgeld correct teruggeeft en stopt wanneer het resterende bedrag <code>0</code> is?</strong></p>
 <p>Als de werkelijke uitkomst niet overeenkomt met je verwachting, onderzoek dan waar het verschil ontstaat en pas je programma waar nodig aan.</p>
-<h3 id="inleveren">Inleveren</h3>
+<h2 class="page-toc" id="inleveren">Inleveren</h2>
 <p>Controleer voordat je de Problem Set afrondt:</p>
 <ul>
 <li>je programma voldoet aan de <strong>specificatie</strong>;</li>
@@ -831,6 +864,8 @@ Gebruik daarna de werkelijk getoonde munten om het resterende bedrag na iedere s
     
     
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../assets/js/page-toc.js"></script>
       
         <script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
       

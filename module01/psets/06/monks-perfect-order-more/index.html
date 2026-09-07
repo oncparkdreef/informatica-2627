@@ -72,6 +72,8 @@
     
       <link rel="stylesheet" href="../../../assets/css/homepage.css">
     
+      <link rel="stylesheet" href="../../../assets/css/guide.css">
+    
       <link rel="stylesheet" href="../../../assets/css/week.css">
     
       <link rel="stylesheet" href="../../../assets/css/tset.css">
@@ -309,20 +311,28 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
   
+
   
-  
+
+  <nav class="md-nav md-nav--secondary page-toc-managed" aria-label="Inhoudsopgave">
+
     
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Inhoudsopgave
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    
+
+    
       
-        <li class="md-nav__item">
+    
+
+    
+      <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        Inhoudsopgave
+      </label>
+
+      <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+          <li class="md-nav__item">
   <a href="#waar-werk-je-aan" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -332,8 +342,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#probleem" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -343,8 +353,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#understanding" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -354,6 +364,18 @@
   </a>
   
     <nav class="md-nav" aria-label="Understanding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Python">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -400,6 +422,23 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithms-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithms &amp; Efficiency
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Algorithms &amp; Efficiency">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#herhaalde-verwerking-met-n" class="md-nav__link">
     <span class="md-ellipsis">
@@ -415,8 +454,13 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#opdracht" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -450,6 +494,11 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#testen" class="md-nav__link">
     <span class="md-ellipsis">
@@ -461,12 +510,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#reflectie-op-de-oplossing" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -476,8 +520,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#inleveren" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -487,10 +531,13 @@
   </a>
   
 </li>
-      
-    </ul>
-  
-</nav>
+        
+      </ul>
+    
+
+  </nav>
+
+
                   </div>
                 </div>
               </div>
@@ -533,7 +580,7 @@
   <span class="badge-label">CT-proces</span>
   <span class="badge-value">Reflecting on the Solution</span>
 </span></p>
-<h2 id="waar-werk-je-aan">Waar werk je aan?</h2>
+<h2 class="page-toc" id="waar-werk-je-aan">Waar werk je aan?</h2>
 <p>In deze Problem Set werk je aan de volgende leerdoelen:</p>
 <ul>
 <li>Ik kan <strong>beredeneren hoe opeenvolgende stappen logisch samenhangen in een algoritme</strong>.</li>
@@ -541,14 +588,16 @@
 <li>Ik kan <strong>het gedrag van een sorteeralgoritme onderzoeken met een Trace Table en meetgegevens</strong>.</li>
 <li>Ik kan <strong>mogelijke oplossingsstrategieën analyseren en mijn gekozen strategie verantwoorden met resultaten uit mijn eigen tests</strong>.</li>
 </ul>
-<h2 id="probleem">Probleem</h2>
+<h2 class="page-toc" id="probleem">Probleem</h2>
 <p>Monk wil zijn volledige verzameling tijdschriften op nummer ordenen.</p>
 <p>Hij gebruikt daarvoor een vaste werkwijze: hij bekijkt steeds <strong>twee tijdschriften die naast elkaar staan</strong>. Staan ze in de verkeerde volgorde, dan verwisselt hij ze. Daarna gaat hij verder met het volgende paar.</p>
 <p>Monk wil niet alleen dat de verzameling uiteindelijk goed staat. Hij wil ook kunnen zien hoeveel werk zijn strategie nodig heeft en herkennen wanneer een volgende ronde niets meer verandert.</p>
 <p>Een computer moet de verzameling daarom systematisch ordenen, het verloop van het algoritme zichtbaar maken en stoppen zodra een volledige ronde geen wisseling meer oplevert.</p>
 <p><strong>Hoe ontwerp je een algoritme dat een verzameling systematisch ordent en hoe onderzoek je de gekozen strategie?</strong></p>
-<h2 id="understanding">Understanding</h2>
-<h3 id="een-bestaand-list-item-veranderen">Een bestaand list-item veranderen</h3>
+<h2 class="page-toc" id="understanding">Understanding</h2>
+<section class="section-understanding">
+<h3 class="page-toc" id="python">Python</h3>
+<h4 id="een-bestaand-list-item-veranderen">Een bestaand list-item veranderen</h4>
 <p>Een item dat al in een list staat, kan worden vervangen door een nieuwe waarde.</p>
 <p>Daarvoor gebruik je de index van dat item.</p>
 <p>Bijvoorbeeld:</p>
@@ -567,7 +616,7 @@
 </code></pre></div>
 <p>wordt die bestaande waarde vervangen door <code>9</code>.</p>
 <p>De lengte van de list verandert daarbij niet.</p>
-<h3 id="lezen-en-veranderen-gebruiken-dezelfde-index">Lezen en veranderen gebruiken dezelfde index</h3>
+<h4 id="lezen-en-veranderen-gebruiken-dezelfde-index">Lezen en veranderen gebruiken dezelfde index</h4>
 <p>Met:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">numbers</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 </code></pre></div>
@@ -577,7 +626,7 @@
 </code></pre></div>
 <p>verander je de waarde op index <code>1</code>.</p>
 <p>De index bepaalt dus op welke positie in de list Python werkt.</p>
-<h3 id="een-waarde-bewaren-voordat-je-haar-vervangt">Een waarde bewaren voordat je haar vervangt</h3>
+<h4 id="een-waarde-bewaren-voordat-je-haar-vervangt">Een waarde bewaren voordat je haar vervangt</h4>
 <p>Soms wil je twee waarden in een list van plaats laten wisselen.</p>
 <p>Daarbij is de volgorde van de assignments belangrijk.</p>
 <p>Bekijk deze list:</p>
@@ -599,7 +648,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>[&quot;green&quot;, &quot;blue&quot;, &quot;red&quot;]
 </code></pre></div>
 <p>De variable <code>temporary</code> bewaart dus een waarde terwijl de twee posities worden aangepast.</p>
-<h3 id="twee-posities-verwisselen">Twee posities verwisselen</h3>
+<h4 id="twee-posities-verwisselen">Twee posities verwisselen</h4>
 <p>Het algemene patroon is:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">temporary</span> <span class="o">=</span> <span class="n">collection</span><span class="p">[</span><span class="n">first_index</span><span class="p">]</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">collection</span><span class="p">[</span><span class="n">first_index</span><span class="p">]</span> <span class="o">=</span> <span class="n">collection</span><span class="p">[</span><span class="n">second_index</span><span class="p">]</span>
@@ -612,7 +661,10 @@
 <li>blijven de andere items in de list hetzelfde.</li>
 </ul>
 <p>Welke twee indexes je gebruikt, hangt af van het probleem dat je oplost.</p>
-<h3 id="herhaalde-verwerking-met-n">Herhaalde verwerking met n</h3>
+</section>
+<section class="section-understanding">
+<h3 class="page-toc" id="algorithms-efficiency">Algorithms &amp; Efficiency</h3>
+<h4 id="herhaalde-verwerking-met-n">Herhaalde verwerking met n</h4>
 <p>Bij <strong>Beschrijven met n</strong> heb je gezien dat je de hoeveelheid gegevens algemeen kunt beschrijven met <strong>n</strong>.</p>
 <p>Wanneer ieder van de <code>n</code> items één keer dezelfde bewerking veroorzaakt, geldt bijvoorbeeld:</p>
 <div class="arithmatex">\[
@@ -636,7 +688,8 @@ n + n + n = 3n
 <p>De factor vóór <code>n</code> laat zien hoeveel volledige verwerkingen zijn uitgevoerd.</p>
 <p>Wil je ook onderzoeken hoe je het aantal bewerkingen algemeen kunt beschrijven wanneer een verwerking meerdere keren wordt herhaald?</p>
 <p>Lees dan <a href="../../../understanding/algorithms-efficiency/repeated-processing-with-n/operation-count-with-repetition/">Aantal bewerkingen bij herhaling</a>.</p>
-<h2 id="opdracht">Opdracht</h2>
+</section>
+<h2 class="page-toc" id="opdracht">Opdracht</h2>
 <p>Maak de uitgebreide versie van <strong>Monk's Perfect Order</strong>.</p>
 <p>Gebruik eerst:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">magazines</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
@@ -652,7 +705,7 @@ n + n + n = 3n
 <p>Laat je pseudocode daarna als comments in je <code>.py</code>-bestand staan.</p>
 <p>Maak daarnaast een <strong>Trace Table</strong> waarin je voor minimaal één test zichtbaar maakt hoe de list per vergelijking en per ronde verandert.</p>
 <p>Ontwerp nadat je programma werkt ook <strong>een tweede mogelijke strategie</strong> voor hetzelfde ordeningsprobleem. Werk deze tweede strategie alleen uit in pseudocode; je hoeft haar niet te programmeren. Gebruik de vergelijking met je werkende strategie later in je reflectie.</p>
-<h3 id="specificatie">Specificatie</h3>
+<h3 class="page-toc" id="specificatie">Specificatie</h3>
 <p>Je programma gebruikt als eerste verzameling:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">magazines</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
 </code></pre></div>
@@ -674,7 +727,7 @@ n + n + n = 3n
 </ul>
 <p>Iedere volledige ronde vergelijkt alle aangrenzende paren van links naar rechts.</p>
 <p>Je mag voor het ordenen <strong>geen</strong> <code>.sort()</code> of <code>sorted()</code> gebruiken.</p>
-<h3 id="hints">Hints</h3>
+<h3 class="page-toc" id="hints">Hints</h3>
 <p>Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.</p>
 <details class="hint">
 <summary>1 — Wat moet je per ronde weten?</summary>
@@ -698,7 +751,7 @@ n + n + n = 3n
 <p>Tussen de rondes hangt doorgaan af van wat er in de vorige ronde is gebeurd.</p>
 <p>Welke eerder geleerde vorm van herhaling past bij zo'n voorwaarde?</p>
 </details>
-<h3 id="testen">Testen</h3>
+<h2 class="page-toc" id="testen">Testen</h2>
 <p>Gebruik minimaal de volgende situaties.</p>
 <p>Voorspel <strong>vooraf</strong> de uiteindelijke geordende list en de aantallen rondes, vergelijkingen en wisselingen.</p>
 <table>
@@ -772,7 +825,7 @@ n + n + n = 3n
 </ul>
 <p><strong>Welke verschillen zie je tussen de tests in het aantal rondes, vergelijkingen en wisselingen, terwijl het algoritme zelf hetzelfde blijft?</strong></p>
 <p>Als een werkelijke uitkomst niet overeenkomt met je voorspelling, gebruik je Trace Table om te bepalen in welke ronde of vergelijking het verschil ontstaat en pas je pseudocode en programma waar nodig aan.</p>
-<h2 id="reflectie-op-de-oplossing">Reflectie op de oplossing</h2>
+<h2 class="page-toc" id="reflectie-op-de-oplossing">Reflectie op de oplossing</h2>
 <p>Gebruik je <strong>pseudocode</strong>, <strong>Trace Table</strong> en <strong>testresultaten</strong> als bewijs.</p>
 <p>Beantwoord:</p>
 <ol>
@@ -780,7 +833,7 @@ n + n + n = 3n
 <li>Waarom weet je dat de verzameling correct geordend is wanneer een volledige ronde geen wisseling meer oplevert?</li>
 <li>Vergelijk je geprogrammeerde strategie met de tweede strategie die je in pseudocode hebt ontworpen. Welke oplossingsrichting vind je op basis van je eigen analyse het meest kansrijk en waarom?</li>
 </ol>
-<h2 id="inleveren">Inleveren</h2>
+<h2 class="page-toc" id="inleveren">Inleveren</h2>
 <p>Controleer voordat je inlevert of:</p>
 <ul>
 <li>je programma voldoet aan de specificatie;</li>
@@ -853,6 +906,8 @@ n + n + n = 3n
     
     
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../assets/js/page-toc.js"></script>
       
         <script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
       

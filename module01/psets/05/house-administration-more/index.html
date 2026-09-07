@@ -72,6 +72,8 @@
     
       <link rel="stylesheet" href="../../../assets/css/homepage.css">
     
+      <link rel="stylesheet" href="../../../assets/css/guide.css">
+    
       <link rel="stylesheet" href="../../../assets/css/week.css">
     
       <link rel="stylesheet" href="../../../assets/css/tset.css">
@@ -309,20 +311,28 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
   
+
   
-  
+
+  <nav class="md-nav md-nav--secondary page-toc-managed" aria-label="Inhoudsopgave">
+
     
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Inhoudsopgave
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    
+
+    
       
-        <li class="md-nav__item">
+    
+
+    
+      <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        Inhoudsopgave
+      </label>
+
+      <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+          <li class="md-nav__item">
   <a href="#waar-werk-je-aan" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -332,8 +342,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#probleem" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -343,8 +353,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#understanding" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -354,6 +364,18 @@
   </a>
   
     <nav class="md-nav" aria-label="Understanding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Python">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -432,8 +454,13 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#opdracht" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -467,6 +494,11 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#testen" class="md-nav__link">
     <span class="md-ellipsis">
@@ -478,12 +510,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#reflectie-op-de-oplossing" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -493,8 +520,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#inleveren" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -504,10 +531,13 @@
   </a>
   
 </li>
-      
-    </ul>
-  
-</nav>
+        
+      </ul>
+    
+
+  </nav>
+
+
                   </div>
                 </div>
               </div>
@@ -550,19 +580,21 @@
   <span class="badge-label">CT-proces</span>
   <span class="badge-value">Reflecting on the Solution</span>
 </span></p>
-<h2 id="waar-werk-je-aan">Waar werk je aan?</h2>
+<h2 class="page-toc" id="waar-werk-je-aan">Waar werk je aan?</h2>
 <p>In deze Problem Set werk je aan de volgende leerdoelen:</p>
 <ul>
 <li>Ik kan <strong>gegevens ordenen in een bruikbare structuur</strong>.</li>
 <li>Ik kan <strong>informatie presenteren in een datastructuurdiagram</strong>.</li>
 <li>Ik kan <strong>uitleggen waarom een gekozen datastructuur geschikt is voor een probleem</strong>.</li>
 </ul>
-<h2 id="probleem">Probleem</h2>
+<h2 class="page-toc" id="probleem">Probleem</h2>
 <p>Op Hogwarts worden ieder jaar nieuwe leerlingen verdeeld over Gryffindor, Ravenclaw, Hufflepuff en Slytherin.</p>
 <p>Naarmate er meer leerlingen worden ingeschreven, groeit ook de hoeveelheid informatie die Hogwarts moet beheren. De administratie moet overzichtelijk blijven en gegevens moeten later weer kunnen worden teruggevonden.</p>
 <p><strong>Hoe ontwerp je een programma dat meerdere gegevens overzichtelijk kan opslaan en terugvinden?</strong></p>
-<h2 id="understanding">Understanding</h2>
-<h3 id="lists">Lists</h3>
+<h2 class="page-toc" id="understanding">Understanding</h2>
+<section class="section-understanding">
+<h3 class="page-toc" id="python">Python</h3>
+<h4 id="lists">Lists</h4>
 <p>Tot nu toe heb je variables gebruikt om waarden te bewaren.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Alex&quot;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">age</span> <span class="o">=</span> <span class="mi">16</span>
@@ -583,7 +615,7 @@
 </code></pre></div>
 <p>De variable <code>names</code> verwijst dan naar een list waarin nog geen items zijn opgeslagen.</p>
 <p>Een list maakt het zo mogelijk om meerdere waarden die bij elkaar horen samen in één structuur te bewaren.</p>
-<h3 id="list-indexes">List indexes</h3>
+<h4 id="list-indexes">List indexes</h4>
 <p>De items in een list hebben ieder een positie.</p>
 <p>Python gebruikt daarvoor een <strong>index</strong>.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Alex&quot;</span><span class="p">,</span> <span class="s2">&quot;Sam&quot;</span><span class="p">,</span> <span class="s2">&quot;Robin&quot;</span><span class="p">]</span>
@@ -625,7 +657,7 @@
 </code></pre></div>
 <p>voor respectievelijk <code>"Alex"</code>, <code>"Sam"</code> en <code>"Robin"</code>.</p>
 <p>De index hoort dus bij de <strong>positie van een item in de list</strong>, niet bij het aantal waarmee mensen normaal beginnen te tellen.</p>
-<h3 id="adding-list-items">Adding list items</h3>
+<h4 id="adding-list-items">Adding list items</h4>
 <p>Een list kan tijdens het uitvoeren van een programma worden uitgebreid.</p>
 <p>Met de list method <code>append()</code> voeg je een nieuw item toe aan het einde van een bestaande list.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Alex&quot;</span><span class="p">,</span> <span class="s2">&quot;Sam&quot;</span><span class="p">]</span>
@@ -647,9 +679,9 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Robin&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>voegt het item toe aan <code>names</code>.</p>
-<h3 id="list-information">List information</h3>
+<h4 id="list-information">List information</h4>
 <p>Je kunt informatie over een list opvragen zonder de items zelf te veranderen.</p>
-<h4 id="aantal-items">Aantal items</h4>
+<h5 id="aantal-items">Aantal items</h5>
 <p>Met <code>len()</code> kun je bepalen hoeveel items een list bevat.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Alex&quot;</span><span class="p">,</span> <span class="s2">&quot;Sam&quot;</span><span class="p">,</span> <span class="s2">&quot;Robin&quot;</span><span class="p">]</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
@@ -667,7 +699,7 @@
 <p>De uitvoer is:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>0
 </code></pre></div>
-<h4 id="controleren-of-een-item-voorkomt">Controleren of een item voorkomt</h4>
+<h5 id="controleren-of-een-item-voorkomt">Controleren of een item voorkomt</h5>
 <p>Met de membership operator <code>in</code> kun je controleren of een waarde in een list voorkomt.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Alex&quot;</span><span class="p">,</span> <span class="s2">&quot;Sam&quot;</span><span class="p">,</span> <span class="s2">&quot;Robin&quot;</span><span class="p">]</span>
 <a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
@@ -687,12 +719,13 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>True
 </code></pre></div>
 <p><code>len()</code> geeft dus informatie over <strong>hoeveel items</strong> een list bevat. Met <code>in</code> en <code>not in</code> kun je bepalen <strong>of een bepaalde waarde</strong> als item in een list voorkomt.</p>
-<h2 id="opdracht">Opdracht</h2>
+</section>
+<h2 class="page-toc" id="opdracht">Opdracht</h2>
 <p>Nu ga je deze kennis gebruiken om het probleem van <strong>House Administration</strong> op te lossen.</p>
 <p>Ontwerp en programmeer een administratie voor alle vier de Hogwarts-huizen waarmee leerlingen kunnen worden opgeslagen en verschillende gegevens uit de administratie kunnen worden opgevraagd.</p>
 <p>Maak voordat je programmeert een <strong>datastructuurdiagram</strong> van de volledige administratie.</p>
 <p>Werk daarna de stappen van je programma uit in <strong>pseudocode</strong> als genummerde comments in je <code>.py</code>-bestand. Bouw vervolgens de Python-code bij deze stappen.</p>
-<h3 id="specificatie">Specificatie</h3>
+<h3 class="page-toc" id="specificatie">Specificatie</h3>
 <p>Gebruik in je administratie de vier Hogwarts-huizen:</p>
 <ul>
 <li>Gryffindor</li>
@@ -712,7 +745,7 @@
 <li>kunnen bepalen welk van twee gekozen huizen op dat moment de meeste leerlingen bevat.</li>
 </ul>
 <p>Wanneer beide gekozen huizen evenveel leerlingen bevatten, moet je programma dat ook kunnen aangeven.</p>
-<h3 id="hints">Hints</h3>
+<h3 class="page-toc" id="hints">Hints</h3>
 <p>Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.</p>
 <details class="hint">
 <summary>1 — Modelleer eerst de volledige administratie</summary>
@@ -743,7 +776,7 @@
 </ul>
 <p>Denk ook aan de situatie waarin beide aantallen gelijk zijn.</p>
 </details>
-<h3 id="testen">Testen</h3>
+<h2 class="page-toc" id="testen">Testen</h2>
 <p>Test de volledige administratie met meerdere wijzigingen en opvragingen.</p>
 <p>Maak minimaal zes testgevallen.</p>
 <table>
@@ -804,11 +837,11 @@
 </ul>
 <p><strong>Kun je met je testgevallen aantonen dat de administratie ook na meerdere wijzigingen correcte gegevens bewaart en correcte informatie teruggeeft?</strong></p>
 <p>Als de werkelijke resultaten niet overeenkomen met je voorspellingen, onderzoek dan waardoor het verschil ontstaat en pas je programma aan.</p>
-<h2 id="reflectie-op-de-oplossing">Reflectie op de oplossing</h2>
+<h2 class="page-toc" id="reflectie-op-de-oplossing">Reflectie op de oplossing</h2>
 <p>Bekijk je <strong>datastructuurdiagram</strong> en je uiteindelijke <strong>Python-programma</strong>.</p>
 <p>Waarom is de datastructuur die je hebt gekozen geschikt om de gegevens van de vier Hogwarts-huizen op te slaan en terug te vinden?</p>
 <p>Onderbouw je antwoord met concrete voorbeelden uit je eigen datastructuurdiagram en programma.</p>
-<h2 id="inleveren">Inleveren</h2>
+<h2 class="page-toc" id="inleveren">Inleveren</h2>
 <p>Controleer voordat je inlevert of:</p>
 <ul>
 <li>je programma voldoet aan de specificatie;</li>
@@ -878,6 +911,8 @@
     
     
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../assets/js/page-toc.js"></script>
       
         <script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
       

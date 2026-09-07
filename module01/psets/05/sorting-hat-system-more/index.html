@@ -72,6 +72,8 @@
     
       <link rel="stylesheet" href="../../../assets/css/homepage.css">
     
+      <link rel="stylesheet" href="../../../assets/css/guide.css">
+    
       <link rel="stylesheet" href="../../../assets/css/week.css">
     
       <link rel="stylesheet" href="../../../assets/css/tset.css">
@@ -309,20 +311,28 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
   
+
   
-  
+
+  <nav class="md-nav md-nav--secondary page-toc-managed" aria-label="Inhoudsopgave">
+
     
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Inhoudsopgave
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    
+
+    
       
-        <li class="md-nav__item">
+    
+
+    
+      <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        Inhoudsopgave
+      </label>
+
+      <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+          <li class="md-nav__item">
   <a href="#waar-werk-je-aan" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -332,8 +342,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#probleem" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -343,8 +353,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#understanding" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -354,6 +364,18 @@
   </a>
   
     <nav class="md-nav" aria-label="Understanding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Python">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -371,8 +393,13 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#opdracht" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -406,6 +433,11 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#testen" class="md-nav__link">
     <span class="md-ellipsis">
@@ -417,12 +449,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#reflectie-op-de-oplossing" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -432,8 +459,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#inleveren" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -443,10 +470,13 @@
   </a>
   
 </li>
-      
-    </ul>
-  
-</nav>
+        
+      </ul>
+    
+
+  </nav>
+
+
                   </div>
                 </div>
               </div>
@@ -489,7 +519,7 @@
   <span class="badge-label">CT-proces</span>
   <span class="badge-value">Reflecting on the Solution</span>
 </span></p>
-<h2 id="waar-werk-je-aan">Waar werk je aan?</h2>
+<h2 class="page-toc" id="waar-werk-je-aan">Waar werk je aan?</h2>
 <p>In deze Problem Set werk je aan de volgende leerdoelen:</p>
 <ul>
 <li>Ik kan <strong>analyseren welke informatie relevant is</strong> voor een probleem.</li>
@@ -497,13 +527,15 @@
 <li>Ik kan <strong>een proces of systeem construeren op basis van een model</strong>.</li>
 <li>Ik kan <strong>uitleggen waarom een gekozen datastructuur geschikt is voor een probleem</strong>.</li>
 </ul>
-<h2 id="probleem">Probleem</h2>
+<h2 class="page-toc" id="probleem">Probleem</h2>
 <p>De Sorting Hat verdeelt nieuwe Hogwarts-leerlingen over Gryffindor, Ravenclaw, Hufflepuff en Slytherin.</p>
 <p>Een computersysteem moet meerdere leerlingen kunnen opslaan en de opgeslagen gegevens vervolgens kunnen gebruiken om te bepalen in welk huis een leerling is ingedeeld.</p>
 <p>Terwijl het systeem wordt gebruikt, komen er bovendien nieuwe leerlingen bij. De opgeslagen informatie verandert dus tijdens het gebruik.</p>
 <p><strong>Hoe ontwerp je een systeem dat opgeslagen gegevens kan doorzoeken en gebruiken om een beslissing te nemen?</strong></p>
-<h2 id="understanding">Understanding</h2>
-<h3 id="lists-and-conditions">Lists and conditions</h3>
+<h2 class="page-toc" id="understanding">Understanding</h2>
+<section class="section-understanding">
+<h3 class="page-toc" id="python">Python</h3>
+<h4 id="lists-and-conditions">Lists and conditions</h4>
 <p>Met <code>in</code> en <code>not in</code> kun je controleren of een waarde in een list voorkomt.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">products</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;bread&quot;</span><span class="p">,</span> <span class="s2">&quot;milk&quot;</span><span class="p">,</span> <span class="s2">&quot;cheese&quot;</span><span class="p">]</span>
 </code></pre></div>
@@ -530,14 +562,15 @@
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Product not found&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>Een list kan zo niet alleen worden gebruikt om meerdere gegevens te bewaren. De opgeslagen gegevens kunnen ook worden gebruikt in de conditions waarmee een programma beslissingen neemt.</p>
-<h2 id="opdracht">Opdracht</h2>
+</section>
+<h2 class="page-toc" id="opdracht">Opdracht</h2>
 <p>Nu ga je de opgeslagen gegevens gebruiken in een interactief <strong>Sorting Hat System</strong>.</p>
 <p>Ontwerp en programmeer een systeem waarin de gebruiker nieuwe leerlingen kan registreren en opgeslagen leerlingen kan opzoeken.</p>
 <p>Nieuwe gegevens moeten tijdens het gebruik bewaard blijven, zodat een nieuw geregistreerde leerling later in dezelfde uitvoering weer kan worden teruggevonden.</p>
 <p>Het programma blijft actief totdat de gebruiker ervoor kiest om te stoppen.</p>
 <p>Maak voordat je programmeert een <strong>datastructuurdiagram</strong> waarin zichtbaar is welke gegevens worden opgeslagen en gebruikt.</p>
 <p>Werk daarna de stappen van je systeem uit in <strong>pseudocode</strong> als genummerde comments in je <code>.py</code>-bestand. Bouw vervolgens de Python-code bij deze stappen.</p>
-<h3 id="specificatie">Specificatie</h3>
+<h3 class="page-toc" id="specificatie">Specificatie</h3>
 <p>Je systeem gebruikt de vier Hogwarts-huizen:</p>
 <ul>
 <li>Gryffindor</li>
@@ -572,7 +605,7 @@
 <li>een ongeldige menukeuze afwijzen en opnieuw een keuze vragen;</li>
 <li>alleen stoppen wanneer de gebruiker optie <code>3</code> kiest.</li>
 </ul>
-<h3 id="hints">Hints</h3>
+<h3 class="page-toc" id="hints">Hints</h3>
 <p>Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.</p>
 <details class="hint">
 <summary>1 — Welke gegevens veranderen tijdens het gebruik?</summary>
@@ -604,7 +637,7 @@
 <p>Test niet alleen de drie geldige menuopties.</p>
 <p>Bedenk wat het programma moet doen wanneer de gebruiker bijvoorbeeld <code>7</code> invoert.</p>
 </details>
-<h3 id="testen">Testen</h3>
+<h2 class="page-toc" id="testen">Testen</h2>
 <p>Test het systeem niet alleen met losse handelingen, maar ook met een <strong>volledige reeks handelingen binnen dezelfde uitvoering</strong>.</p>
 <p>Voer minimaal het volgende testscenario uit:</p>
 <table>
@@ -676,11 +709,11 @@
 <p>De leerling moet dan nog steeds worden gevonden.</p>
 <p><strong>Kun je met dit testscenario aantonen dat je systeem correct beslist, nieuwe gegevens bewaart en alleen stopt wanneer de gebruiker daarvoor kiest?</strong></p>
 <p>Als de werkelijke resultaten niet overeenkomen met je voorspellingen, onderzoek dan waardoor het verschil ontstaat en pas je programma aan.</p>
-<h2 id="reflectie-op-de-oplossing">Reflectie op de oplossing</h2>
+<h2 class="page-toc" id="reflectie-op-de-oplossing">Reflectie op de oplossing</h2>
 <p>Bekijk je <strong>datastructuurdiagram</strong> en je uiteindelijke <strong>Python-programma</strong>.</p>
 <p>Waarom is de gekozen datastructuur geschikt voor een systeem waarin gegevens tijdens het gebruik worden toegevoegd én later worden gebruikt om beslissingen te nemen?</p>
 <p>Onderbouw je antwoord met concrete voorbeelden uit je eigen datastructuurdiagram en programma.</p>
-<h2 id="inleveren">Inleveren</h2>
+<h2 class="page-toc" id="inleveren">Inleveren</h2>
 <p>Controleer voordat je inlevert of:</p>
 <ul>
 <li>je programma voldoet aan de specificatie;</li>
@@ -751,6 +784,8 @@
     
     
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../assets/js/page-toc.js"></script>
       
         <script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
       

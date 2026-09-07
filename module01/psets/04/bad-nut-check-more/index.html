@@ -72,6 +72,8 @@
     
       <link rel="stylesheet" href="../../../assets/css/homepage.css">
     
+      <link rel="stylesheet" href="../../../assets/css/guide.css">
+    
       <link rel="stylesheet" href="../../../assets/css/week.css">
     
       <link rel="stylesheet" href="../../../assets/css/tset.css">
@@ -309,20 +311,28 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
   
+
   
-  
+
+  <nav class="md-nav md-nav--secondary page-toc-managed" aria-label="Inhoudsopgave">
+
     
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Inhoudsopgave
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    
+
+    
       
-        <li class="md-nav__item">
+    
+
+    
+      <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        Inhoudsopgave
+      </label>
+
+      <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+          <li class="md-nav__item">
   <a href="#charlie-and-the-chocolate-factory-squirrel-attack" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -332,8 +342,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#waar-werk-je-aan" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -343,8 +353,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#probleem" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -354,8 +364,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#demo" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -365,8 +375,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#understanding" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -376,6 +386,18 @@
   </a>
   
     <nav class="md-nav" aria-label="Understanding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Python">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -470,8 +492,13 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#opdracht" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -505,6 +532,11 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#testen" class="md-nav__link">
     <span class="md-ellipsis">
@@ -516,12 +548,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#reflectie-op-de-oplossing" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -531,8 +558,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#inleveren" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -542,10 +569,13 @@
   </a>
   
 </li>
-      
-    </ul>
-  
-</nav>
+        
+      </ul>
+    
+
+  </nav>
+
+
                   </div>
                 </div>
               </div>
@@ -602,7 +632,7 @@
   </div>
 </div>
 
-<h2 id="waar-werk-je-aan">Waar werk je aan?</h2>
+<h2 class="page-toc" id="waar-werk-je-aan">Waar werk je aan?</h2>
 <p>Met deze Problem Set werk je aan de volgende leerdoelen:</p>
 <ul>
 <li>Ik kan <strong>beredeneren</strong> hoe verschillende controles samen bepalen of invoer bruikbaar is.</li>
@@ -610,15 +640,17 @@
 <li>Ik kan <strong>een oplossing automatiseren</strong> door meerdere voorwaarden en een stopvoorwaarde vast te leggen.</li>
 <li>Ik kan <strong>een controlesysteem programmeren</strong> dat invoer blijft controleren totdat aan alle voorwaarden is voldaan.</li>
 </ul>
-<h2 id="probleem">Probleem</h2>
+<h2 class="page-toc" id="probleem">Probleem</h2>
 <p>In <em>Charlie and the Chocolate Factory</em> worden de controles van de eekhoorns steeds strenger.</p>
 <p>Invoer is niet automatisch bruikbaar omdat deze er op het eerste gezicht goed uitziet. Het systeem moet invoer eerst geschikt maken voor controle en daarna bepalen of deze aan alle voorwaarden voldoet.</p>
 <p>De controle wordt herhaald totdat een bruikbare invoer wordt gevonden.</p>
 <p><strong>Hoe ontwerp je een controlesysteem dat verschillende schrijfwijzen kan verwerken en pas stopt wanneer aan alle voorwaarden is voldaan?</strong></p>
-<h2 id="demo">Demo</h2>
+<h2 class="page-toc" id="demo">Demo</h2>
 <p>[DEMO LATER TOEVOEGEN]</p>
-<h2 id="understanding">Understanding</h2>
-<h3 id="input-validation">Input validation</h3>
+<h2 class="page-toc" id="understanding">Understanding</h2>
+<section class="section-understanding">
+<h3 class="page-toc" id="python">Python</h3>
+<h4 id="input-validation">Input validation</h4>
 <p>Een programma krijgt niet altijd bruikbare invoer van een gebruiker.</p>
 <p>Een gebruiker kan bijvoorbeeld:</p>
 <ul>
@@ -628,7 +660,7 @@
 <li>een waarde invoeren die niet aan de voorwaarden voldoet.</li>
 </ul>
 <p>Een programma kan daarom controleren of invoer bruikbaar is voordat het verdergaat.</p>
-<h3 id="invoer-controleren">Invoer controleren</h3>
+<h4 id="invoer-controleren">Invoer controleren</h4>
 <p>Bij input validation wordt invoer beoordeeld aan de hand van één of meer voorwaarden.</p>
 <p>Bijvoorbeeld:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">answer</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Type yes or no: &quot;</span><span class="p">)</span>
@@ -647,7 +679,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Yes
 </code></pre></div>
 <p>Ook extra spaties kunnen ervoor zorgen dat een vergelijking niet het verwachte resultaat geeft.</p>
-<h3 id="invoer-bewerken">Invoer bewerken</h3>
+<h4 id="invoer-bewerken">Invoer bewerken</h4>
 <p>Een string kan worden bewerkt voordat deze wordt gecontroleerd.</p>
 <p>Python heeft verschillende <strong>string methods</strong> waarmee je een string kunt onderzoeken of bewerken.</p>
 <p>Bijvoorbeeld:</p>
@@ -664,7 +696,7 @@
 <p>en</p>
 <p><strong>invoer controleren</strong>.</p>
 <p>Een string method kan de invoer veranderen of informatie over de invoer geven. Een condition bepaalt vervolgens wat het programma met die informatie doet.</p>
-<h3 id="verschillende-manieren-van-controleren">Verschillende manieren van controleren</h3>
+<h4 id="verschillende-manieren-van-controleren">Verschillende manieren van controleren</h4>
 <p>Niet iedere controle vraagt om dezelfde bewerking.</p>
 <p>Python heeft bijvoorbeeld string methods waarmee je kunt onderzoeken:</p>
 <ul>
@@ -676,7 +708,7 @@
 <li>of een string alleen cijfers bevat.</li>
 </ul>
 <p>Welke controle nodig is, hangt af van het probleem en van wat als geldige invoer wordt beschouwd.</p>
-<h3 id="meerdere-voorwaarden">Meerdere voorwaarden</h3>
+<h4 id="meerdere-voorwaarden">Meerdere voorwaarden</h4>
 <p>Een invoer kan aan meerdere voorwaarden tegelijk moeten voldoen.</p>
 <p>Bijvoorbeeld:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">if</span> <span class="n">condition1</span> <span class="ow">and</span> <span class="n">condition2</span><span class="p">:</span>
@@ -689,7 +721,7 @@
 <li>welke voorwaarden nodig zijn;</li>
 <li>en wanneer de volledige invoer als geldig wordt beschouwd.</li>
 </ul>
-<h3 id="opnieuw-vragen">Opnieuw vragen</h3>
+<h4 id="opnieuw-vragen">Opnieuw vragen</h4>
 <p>Input validation wordt vaak gecombineerd met een <code>while</code>-loop.</p>
 <p>Het programma kan dan invoer blijven vragen zolang de invoer niet geldig is.</p>
 <p>De algemene structuur is:</p>
@@ -700,7 +732,7 @@
 <p>De invoer wordt iedere keer opnieuw gecontroleerd.</p>
 <p>Zodra de invoer geldig is, wordt de condition van de <code>while</code> <code>False</code> en stopt het herhalende proces.</p>
 <p>Hierdoor hoeft het programma niet vooraf te weten hoeveel pogingen de gebruiker nodig heeft.</p>
-<h3 id="pogingen-bijhouden">Pogingen bijhouden</h3>
+<h4 id="pogingen-bijhouden">Pogingen bijhouden</h4>
 <p>Een programma kan ook bijhouden hoe vaak de gebruiker invoer heeft gegeven.</p>
 <p>Daarvoor kan een teller worden gebruikt:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">attempts</span> <span class="o">=</span> <span class="mi">0</span>
@@ -711,7 +743,7 @@
 </code></pre></div>
 <p>De teller verandert iedere keer dat een nieuwe poging wordt gedaan.</p>
 <p>Na afloop bevat <code>attempts</code> het aantal uitgevoerde pogingen.</p>
-<h3 id="een-validatieproces">Een validatieproces</h3>
+<h4 id="een-validatieproces">Een validatieproces</h4>
 <p>Input validation kan worden gezien als een proces:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>invoer ontvangen
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>      ↓
@@ -726,12 +758,13 @@
 </code></pre></div>
 <p>Bij iedere nieuwe poging begint het proces opnieuw.</p>
 <p>De voorwaarden bepalen uiteindelijk wanneer het proces mag stoppen.</p>
-<h2 id="opdracht">Opdracht</h2>
+</section>
+<h2 class="page-toc" id="opdracht">Opdracht</h2>
 <p>Nu ga je deze kennis gebruiken om het probleem van <strong>Bad Nut Check</strong> op te lossen.</p>
 <p>Breid je controlesysteem uit zodat het invoer robuuster kan controleren.</p>
 <p>Werk je oplossing eerst uit als een <strong>flowchart</strong>.</p>
 <p>Zet daarna dezelfde oplossing om in <strong>pseudocode</strong>. Schrijf je pseudocode als genummerde comments in je <code>.py</code>-bestand en bouw daarna de Python-code bij deze stappen.</p>
-<h3 id="specificatie">Specificatie</h3>
+<h3 class="page-toc" id="specificatie">Specificatie</h3>
 <p>Je programma moet:</p>
 <ul>
 <li>de gebruiker om een noot vragen;</li>
@@ -746,7 +779,7 @@
 </ul>
 <p>Je bepaalt zelf welke <strong>string methods</strong> nodig zijn om de invoer te onderzoeken of te bewerken.</p>
 <p>Gebruik niet automatisch dezelfde bewerkingen voor iedere invoer. Bedenk per controle welke informatie je nodig hebt en welke bewerking daarbij past.</p>
-<h3 id="hints">Hints</h3>
+<h3 class="page-toc" id="hints">Hints</h3>
 <p>Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.</p>
 <details class="hint">
 <summary>1 — Welke controles moet je uitvoeren?</summary>
@@ -800,7 +833,7 @@
 <p>Bedenk verschillende manieren waarop een gebruiker dezelfde informatie kan invoeren.</p>
 <p>Test vervolgens of jouw systeem deze invoer op dezelfde manier behandelt wanneer dat volgens jouw ontwerp hoort.</p>
 </details>
-<h3 id="testen">Testen</h3>
+<h2 class="page-toc" id="testen">Testen</h2>
 <p>Een programma is pas betrouwbaar als je controleert of <strong>verschillende schrijfwijzen en verschillende ongeldige situaties correct worden afgehandeld</strong>.</p>
 <p>Voer minimaal de volgende tests uit:</p>
 <table>
@@ -874,7 +907,7 @@
 <p>Leg bij iedere test de <strong>verwachte uitkomst</strong>, het <strong>verwachte aantal pogingen</strong>, de <strong>werkelijke uitkomst</strong> en het <strong>werkelijke aantal pogingen</strong> vast.</p>
 <p><strong>Kun je met deze testgevallen aantonen dat je controlesysteem verschillende schrijfwijzen correct behandelt, iedere ongeldige invoer blijft afwijzen en pas stopt wanneer geldige invoer is gegeven?</strong></p>
 <p>Als de werkelijke uitkomst niet overeenkomt met je verwachting, onderzoek dan waar het verschil ontstaat en pas je programma waar nodig aan.</p>
-<h2 id="reflectie-op-de-oplossing">Reflectie op de oplossing</h2>
+<h2 class="page-toc" id="reflectie-op-de-oplossing">Reflectie op de oplossing</h2>
 <p>Beschrijf na het testen:</p>
 <ol>
 <li>
@@ -893,7 +926,7 @@
 <p><strong>Hoe weet je dat je validatieproces niet te vroeg stopt en ook niet onnodig doorgaat?</strong></p>
 </li>
 </ol>
-<h2 id="inleveren">Inleveren</h2>
+<h2 class="page-toc" id="inleveren">Inleveren</h2>
 <p>Controleer voordat je de Problem Set afrondt:</p>
 <ul>
 <li>je programma voldoet aan de <strong>specificatie</strong>;</li>
@@ -971,6 +1004,8 @@
     
     
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../assets/js/page-toc.js"></script>
       
         <script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
       

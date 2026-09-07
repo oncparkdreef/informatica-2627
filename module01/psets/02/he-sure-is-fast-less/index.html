@@ -72,6 +72,8 @@
     
       <link rel="stylesheet" href="../../../assets/css/homepage.css">
     
+      <link rel="stylesheet" href="../../../assets/css/guide.css">
+    
       <link rel="stylesheet" href="../../../assets/css/week.css">
     
       <link rel="stylesheet" href="../../../assets/css/tset.css">
@@ -309,20 +311,28 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
   
+
   
-  
+
+  <nav class="md-nav md-nav--secondary page-toc-managed" aria-label="Inhoudsopgave">
+
     
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Inhoudsopgave
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    
+
+    
       
-        <li class="md-nav__item">
+    
+
+    
+      <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        Inhoudsopgave
+      </label>
+
+      <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+          <li class="md-nav__item">
   <a href="#waar-werk-je-aan" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -332,8 +342,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#probleem" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -343,8 +353,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#demo" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -354,8 +364,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#understanding" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -365,6 +375,18 @@
   </a>
   
     <nav class="md-nav" aria-label="Understanding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Python">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -415,8 +437,13 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#opdracht" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -450,6 +477,11 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#testen" class="md-nav__link">
     <span class="md-ellipsis">
@@ -473,13 +505,11 @@
 </li>
         
       </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+    
+
+  </nav>
+
+
                   </div>
                 </div>
               </div>
@@ -518,7 +548,7 @@
   <span class="badge-label">CT-proces</span>
   <span class="badge-value">Expressing the Solution</span>
 </span></p>
-<h2 id="waar-werk-je-aan">Waar werk je aan?</h2>
+<h2 class="page-toc" id="waar-werk-je-aan">Waar werk je aan?</h2>
 <p>Met deze Problem Set werk je aan de volgende leerdoelen:</p>
 <ul>
 <li>Ik kan de benodigde <strong>gegevens verzamelen</strong> voor een analyse.</li>
@@ -526,16 +556,18 @@
 <li>Ik kan de <strong>betekenis van geordende gegevens interpreteren</strong>.</li>
 <li>Ik kan informatie <strong>presenteren in de gekozen representatievorm</strong>.</li>
 </ul>
-<h2 id="probleem">Probleem</h2>
+<h2 class="page-toc" id="probleem">Probleem</h2>
 <p>In <em>Forrest Gump</em> zien we dat Forrest snel rent.</p>
 <p>Maar hoe snel rent hij eigenlijk?</p>
 <p>Een computersysteem moet een loopprestatie verwerken en op basis van ingevoerde gegevens automatisch betekenisvolle resultaten berekenen en presenteren.</p>
 <p>Een computer kan alleen berekeningen uitvoeren wanneer informatie uit de werkelijkheid eerst wordt gemodelleerd als gegevens waarmee gerekend kan worden.</p>
 <p><strong>Hoe ontwerp je een systeem dat een loopprestatie omzet naar gegevens waarmee een computer snelheid en andere prestaties automatisch kan berekenen en presenteren?</strong></p>
-<h2 id="demo">Demo</h2>
+<h2 class="page-toc" id="demo">Demo</h2>
 <p>[DEMO LATER TOEVOEGEN]</p>
-<h2 id="understanding">Understanding</h2>
-<h3 id="variables">Variables</h3>
+<h2 class="page-toc" id="understanding">Understanding</h2>
+<section class="section-understanding">
+<h3 class="page-toc" id="python">Python</h3>
+<h4 id="variables">Variables</h4>
 <p>Een <strong>variable</strong> is een naam die verwijst naar een waarde.</p>
 <p>Bijvoorbeeld:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">age</span> <span class="o">=</span> <span class="mi">16</span>
@@ -551,7 +583,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>16
 </code></pre></div>
 <p>De waarde hoeft daardoor niet iedere keer opnieuw in de code te worden geschreven.</p>
-<h3 id="expressions">Expressions</h3>
+<h4 id="expressions">Expressions</h4>
 <p>Een <strong>expression</strong> is code die Python evalueert om een waarde te krijgen.</p>
 <p>Bijvoorbeeld:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="mi">8</span> <span class="o">*</span> <span class="mi">2</span>
@@ -569,7 +601,7 @@
 <p>De uitvoer is:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>12
 </code></pre></div>
-<h3 id="het-resultaat-bewaren">Het resultaat bewaren</h3>
+<h4 id="het-resultaat-bewaren">Het resultaat bewaren</h4>
 <p>Het resultaat van een expression kan zelf weer in een variable worden bewaard.</p>
 <p>Bijvoorbeeld:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">price</span> <span class="o">=</span> <span class="mi">4</span>
@@ -591,7 +623,7 @@
 <p>De uitvoer is:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>12
 </code></pre></div>
-<h3 id="berekende-waarden-opnieuw-gebruiken">Berekende waarden opnieuw gebruiken</h3>
+<h4 id="berekende-waarden-opnieuw-gebruiken">Berekende waarden opnieuw gebruiken</h4>
 <p>Een berekende waarde kan ook onderdeel worden van een volgende berekening.</p>
 <p>Bijvoorbeeld:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">length</span> <span class="o">=</span> <span class="mi">5</span>
@@ -612,10 +644,11 @@
 <p>Het resultaat daarvan wordt als <code>double_area</code> bewaard.</p>
 <p>Zo kunnen verschillende berekeningen op elkaar voortbouwen: het resultaat van de ene berekening kan informatie opleveren die in een volgende berekening opnieuw wordt gebruikt.</p>
 <p><a href="../../../understanding/visual-first/ipo/">Meer over IPO-diagrammen</a></p>
-<h2 id="opdracht">Opdracht</h2>
+</section>
+<h2 class="page-toc" id="opdracht">Opdracht</h2>
 <p>Nu ga je deze kennis gebruiken om het probleem van <strong>How Fast Is Forrest?</strong> op te lossen.</p>
 <p>Ontwerp en programmeer een systeem dat informatie over een loopprestatie verwerkt en daaruit een overzichtelijk prestatierapport maakt.</p>
-<h3 id="specificatie">Specificatie</h3>
+<h3 class="page-toc" id="specificatie">Specificatie</h3>
 <p>Je programma vraagt de gebruiker om:</p>
 <ul>
 <li>de <strong>afstand in meters</strong>;</li>
@@ -632,7 +665,7 @@
 <p>Gebruik in je programma <strong>variabelen</strong>, <code>int</code> en <code>float</code>.</p>
 <p>Gebruik voor afstand en tijd <strong>positieve getallen</strong>. Waarden groter dan <code>0</code> zijn in deze Problem Set geldige invoer.</p>
 <p>Andere invoer hoef je in deze Problem Set niet af te handelen.</p>
-<h3 id="hints">Hints</h3>
+<h3 class="page-toc" id="hints">Hints</h3>
 <p>Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.</p>
 <details class="hint">
 <summary>1 — Welke informatie gaat erin en komt eruit?</summary>
@@ -669,7 +702,7 @@
 <p>Geef deze waarden betekenisvolle <strong>variabelenamen</strong>.</p>
 <p>Bedenk ook welke waarden als <code>int</code> en welke als <code>float</code> moeten worden gebruikt zodat Python ermee kan rekenen.</p>
 </details>
-<h3 id="testen">Testen</h3>
+<h2 class="page-toc" id="testen">Testen</h2>
 <p>Een programma is pas betrouwbaar als het bij verschillende afstanden en tijden de juiste resultaten berekent en presenteert.</p>
 <p>Voer minimaal de volgende tests uit:</p>
 <table>
@@ -733,7 +766,7 @@
 <p><strong>werkelijke uitkomst = verwachte uitkomst</strong></p>
 <p>Als dat niet zo is, onderzoek dan waar je informatiemodel, berekening of programma iets anders doet dan je had verwacht en pas je programma waar nodig aan.</p>
 <p><strong>Kun je met deze drie testgevallen aantonen dat je programma verschillende loopprestaties correct verwerkt en alle ingevoerde en berekende gegevens in het prestatierapport toont?</strong></p>
-<h3 id="inleveren">Inleveren</h3>
+<h2 class="page-toc" id="inleveren">Inleveren</h2>
 <p>Controleer voordat je de Problem Set afrondt:</p>
 <ul>
 <li>je programma vraagt om een <strong>afstand in meters</strong> en een <strong>tijd in seconden</strong>;</li>
@@ -808,6 +841,8 @@
     
     
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../assets/js/page-toc.js"></script>
       
         <script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
       

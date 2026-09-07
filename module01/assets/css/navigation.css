@@ -326,3 +326,18 @@
 .course-nav__weeks a:focus-visible span {
   color: var(--course-nav-muted-hover);
 }
+
+
+/* =========================================================
+   PAGINA-INHOUDSOPGAVE
+   ========================================================= */
+
+/* Verberg de beheerde pagina-TOC totdat filtering gereed is. */
+
+.page-toc-managed {
+  visibility: hidden;
+}
+
+.page-toc-managed.page-toc-ready {
+  visibility: visible;
+}
