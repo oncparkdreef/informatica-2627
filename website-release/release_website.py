@@ -1653,17 +1653,20 @@ def main():
         for slug, week, reason in package["included"]
     }
 
-    if len(publication_modules) != 1:
+    if len(publication_modules) > 1:
         print()
         print(
-            "Fout: het publicatiepakket moet precies "
-            "één module bevatten."
+            "Fout: het publicatiepakket mag niet meer "
+            "dan één module bevatten."
         )
         raise SystemExit(1)
 
-    publication_module = next(
-        iter(publication_modules)
-    )
+    if len(publication_modules) == 1:
+        publication_module = next(
+            iter(publication_modules)
+        )
+    else:
+        publication_module = 1
 
     try:
         build_publication_package(
