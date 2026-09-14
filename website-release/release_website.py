@@ -13,6 +13,7 @@ import sys
 import tempfile
 from datetime import date, datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import yaml
 
@@ -1457,7 +1458,7 @@ def main():
 
         raise SystemExit(1)
 
-    today = date.today()
+    today = datetime.now(ZoneInfo("Europe/Amsterdam")).date()
     found = False
 
     print()

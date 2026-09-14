@@ -156,6 +156,12 @@ jobs:
 
           python -m mkdocs --version
 
+      - name: Install website release dependencies
+        shell: pwsh
+        run: |
+          python -m pip install `
+            -r "website-release\requirements.txt"
+
       - name: Build website release
         shell: pwsh
         run: |
