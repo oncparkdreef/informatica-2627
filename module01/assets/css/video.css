@@ -68,3 +68,46 @@
     max-width: 100%;
   }
 }
+
+.video-youtube-link {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-youtube-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.video-youtube-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 84px;
+  height: 58px;
+  border-radius: 14px;
+
+  background: rgba(255, 0, 0, 0.92);
+  color: #fff;
+
+  font-size: 30px;
+  line-height: 1;
+
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease;
+}
+
+.video-youtube-link:hover .video-youtube-play {
+  transform: translate(-50%, -50%) scale(1.08);
+  background: rgb(255, 0, 0);
+}
