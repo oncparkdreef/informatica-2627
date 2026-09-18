@@ -72,48 +72,50 @@
    ALGEMENE PAGINALAYOUT
    ========================================================= */
 
-.md-grid {
-  max-width: none;
+@media screen and (min-width: 60em) {
 
-  margin-left: 0;
-  margin-right: 0;
-}
+  .md-grid {
+    max-width: none;
 
-
-.md-main__inner {
-  margin-top: 0;
-}
+    margin-left: 0;
+    margin-right: 0;
+  }
 
 
-.md-content {
-  max-width: none;
-}
+  .md-main__inner {
+    margin-top: 0;
+  }
 
 
-.md-content__inner {
-  max-width: none;
-
-  margin: 0;
-
-  padding:
-    var(--content-padding-top)
-    var(--content-padding-right)
-    var(--content-padding-bottom)
-    var(--content-padding-left);
-}
+  .md-content {
+    max-width: none;
+  }
 
 
-/* =========================================================
+  .md-content__inner {
+    max-width: none;
+
+    margin: 0;
+
+    padding:
+      var(--content-padding-top) var(--content-padding-right) var(--content-padding-bottom) var(--content-padding-left);
+  }
+
+
+  /* =========================================================
    HEADER
    ========================================================= */
 
-.md-header {
-  display: none;
-}
+  .md-header {
+    display: none;
+  }
 
 
-.md-container {
-  padding-top: 0;
+  .md-container {
+    padding-top: 0;
+  }
+
+
 }
 
 
@@ -130,39 +132,116 @@
    LINKER SIDEBAR
    ========================================================= */
 
-.md-sidebar--primary {
-  width: var(--course-nav-width);
-  height: 100vh;
 
-  top: 0;
+/* =========================================================
+   COMPACTE DESKTOPLAYOUT
+   Tablet landscape en smallere laptops: 960px - 1219px
 
-  margin: 0;
-  padding: 0;
+   Onder 960px blijft Material de mobiele header/drawer gebruiken.
+   Vanaf 1220px blijft de bestaande desktoplayout ongewijzigd.
+   ========================================================= */
 
-  overflow: hidden;
+@media screen and (min-width: 60em) and (max-width: 76.24em) {
 
-  background: var(--course-nav-background);
+  :root {
+    --course-nav-width: 15rem;
+
+    --course-nav-padding-left: 1rem;
+    --course-nav-padding-right: 1rem;
+
+    --content-padding-left: 2rem;
+    --content-padding-right: 2rem;
+  }
+
+
+  .md-sidebar--primary {
+    position: sticky;
+    display: block;
+
+    width: var(--course-nav-width);
+    height: 100vh;
+
+    top: 0;
+    left: auto;
+    right: auto;
+
+    margin: 0;
+    padding: 0;
+
+    transform: none;
+    overflow: hidden;
+
+    background: var(--course-nav-background);
+  }
+
+
+  .md-sidebar--primary .md-sidebar__scrollwrap {
+    position: static;
+
+    width: 100%;
+    height: 100vh;
+
+    top: auto;
+    left: auto;
+    right: auto;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    background: var(--course-nav-background);
+  }
+
+
+  .md-sidebar--primary .md-sidebar__inner {
+    height: 100%;
+
+    padding: 0;
+
+    background: var(--course-nav-background);
+  }
 }
 
 
-.md-sidebar--primary .md-sidebar__scrollwrap {
-  top: 0;
+@media screen and (min-width: 76.25em) {
 
-  height: 100vh;
+  .md-sidebar--primary {
+    width: var(--course-nav-width);
+    height: 100vh;
 
-  margin: 0;
-  padding: 0;
+    top: 0;
 
-  background: var(--course-nav-background);
-}
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    background: var(--course-nav-background);
+  }
 
 
-.md-sidebar--primary .md-sidebar__inner {
-  height: 100%;
+  .md-sidebar--primary .md-sidebar__scrollwrap {
+    top: 0;
 
-  padding: 0;
+    height: 100vh;
 
-  background: var(--course-nav-background);
+    margin: 0;
+    padding: 0;
+
+    background: var(--course-nav-background);
+  }
+
+
+  .md-sidebar--primary .md-sidebar__inner {
+    height: 100%;
+
+    padding: 0;
+
+    background: var(--course-nav-background);
+  }
+
+
 }
 
 
@@ -179,10 +258,7 @@
   min-height: 100%;
 
   padding:
-    var(--course-nav-padding-top)
-    var(--course-nav-padding-right)
-    var(--course-nav-padding-bottom)
-    var(--course-nav-padding-left);
+    var(--course-nav-padding-top) var(--course-nav-padding-right) var(--course-nav-padding-bottom) var(--course-nav-padding-left);
 
   background: var(--course-nav-background);
   color: var(--course-nav-text);
@@ -325,6 +401,95 @@
 .course-nav__weeks a:hover span,
 .course-nav__weeks a:focus-visible span {
   color: var(--course-nav-muted-hover);
+}
+
+
+/* =========================================================
+   MOBIELE CURSUSNAVIGATIE
+   Onder 960px gebruikt Material de header + drawer.
+
+   De drawerbreedte blijft door Material beheerd.
+   Alleen de inhoud van onze course-nav wordt compacter
+   gemaakt voor tablet portrait, telefoon en smalle vensters.
+   ========================================================= */
+
+@media screen and (max-width: 59.99em) {
+
+  .md-sidebar--primary,
+  .md-sidebar--primary .md-sidebar__scrollwrap,
+  .md-sidebar--primary .md-sidebar__inner,
+  .course-nav {
+    background: var(--course-nav-background);
+  }
+
+
+  .course-nav {
+    box-sizing: border-box;
+
+    width: 100%;
+
+    padding:
+      0.8rem 0.65rem 1rem;
+
+    font-size: 0.82rem;
+    line-height: 1.3;
+  }
+
+
+  .course-nav__header {
+    padding-bottom: 0.65rem;
+  }
+
+
+  .course-nav__home strong {
+    font-size: 1.25rem;
+    line-height: 1.1;
+  }
+
+
+  .course-nav__home span {
+    max-width: none;
+
+    font-size: 0.74rem;
+    line-height: 1.25;
+  }
+
+
+  .course-nav__section {
+    padding: 0.6rem 0;
+  }
+
+
+  .course-nav__section a {
+    padding: 0.06rem 0;
+  }
+
+
+  .course-nav__weeks a {
+    display: flex;
+    align-items: baseline;
+
+    gap: 0.22rem;
+
+    padding: 0.11rem 0;
+
+    font-size: 0.72rem;
+    line-height: 1.45;
+  }
+
+
+  .course-nav__weeks strong {
+    flex: 0 0 auto;
+
+    white-space: nowrap;
+  }
+
+
+  .course-nav__weeks span {
+    min-width: 0;
+
+    white-space: nowrap;
+  }
 }
 
 

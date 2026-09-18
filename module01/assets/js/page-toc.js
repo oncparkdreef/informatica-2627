@@ -4,6 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   if (pageTocHeadings.length === 0) {
+    const secondarySidebar = document.querySelector(
+      ".md-sidebar--secondary"
+    );
+
+    if (secondarySidebar) {
+      secondarySidebar.style.display = "none";
+    }
+
     return;
   }
 

@@ -63,6 +63,7 @@
 }
 
 @media screen and (max-width: 800px) {
+
   .video-title,
   .video-container {
     max-width: 100%;
@@ -72,14 +73,50 @@
 .video-youtube-link {
   position: relative;
   display: block;
+
+  width: 100%;
+  max-width: 760px;
+
+  aspect-ratio: 16 / 9;
+
   overflow: hidden;
+
   background: #000;
 }
 
+
 .video-youtube-link img {
   display: block;
+
   width: 100%;
-  height: auto;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* =========================================================
+   TELEFOON LANDSCAPE
+
+   Op een laag landscape-scherm bepaalt de beschikbare hoogte
+   de videogrootte, zodat de video niet vrijwel het hele
+   viewport inneemt.
+   ========================================================= */
+
+@media screen and (max-width: 59.99em) and (orientation: landscape) and (max-height: 500px) {
+
+  .video-block {
+    width: min(100%, calc(62vh * 16 / 9));
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .video-title,
+  .video-youtube-link {
+    width: 100%;
+    max-width: none;
+  }
 }
 
 .video-youtube-play {
