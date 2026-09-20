@@ -2,66 +2,110 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://oncparkdreef.github.io/informatica-2627/module01/</loc>
-         <lastmod>2026-09-18</lastmod>
+         <lastmod>2026-09-20</lastmod>
     </url>
     <url>
          <loc>https://oncparkdreef.github.io/informatica-2627/module01/concepts/computational-thinking/</loc>
-         <lastmod>2026-09-18</lastmod>
+         <lastmod>2026-09-20</lastmod>
     </url>
     <url>
          <loc>https://oncparkdreef.github.io/informatica-2627/module01/concepts/git/</loc>
-         <lastmod>2026-09-18</lastmod>
+         <lastmod>2026-09-20</lastmod>
     </url>
     <url>
          <loc>https://oncparkdreef.github.io/informatica-2627/module01/concepts/python/</loc>
-         <lastmod>2026-09-18</lastmod>
+         <lastmod>2026-09-20</lastmod>
     </url>
     <url>
          <loc>https://oncparkdreef.github.io/informatica-2627/module01/concepts/visual-first/</loc>
-         <lastmod>2026-09-18</lastmod>
+         <lastmod>2026-09-20</lastmod>
     </url>
     <url>
          <loc>https://oncparkdreef.github.io/informatica-2627/module01/guide/</loc>
-         <lastmod>2026-09-18</lastmod>
+         <lastmod>2026-09-20</lastmod>
     </url>
     <url>
          <loc>https://oncparkdreef.github.io/informatica-2627/module01/guide/git-github/</loc>
-         <lastmod>2026-09-18</lastmod>
+         <lastmod>2026-09-20</lastmod>
     </url>
     <url>
          <loc>https://oncparkdreef.github.io/informatica-2627/module01/guide/portfolio/</loc>
-         <lastmod>2026-09-18</lastmod>
+         <lastmod>2026-09-20</lastmod>
     </url>
     <url>
          <loc>https://oncparkdreef.github.io/informatica-2627/module01/guide/software/</loc>
-         <lastmod>2026-09-18</lastmod>
+         <lastmod>2026-09-20</lastmod>
     </url>
     <url>
          <loc>https://oncparkdreef.github.io/informatica-2627/module01/guide/werkwijze/</loc>
-         <lastmod>2026-09-18</lastmod>
+         <lastmod>2026-09-20</lastmod>
     </url>
     <url>
          <loc>https://oncparkdreef.github.io/informatica-2627/module01/psets/00/</loc>
-         <lastmod>2026-09-18</lastmod>
+         <lastmod>2026-09-20</lastmod>
     </url>
     <url>
          <loc>https://oncparkdreef.github.io/informatica-2627/module01/psets/00/my-morning-routine/</loc>
-         <lastmod>2026-09-18</lastmod>
+         <lastmod>2026-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://oncparkdreef.github.io/informatica-2627/module01/psets/01/</loc>
+         <lastmod>2026-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://oncparkdreef.github.io/informatica-2627/module01/psets/01/order-up-less/</loc>
+         <lastmod>2026-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://oncparkdreef.github.io/informatica-2627/module01/psets/01/order-up-more/</loc>
+         <lastmod>2026-09-20</lastmod>
     </url>
     <url>
          <loc>https://oncparkdreef.github.io/informatica-2627/module01/resources/</loc>
-         <lastmod>2026-09-18</lastmod>
+         <lastmod>2026-09-20</lastmod>
     </url>
     <url>
          <loc>https://oncparkdreef.github.io/informatica-2627/module01/tsets/00/tosti-challenge/</loc>
-         <lastmod>2026-09-18</lastmod>
+         <lastmod>2026-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://oncparkdreef.github.io/informatica-2627/module01/tsets/01/order-here/</loc>
+         <lastmod>2026-09-20</lastmod>
     </url>
     <url>
          <loc>https://oncparkdreef.github.io/informatica-2627/module01/understanding/</loc>
-         <lastmod>2026-09-18</lastmod>
+         <lastmod>2026-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://oncparkdreef.github.io/informatica-2627/module01/understanding/_content/python/sequential-execution/</loc>
+         <lastmod>2026-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://oncparkdreef.github.io/informatica-2627/module01/understanding/_content/visual-first/flowcharts/basics/</loc>
+         <lastmod>2026-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://oncparkdreef.github.io/informatica-2627/module01/understanding/git/update/</loc>
+         <lastmod>2026-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://oncparkdreef.github.io/informatica-2627/module01/understanding/portfolio/</loc>
+         <lastmod>2026-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://oncparkdreef.github.io/informatica-2627/module01/understanding/python/sequential-execution/</loc>
+         <lastmod>2026-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://oncparkdreef.github.io/informatica-2627/module01/understanding/visual-first/flowcharts/basics/</loc>
+         <lastmod>2026-09-20</lastmod>
     </url>
     <url>
          <loc>https://oncparkdreef.github.io/informatica-2627/module01/weeks/00/</loc>
-         <lastmod>2026-09-18</lastmod>
+         <lastmod>2026-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://oncparkdreef.github.io/informatica-2627/module01/weeks/01/</loc>
+         <lastmod>2026-09-20</lastmod>
     </url>
 </urlset>
