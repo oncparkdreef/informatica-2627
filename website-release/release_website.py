@@ -11,6 +11,7 @@ import stat
 import subprocess
 import sys
 import tempfile
+import zipfile
 from datetime import date, datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -1064,6 +1065,29 @@ def prepare_publication_package(
                 )
 
     # -----------------------------------------------------
+    # Leerlingbestanden filteren
+    # -----------------------------------------------------
+
+    package_student_files_root = (
+        PUBLICATION_PACKAGE_ROOT
+        / "student-files"
+    )
+
+    if package_student_files_root.is_dir():
+        for child in package_student_files_root.iterdir():
+            if (
+                child.is_dir()
+                and re.fullmatch(
+                    r"\d{2}",
+                    child.name,
+                )
+                and child.name not in included_weeks
+            ):
+                shutil.rmtree(
+                    child
+                )
+
+    # -----------------------------------------------------
     # Understanding filteren
     # -----------------------------------------------------
 
@@ -1239,6 +1263,96 @@ def build_publication_package(module):
         raise RuntimeError(
             "Informatica-export is mislukt."
         )
+
+def build_student_downloads(included):
+    """
+    Maak per openbare week een ZIP met leerlingbestanden.
+
+    De inhoud van de weekmap komt direct in de ZIP,
+    zonder extra bovenliggende map.
+    """
+
+    student_files_root = (
+        PUBLICATION_PACKAGE_ROOT
+        / "student-files"
+    )
+
+    site_root = (
+        PUBLICATION_PACKAGE_ROOT
+        / "site"
+    )
+
+    if not site_root.is_dir():
+        raise RuntimeError(
+            "Gebouwde website niet gevonden voor leerlingdownloads:\n"
+            f"  {site_root}"
+        )
+
+    print()
+    print("Leerlingdownloads maken...")
+
+    created = []
+
+    for slug, week, reason in included:
+        source_dir = (
+            student_files_root
+            / week
+        )
+
+        if not source_dir.is_dir():
+            continue
+
+        files = sorted(
+            path
+            for path in source_dir.rglob("*")
+            if path.is_file()
+        )
+
+        if not files:
+            continue
+
+        downloads_root = (
+            site_root
+            / "downloads"
+        )
+
+        downloads_root.mkdir(
+            parents=True,
+            exist_ok=True,
+        )
+
+        zip_path = (
+            downloads_root
+            / f"{slug}.zip"
+        )
+
+        with zipfile.ZipFile(
+            zip_path,
+            "w",
+            compression=zipfile.ZIP_DEFLATED,
+        ) as archive:
+            for source_path in files:
+                archive.write(
+                    source_path,
+                    arcname=(
+                        source_path
+                        .relative_to(source_dir)
+                        .as_posix()
+                    ),
+                )
+
+        created.append(zip_path)
+
+        print(
+            f"  {slug}: {len(files)} bestand(en) -> "
+            f"{zip_path}"
+        )
+
+    if not created:
+        print("  geen leerlingdownloads")
+
+    return created
+
 
 def publish_website(module):
     """
@@ -1672,6 +1786,10 @@ def main():
     try:
         build_publication_package(
             publication_module
+        )
+
+        build_student_downloads(
+            package["included"]
         )
     except RuntimeError as error:
         print()
