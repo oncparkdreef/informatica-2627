@@ -1,4 +1,4 @@
-﻿# Bestand: release_website.py
+# Bestand: release_website.py
 # Locatie: Informatica-2627/website-release/release_website.py
 # Doel: geplande weekreleases voor de publieke leerlingwebsite voorbereiden
 
@@ -93,6 +93,11 @@ RELEASE_PLAN_FILE = (
     SCRIPT_DIR
     / "release-plans"
     / "website.csv"
+)
+
+RELEASE_STATE_FILE = (
+    SCRIPT_DIR
+    / "release-state.json"
 )
 
 RELEASE_WEBSITE_ROOT = (
@@ -1501,6 +1506,34 @@ def mark_published(
         RELEASE_PLAN_FILE
     )
 
+
+def write_release_state(source_commit):
+    """
+    Leg vast welke commit van de officiële jaarbron
+    succesvol voor de publieke website is gebruikt.
+    """
+
+    released_at = datetime.now(
+        ZoneInfo("Europe/Amsterdam")
+    )
+
+    state = {
+        "school_year": SCHOOL_YEAR,
+        "source_commit": source_commit,
+        "released_at": released_at.isoformat(),
+    }
+
+    RELEASE_STATE_FILE.write_text(
+        json.dumps(
+            state,
+            ensure_ascii=False,
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+
+
 # =========================================================
 # MAIN
 # =========================================================
@@ -1822,6 +1855,10 @@ def main():
                 fieldnames,
                 newly_published_slugs,
             )
+
+        write_release_state(
+            source_commit
+        )
 
     print()
     print("=" * 70)

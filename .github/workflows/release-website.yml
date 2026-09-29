@@ -1,4 +1,4 @@
-﻿name: Release website
+name: Release website
 
 on:
   workflow_dispatch:
@@ -225,7 +225,8 @@ jobs:
           git add -- `
             "module01" `
             "404.html" `
-            "website-release/release-plans/website.csv"
+            "website-release/release-plans/website.csv" `
+            "website-release/release-state.json"
 
           $changes = git diff --cached --name-only
 
