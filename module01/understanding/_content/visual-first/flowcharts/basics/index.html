@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html>
 
 <html class="no-js" lang="nl">
@@ -19,6 +19,7 @@
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
 <link href="../../../../../assets/css/style.css" rel="stylesheet"/>
 <link href="../../../../../assets/css/navigation.css" rel="stylesheet"/>
+<link href="../../../../../assets/css/tool-dock.css" rel="stylesheet"/>
 <link href="../../../../../assets/css/reference.css" rel="stylesheet"/>
 <link href="../../../../../assets/css/goals.css" rel="stylesheet"/>
 <link href="../../../../../assets/css/test.css" rel="stylesheet"/>
@@ -235,6 +236,54 @@
 <p>Een flowchart is daarmee geen Python-code, maar een manier om de <strong>logica van een algoritme zichtbaar te maken</strong> voordat je gaat programmeren.</p>
 </article>
 </div>
+          
+  ﻿<aside aria-label="Externe tools" class="tool-dock" data-tool-dock="">
+<button aria-controls="tool-dock-panel" aria-expanded="false" class="tool-dock__toggle" data-tool-dock-toggle="" type="button">
+<span aria-hidden="true" class="tool-dock__toggle-icon">‹</span>
+<span class="tool-dock__sr-only">Open externe tools</span>
+</button>
+<nav class="tool-dock__panel" id="tool-dock-panel">
+<button aria-label="Open jouw GitHub" class="tool-dock__item" data-student-tool="github" title="GitHub" type="button">
+<img alt="" class="tool-dock__icon-image" src="../../../../../assets/images/tool-dock/github.png"/>
+</button>
+<button aria-label="Open jouw Codespace" class="tool-dock__item" data-student-tool="codespaces" title="GitHub Codespaces" type="button">
+<img alt="" class="tool-dock__icon-image" src="../../../../../assets/images/tool-dock/codespaces.png"/>
+</button>
+<a aria-label="Lucidchart" class="tool-dock__item" href="https://lucid.app/" rel="noopener noreferrer" target="_blank" title="Lucidchart">
+<img alt="" class="tool-dock__icon-image" src="../../../../../assets/images/tool-dock/lucidchart.png"/>
+</a>
+<a aria-label="Think Python" class="tool-dock__item" href="https://greenteapress.com/thinkpython2/thinkpython2.pdf" rel="noopener noreferrer" target="_blank" title="Think Python">
+<img alt="" class="tool-dock__icon-image" src="../../../../../assets/images/tool-dock/think-python.png"/>
+</a>
+</nav>
+</aside>
+<div class="tool-access-modal" data-tool-access-modal="" hidden="">
+<div class="tool-access-modal__backdrop" data-tool-access-close=""></div>
+<section aria-labelledby="tool-access-title" aria-modal="true" class="tool-access-modal__dialog" role="dialog">
+<button aria-label="Sluiten" class="tool-access-modal__close" data-tool-access-close="" type="button">
+      ×
+    </button>
+<img alt="" class="tool-access-modal__logo" data-tool-access-logo="" src=""/>
+<h2 class="tool-access-modal__title" data-tool-access-title="" id="tool-access-title">
+      Open jouw omgeving
+    </h2>
+<p class="tool-access-modal__intro">
+      Vul je leerlingnummer in.
+    </p>
+<form data-tool-access-form="">
+<label class="tool-access-modal__label" for="tool-access-student-number">
+        Leerlingnummer
+      </label>
+<input autocomplete="off" class="tool-access-modal__input" data-tool-access-input="" id="tool-access-student-number" inputmode="numeric" pattern="[0-9]+" placeholder="Bijvoorbeeld 123456" required="" spellcheck="false" type="text"/>
+<p class="tool-access-modal__error" data-tool-access-error="" hidden="">
+        Vul een geldig leerlingnummer in.
+      </p>
+<button class="tool-access-modal__submit" data-tool-access-submit="" type="submit">
+        Open
+      </button>
+</form>
+</section>
+</div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
 </div>
@@ -260,6 +309,7 @@
 <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["navigation.tracking", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": null}</script>
 <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
 <script src="../../../../../assets/js/page-toc.js"></script>
+<script src="../../../../../assets/js/tool-dock.js"></script>
 <script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>

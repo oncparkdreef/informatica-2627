@@ -1,4 +1,4 @@
-
+﻿
 <!doctype html>
 <html lang="nl" class="no-js">
   <head>
@@ -55,6 +55,8 @@
       <link rel="stylesheet" href="../../../assets/css/style.css">
     
       <link rel="stylesheet" href="../../../assets/css/navigation.css">
+    
+      <link rel="stylesheet" href="../../../assets/css/tool-dock.css">
     
       <link rel="stylesheet" href="../../../assets/css/reference.css">
     
@@ -407,6 +409,50 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#variable-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variable names
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int-en-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        int en float
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invoer-omzetten-naar-een-getal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Invoer omzetten naar een getal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arithmetic-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arithmetic operators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#expressions" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -522,6 +568,7 @@
             
           
           
+  
             <div class="md-content" data-md-component="content">
               
               <article class="md-content__inner md-typeset">
@@ -589,63 +636,148 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>16
 </code></pre></div>
 <p>De waarde hoeft daardoor niet iedere keer opnieuw in de code te worden geschreven.</p>
+<h4 id="variable-names">Variable names</h4>
+<p>Een variable name maakt duidelijk welke informatie een waarde voorstelt.</p>
+<p>Bijvoorbeeld:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">age</span> <span class="o">=</span> <span class="mi">16</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">temperature</span> <span class="o">=</span> <span class="mi">18</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">price</span> <span class="o">=</span> <span class="mi">4</span>
+</code></pre></div>
+<p>Variable names mogen letters, cijfers en <code>_</code> bevatten, maar mogen niet met een cijfer beginnen en geen spaties bevatten.</p>
+<p>Dit zijn geldige variable names:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">temperature</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">room_temperature</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">temperature2</span>
+</code></pre></div>
+<p>Dit zijn geen geldige variable names:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>2temperature
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>room temperature
+</code></pre></div>
+<p>Python maakt ook onderscheid tussen hoofdletters en kleine letters. <code>temperature</code> en <code>Temperature</code> zijn dus verschillende variable names.</p>
+<p>Gebruik namen die duidelijk maken <strong>welke informatie</strong> een variable voorstelt.</p>
+<h4 id="int-en-float"><code>int</code> en <code>float</code></h4>
+<p>Waarden hebben in Python een bepaald <strong>type</strong>.</p>
+<p>Voor getallen gebruiken we onder andere <code>int</code> en <code>float</code>.</p>
+<p>Een geheel getal heeft het type <code>int</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">age</span> <span class="o">=</span> <span class="mi">16</span>
+</code></pre></div>
+<p>Een getal met een decimaal deel heeft het type <code>float</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">temperature</span> <span class="o">=</span> <span class="mf">18.5</span>
+</code></pre></div>
+<p>De waarden <code>16</code> en <code>18.5</code> zijn dus allebei getallen, maar hebben in Python een verschillend type.</p>
+<h4 id="invoer-omzetten-naar-een-getal">Invoer omzetten naar een getal</h4>
+<p>Met <code>input()</code> kan een programma informatie van een gebruiker ontvangen.</p>
+<p>Bijvoorbeeld:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Leeftijd: &quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>De informatie die <code>input()</code> ontvangt, kan niet direct als getal worden gebruikt.</p>
+<p>Met <code>int()</code> kun je invoer omzetten naar een integer:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Leeftijd: &quot;</span><span class="p">))</span>
+</code></pre></div>
+<p>Met <code>float()</code> kun je invoer omzetten naar een floating-point getal:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">temperature</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Temperatuur: &quot;</span><span class="p">))</span>
+</code></pre></div>
+<p>Gebruik <code>int()</code> wanneer de waarde een geheel getal moet zijn.</p>
+<p>Gebruik <code>float()</code> wanneer de waarde ook een decimaal deel kan bevatten.</p>
+<h4 id="arithmetic-operators">Arithmetic operators</h4>
+<p>Met numerieke waarden kan Python berekeningen uitvoeren.</p>
+<p>Daarvoor gebruikt Python <strong>arithmetic operators</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Betekenis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>optellen</td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>aftrekken</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>vermenigvuldigen</td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>delen</td>
+</tr>
+</tbody>
+</table>
+<p>Bijvoorbeeld:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">print</span><span class="p">(</span><span class="mi">8</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nb">print</span><span class="p">(</span><span class="mi">8</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="nb">print</span><span class="p">(</span><span class="mi">8</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="nb">print</span><span class="p">(</span><span class="mi">8</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+<p>De uitvoer is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>10
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>6
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>16
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>4.0
+</code></pre></div>
+<p>Bij delen met <code>/</code> is het resultaat in Python een <code>float</code>. Daarom wordt <code>8 / 2</code> weergegeven als <code>4.0</code>.</p>
 <h4 id="expressions">Expressions</h4>
 <p>Een <strong>expression</strong> is code die Python evalueert om een waarde te krijgen.</p>
 <p>Bijvoorbeeld:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="mi">8</span> <span class="o">*</span> <span class="mi">2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="mi">8</span> <span class="o">*</span> <span class="mi">2</span>
 </code></pre></div>
 <p>Python evalueert deze expression. Het resultaat is de waarde <code>16</code>.</p>
 <p>Een expression kan ook variables bevatten:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">price</span> <span class="o">=</span> <span class="mi">4</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">amount</span> <span class="o">=</span> <span class="mi">3</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">price</span> <span class="o">*</span> <span class="n">amount</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">price</span> <span class="o">=</span> <span class="mi">4</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">amount</span> <span class="o">=</span> <span class="mi">3</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">price</span> <span class="o">*</span> <span class="n">amount</span><span class="p">)</span>
 </code></pre></div>
 <p>Python gebruikt de waarden waarnaar <code>price</code> en <code>amount</code> verwijzen en evalueert:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">price</span> <span class="o">*</span> <span class="n">amount</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">price</span> <span class="o">*</span> <span class="n">amount</span>
 </code></pre></div>
 <p>De uitvoer is:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>12
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>12
 </code></pre></div>
 <h4 id="het-resultaat-bewaren">Het resultaat bewaren</h4>
 <p>Het resultaat van een expression kan zelf weer in een variable worden bewaard.</p>
 <p>Bijvoorbeeld:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">price</span> <span class="o">=</span> <span class="mi">4</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">amount</span> <span class="o">=</span> <span class="mi">3</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">total</span> <span class="o">=</span> <span class="n">price</span> <span class="o">*</span> <span class="n">amount</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">price</span> <span class="o">=</span> <span class="mi">4</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="n">amount</span> <span class="o">=</span> <span class="mi">3</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="n">total</span> <span class="o">=</span> <span class="n">price</span> <span class="o">*</span> <span class="n">amount</span>
 </code></pre></div>
 <p>Python evalueert eerst:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">price</span> <span class="o">*</span> <span class="n">amount</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">price</span> <span class="o">*</span> <span class="n">amount</span>
 </code></pre></div>
 <p>Het resultaat is <code>12</code>.</p>
 <p>Met:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">total</span> <span class="o">=</span> <span class="n">price</span> <span class="o">*</span> <span class="n">amount</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">total</span> <span class="o">=</span> <span class="n">price</span> <span class="o">*</span> <span class="n">amount</span>
 </code></pre></div>
 <p>wordt deze berekende waarde vervolgens toegekend aan de variable <code>total</code>.</p>
 <p>Je kunt die waarde daarna opnieuw gebruiken:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
 </code></pre></div>
 <p>De uitvoer is:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>12
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>12
 </code></pre></div>
 <h4 id="berekende-waarden-opnieuw-gebruiken">Berekende waarden opnieuw gebruiken</h4>
 <p>Een berekende waarde kan ook onderdeel worden van een volgende berekening.</p>
 <p>Bijvoorbeeld:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">length</span> <span class="o">=</span> <span class="mi">5</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">width</span> <span class="o">=</span> <span class="mi">3</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">area</span> <span class="o">=</span> <span class="n">length</span> <span class="o">*</span> <span class="n">width</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="n">double_area</span> <span class="o">=</span> <span class="n">area</span> <span class="o">*</span> <span class="mi">2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">length</span> <span class="o">=</span> <span class="mi">5</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="n">width</span> <span class="o">=</span> <span class="mi">3</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="n">area</span> <span class="o">=</span> <span class="n">length</span> <span class="o">*</span> <span class="n">width</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="n">double_area</span> <span class="o">=</span> <span class="n">area</span> <span class="o">*</span> <span class="mi">2</span>
 </code></pre></div>
 <p>Python voert deze instructions op volgorde uit.</p>
 <p>Eerst worden de waarden van <code>length</code> en <code>width</code> bewaard.</p>
 <p>Daarna evalueert Python:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">length</span> <span class="o">*</span> <span class="n">width</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">length</span> <span class="o">*</span> <span class="n">width</span>
 </code></pre></div>
 <p>Het resultaat wordt als <code>area</code> bewaard.</p>
 <p>Pas daarna wordt <code>area</code> gebruikt in:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">area</span> <span class="o">*</span> <span class="mi">2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">area</span> <span class="o">*</span> <span class="mi">2</span>
 </code></pre></div>
 <p>Het resultaat daarvan wordt als <code>double_area</code> bewaard.</p>
 <p>Zo kunnen verschillende berekeningen op elkaar voortbouwen: het resultaat van de ene berekening kan informatie opleveren die in een volgende berekening opnieuw wordt gebruikt.</p>
@@ -824,6 +956,169 @@
               </article>
             </div>
           
+  ﻿<aside class="tool-dock" data-tool-dock aria-label="Externe tools">
+
+  <button
+    class="tool-dock__toggle"
+    type="button"
+    data-tool-dock-toggle
+    aria-expanded="false"
+    aria-controls="tool-dock-panel"
+  >
+    <span class="tool-dock__toggle-icon" aria-hidden="true">‹</span>
+    <span class="tool-dock__sr-only">Open externe tools</span>
+  </button>
+
+  <nav class="tool-dock__panel" id="tool-dock-panel">
+
+    <button
+      class="tool-dock__item"
+      type="button"
+      data-student-tool="github"
+      aria-label="Open jouw GitHub"
+      title="GitHub"
+    >
+      <img
+        class="tool-dock__icon-image"
+        src="../../../assets/images/tool-dock/github.png"
+        alt=""
+      >
+    </button>
+
+    <button
+      class="tool-dock__item"
+      type="button"
+      data-student-tool="codespaces"
+      aria-label="Open jouw Codespace"
+      title="GitHub Codespaces"
+    >
+      <img
+        class="tool-dock__icon-image"
+        src="../../../assets/images/tool-dock/codespaces.png"
+        alt=""
+      >
+    </button>
+
+    <a
+      class="tool-dock__item"
+      href="https://lucid.app/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Lucidchart"
+      title="Lucidchart"
+    >
+      <img
+        class="tool-dock__icon-image"
+        src="../../../assets/images/tool-dock/lucidchart.png"
+        alt=""
+      >
+    </a>
+
+    <a
+      class="tool-dock__item"
+      href="https://greenteapress.com/thinkpython2/thinkpython2.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Think Python"
+      title="Think Python"
+    >
+      <img
+        class="tool-dock__icon-image"
+        src="../../../assets/images/tool-dock/think-python.png"
+        alt=""
+      >
+    </a>
+
+  </nav>
+</aside>
+
+
+<div
+  class="tool-access-modal"
+  data-tool-access-modal
+  hidden
+>
+  <div
+    class="tool-access-modal__backdrop"
+    data-tool-access-close
+  ></div>
+
+  <section
+    class="tool-access-modal__dialog"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="tool-access-title"
+  >
+    <button
+      class="tool-access-modal__close"
+      type="button"
+      data-tool-access-close
+      aria-label="Sluiten"
+    >
+      ×
+    </button>
+
+    <img
+      class="tool-access-modal__logo"
+      data-tool-access-logo
+      src=""
+      alt=""
+    >
+
+    <h2
+      class="tool-access-modal__title"
+      id="tool-access-title"
+      data-tool-access-title
+    >
+      Open jouw omgeving
+    </h2>
+
+    <p class="tool-access-modal__intro">
+      Vul je leerlingnummer in.
+    </p>
+
+    <form data-tool-access-form>
+
+      <label
+        class="tool-access-modal__label"
+        for="tool-access-student-number"
+      >
+        Leerlingnummer
+      </label>
+
+      <input
+        class="tool-access-modal__input"
+        id="tool-access-student-number"
+        data-tool-access-input
+        type="text"
+        inputmode="numeric"
+        pattern="[0-9]+"
+        autocomplete="off"
+        spellcheck="false"
+        placeholder="Bijvoorbeeld 123456"
+        required
+      >
+
+      <p
+        class="tool-access-modal__error"
+        data-tool-access-error
+        hidden
+      >
+        Vul een geldig leerlingnummer in.
+      </p>
+
+      <button
+        class="tool-access-modal__submit"
+        type="submit"
+        data-tool-access-submit
+      >
+        Open
+      </button>
+
+    </form>
+  </section>
+</div>
+
           
   <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
@@ -865,6 +1160,8 @@
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="../../../assets/js/page-toc.js"></script>
+      
+        <script src="../../../assets/js/tool-dock.js"></script>
       
         <script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
       

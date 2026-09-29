@@ -1,4 +1,4 @@
-
+﻿
 <!doctype html>
 <html lang="nl" class="no-js">
   <head>
@@ -55,6 +55,8 @@
       <link rel="stylesheet" href="../../../assets/css/style.css">
     
       <link rel="stylesheet" href="../../../assets/css/navigation.css">
+    
+      <link rel="stylesheet" href="../../../assets/css/tool-dock.css">
     
       <link rel="stylesheet" href="../../../assets/css/reference.css">
     
@@ -322,6 +324,7 @@
             
           
           
+  
             <div class="md-content" data-md-component="content">
               
               <article class="md-content__inner md-typeset">
@@ -381,6 +384,169 @@
               </article>
             </div>
           
+  ﻿<aside class="tool-dock" data-tool-dock aria-label="Externe tools">
+
+  <button
+    class="tool-dock__toggle"
+    type="button"
+    data-tool-dock-toggle
+    aria-expanded="false"
+    aria-controls="tool-dock-panel"
+  >
+    <span class="tool-dock__toggle-icon" aria-hidden="true">‹</span>
+    <span class="tool-dock__sr-only">Open externe tools</span>
+  </button>
+
+  <nav class="tool-dock__panel" id="tool-dock-panel">
+
+    <button
+      class="tool-dock__item"
+      type="button"
+      data-student-tool="github"
+      aria-label="Open jouw GitHub"
+      title="GitHub"
+    >
+      <img
+        class="tool-dock__icon-image"
+        src="../../../assets/images/tool-dock/github.png"
+        alt=""
+      >
+    </button>
+
+    <button
+      class="tool-dock__item"
+      type="button"
+      data-student-tool="codespaces"
+      aria-label="Open jouw Codespace"
+      title="GitHub Codespaces"
+    >
+      <img
+        class="tool-dock__icon-image"
+        src="../../../assets/images/tool-dock/codespaces.png"
+        alt=""
+      >
+    </button>
+
+    <a
+      class="tool-dock__item"
+      href="https://lucid.app/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Lucidchart"
+      title="Lucidchart"
+    >
+      <img
+        class="tool-dock__icon-image"
+        src="../../../assets/images/tool-dock/lucidchart.png"
+        alt=""
+      >
+    </a>
+
+    <a
+      class="tool-dock__item"
+      href="https://greenteapress.com/thinkpython2/thinkpython2.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Think Python"
+      title="Think Python"
+    >
+      <img
+        class="tool-dock__icon-image"
+        src="../../../assets/images/tool-dock/think-python.png"
+        alt=""
+      >
+    </a>
+
+  </nav>
+</aside>
+
+
+<div
+  class="tool-access-modal"
+  data-tool-access-modal
+  hidden
+>
+  <div
+    class="tool-access-modal__backdrop"
+    data-tool-access-close
+  ></div>
+
+  <section
+    class="tool-access-modal__dialog"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="tool-access-title"
+  >
+    <button
+      class="tool-access-modal__close"
+      type="button"
+      data-tool-access-close
+      aria-label="Sluiten"
+    >
+      ×
+    </button>
+
+    <img
+      class="tool-access-modal__logo"
+      data-tool-access-logo
+      src=""
+      alt=""
+    >
+
+    <h2
+      class="tool-access-modal__title"
+      id="tool-access-title"
+      data-tool-access-title
+    >
+      Open jouw omgeving
+    </h2>
+
+    <p class="tool-access-modal__intro">
+      Vul je leerlingnummer in.
+    </p>
+
+    <form data-tool-access-form>
+
+      <label
+        class="tool-access-modal__label"
+        for="tool-access-student-number"
+      >
+        Leerlingnummer
+      </label>
+
+      <input
+        class="tool-access-modal__input"
+        id="tool-access-student-number"
+        data-tool-access-input
+        type="text"
+        inputmode="numeric"
+        pattern="[0-9]+"
+        autocomplete="off"
+        spellcheck="false"
+        placeholder="Bijvoorbeeld 123456"
+        required
+      >
+
+      <p
+        class="tool-access-modal__error"
+        data-tool-access-error
+        hidden
+      >
+        Vul een geldig leerlingnummer in.
+      </p>
+
+      <button
+        class="tool-access-modal__submit"
+        type="submit"
+        data-tool-access-submit
+      >
+        Open
+      </button>
+
+    </form>
+  </section>
+</div>
+
           
   <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
@@ -422,6 +588,8 @@
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="../../../assets/js/page-toc.js"></script>
+      
+        <script src="../../../assets/js/tool-dock.js"></script>
       
         <script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
       

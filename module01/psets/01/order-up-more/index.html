@@ -1,4 +1,4 @@
-
+﻿
 <!doctype html>
 <html lang="nl" class="no-js">
   <head>
@@ -55,6 +55,8 @@
       <link rel="stylesheet" href="../../../assets/css/style.css">
     
       <link rel="stylesheet" href="../../../assets/css/navigation.css">
+    
+      <link rel="stylesheet" href="../../../assets/css/tool-dock.css">
     
       <link rel="stylesheet" href="../../../assets/css/reference.css">
     
@@ -396,10 +398,54 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Statements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sequential-execution" class="md-nav__link">
     <span class="md-ellipsis">
       
         Sequential execution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input
       
     </span>
   </a>
@@ -489,6 +535,7 @@
             
           
           
+  
             <div class="md-content" data-md-component="content">
               
               <article class="md-content__inner md-typeset">
@@ -534,26 +581,38 @@
 <h2 class="page-toc" id="understanding">Understanding</h2>
 <section class="section-understanding">
 <h3 class="page-toc" id="python">Python</h3>
+<h4 id="statements">Statements</h4>
+<p>Een volledige instructie die Python kan uitvoeren noemen we een <strong>statement</strong>.</p>
+<p>Bijvoorbeeld:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Dit is één statement. Het statement gebruikt de functie <code>print()</code> om de tekst <code>"Hello"</code> te tonen.</p>
+<p>Ook:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Press Enter &quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>is één statement. Het statement gebruikt de functie <code>input()</code> om op invoer van de gebruiker te wachten.</p>
+<p><code>print()</code> en <code>input()</code> zijn dus functies. De volledige regels waarin deze functies worden gebruikt, zijn <strong>statements</strong>.</p>
+<p>Een programma kan uit meerdere statements bestaan. Python voert deze statements uit in de volgorde waarin ze in het programma staan.</p>
 <h4 id="sequential-execution">Sequential execution</h4>
 <p>Python voert statements standaard uit in de volgorde waarin ze in het
 programma staan: van boven naar beneden.</p>
 <p>Bijvoorbeeld:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;First&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Second&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Third&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;First&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Second&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Third&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>De uitvoer is:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>First
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Second
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Third
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>First
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Second
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Third
 </code></pre></div>
 <p>Deze uitvoering van statements in een vaste volgorde noemen we
 <strong>sequential execution</strong>.</p>
 <p>Ook wanneer <code>print()</code> en <code>input()</code> worden gecombineerd, blijft deze
 volgorde bestaan:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;First&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Press Enter to continue &quot;</span><span class="p">)</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Second&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;First&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Press Enter to continue &quot;</span><span class="p">)</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Second&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>Python:</p>
 <ol>
@@ -565,6 +624,60 @@ volgorde bestaan:</p>
 wordt uitgevoerd.</p>
 <p>Welke statements nodig zijn en in welke volgorde ze moeten staan, hangt af
 van het probleem dat je probeert op te lossen.</p>
+<h4 id="comments">Comments</h4>
+<p>Met een <strong>comment</strong> kun je informatie in je code schrijven die Python niet
+uitvoert.</p>
+<p>Een comment begint met <code>#</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Show a message</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Python negeert de tekst achter <code>#</code>.</p>
+<p>Comments kunnen helpen om zichtbaar te maken wat een deel van een programma
+doet of waarom een bepaalde keuze is gemaakt.</p>
+<p>Bijvoorbeeld:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Start</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ready&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Wait for input</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Press Enter &quot;</span><span class="p">)</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1"># Continue</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Go&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>De comments maken de opbouw van het programma zichtbaar, maar veranderen
+de uitvoering van het programma niet.</p>
+<h4 id="output">Output</h4>
+<p>Met <code>print()</code> kan een programma informatie tonen.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>De uitvoer is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Hello
+</code></pre></div>
+<p>De tekst die moet worden weergegeven staat tussen aanhalingstekens.</p>
+<p>Je kunt meerdere <code>print()</code>-instructies gebruiken:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Good morning&quot;</span><span class="p">)</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Have a nice day&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>De uitvoer is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Good morning
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>Have a nice day
+</code></pre></div>
+<h4 id="input">Input</h4>
+<p>Een programma kan wachten op informatie van een gebruiker.</p>
+<p>Daarvoor gebruikt Python <code>input()</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your name? &quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Python toont de tekst en wacht vervolgens totdat de gebruiker iets invoert
+en op Enter drukt.</p>
+<p>Pas daarna gaat het programma verder.</p>
+<p>Bijvoorbeeld:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ready&quot;</span><span class="p">)</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Press Enter to continue &quot;</span><span class="p">)</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Go&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Eerst wordt <code>Ready</code> getoond.</p>
+<p>Daarna wacht het programma bij <code>input()</code> op de gebruiker. Pas wanneer de
+gebruiker op Enter drukt, wordt <code>Go</code> getoond.</p>
 </section>
 <h2 class="page-toc" id="opdracht">Opdracht</h2>
 <p>Nu ga je deze kennis gebruiken om het probleem van <strong>Order Up!</strong> op te lossen.</p>
@@ -618,10 +731,10 @@ van het probleem dat je probeert op te lossen.</p>
 <summary>4 — Van ontwerp naar Python</summary>
 <p>Bekijk je ontworpen gebruikersflow stap voor stap.</p>
 <p>Met <code>print()</code> kan het systeem informatie tonen:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Persoon 1&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Persoon 1&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>Met <code>input()</code> kan het programma wachten op een reactie:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Maak een keuze: &quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Maak een keuze: &quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>Vertaal nu je eigen ontwerp in dezelfde volgorde naar Python.</p>
 </details>
@@ -721,6 +834,169 @@ van het probleem dat je probeert op te lossen.</p>
               </article>
             </div>
           
+  ﻿<aside class="tool-dock" data-tool-dock aria-label="Externe tools">
+
+  <button
+    class="tool-dock__toggle"
+    type="button"
+    data-tool-dock-toggle
+    aria-expanded="false"
+    aria-controls="tool-dock-panel"
+  >
+    <span class="tool-dock__toggle-icon" aria-hidden="true">‹</span>
+    <span class="tool-dock__sr-only">Open externe tools</span>
+  </button>
+
+  <nav class="tool-dock__panel" id="tool-dock-panel">
+
+    <button
+      class="tool-dock__item"
+      type="button"
+      data-student-tool="github"
+      aria-label="Open jouw GitHub"
+      title="GitHub"
+    >
+      <img
+        class="tool-dock__icon-image"
+        src="../../../assets/images/tool-dock/github.png"
+        alt=""
+      >
+    </button>
+
+    <button
+      class="tool-dock__item"
+      type="button"
+      data-student-tool="codespaces"
+      aria-label="Open jouw Codespace"
+      title="GitHub Codespaces"
+    >
+      <img
+        class="tool-dock__icon-image"
+        src="../../../assets/images/tool-dock/codespaces.png"
+        alt=""
+      >
+    </button>
+
+    <a
+      class="tool-dock__item"
+      href="https://lucid.app/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Lucidchart"
+      title="Lucidchart"
+    >
+      <img
+        class="tool-dock__icon-image"
+        src="../../../assets/images/tool-dock/lucidchart.png"
+        alt=""
+      >
+    </a>
+
+    <a
+      class="tool-dock__item"
+      href="https://greenteapress.com/thinkpython2/thinkpython2.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Think Python"
+      title="Think Python"
+    >
+      <img
+        class="tool-dock__icon-image"
+        src="../../../assets/images/tool-dock/think-python.png"
+        alt=""
+      >
+    </a>
+
+  </nav>
+</aside>
+
+
+<div
+  class="tool-access-modal"
+  data-tool-access-modal
+  hidden
+>
+  <div
+    class="tool-access-modal__backdrop"
+    data-tool-access-close
+  ></div>
+
+  <section
+    class="tool-access-modal__dialog"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="tool-access-title"
+  >
+    <button
+      class="tool-access-modal__close"
+      type="button"
+      data-tool-access-close
+      aria-label="Sluiten"
+    >
+      ×
+    </button>
+
+    <img
+      class="tool-access-modal__logo"
+      data-tool-access-logo
+      src=""
+      alt=""
+    >
+
+    <h2
+      class="tool-access-modal__title"
+      id="tool-access-title"
+      data-tool-access-title
+    >
+      Open jouw omgeving
+    </h2>
+
+    <p class="tool-access-modal__intro">
+      Vul je leerlingnummer in.
+    </p>
+
+    <form data-tool-access-form>
+
+      <label
+        class="tool-access-modal__label"
+        for="tool-access-student-number"
+      >
+        Leerlingnummer
+      </label>
+
+      <input
+        class="tool-access-modal__input"
+        id="tool-access-student-number"
+        data-tool-access-input
+        type="text"
+        inputmode="numeric"
+        pattern="[0-9]+"
+        autocomplete="off"
+        spellcheck="false"
+        placeholder="Bijvoorbeeld 123456"
+        required
+      >
+
+      <p
+        class="tool-access-modal__error"
+        data-tool-access-error
+        hidden
+      >
+        Vul een geldig leerlingnummer in.
+      </p>
+
+      <button
+        class="tool-access-modal__submit"
+        type="submit"
+        data-tool-access-submit
+      >
+        Open
+      </button>
+
+    </form>
+  </section>
+</div>
+
           
   <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
@@ -762,6 +1038,8 @@ van het probleem dat je probeert op te lossen.</p>
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="../../../assets/js/page-toc.js"></script>
+      
+        <script src="../../../assets/js/tool-dock.js"></script>
       
         <script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
       

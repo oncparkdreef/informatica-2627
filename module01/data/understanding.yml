@@ -71,21 +71,60 @@ algorithms-efficiency:
     source: nl/understanding/_content/algorithms-efficiency/repeated-processing-with-n/operation-count-with-repetition.md
 
 python:
+  statements:
+    id: python.statements
+    title: Statements
+    source: nl/understanding/_content/python/statements.md
+
   sequential-execution:
     id: python.sequential-execution
     title: Sequential execution
     source: nl/understanding/_content/python/sequential-execution.md
+
+  comments:
+    id: python.comments
+    title: Comments
+    source: nl/understanding/_content/python/comments.md
+
+  output:
+    id: python.output
+    title: Output
+    source: nl/understanding/_content/python/output.md
+
+  input:
+    id: python.input
+    title: Input
+    source: nl/understanding/_content/python/input.md
 
   variables:
     id: python.variables
     title: Variables
     source: nl/understanding/_content/python/variables.md
 
+  variable-names:
+    id: python.variable-names
+    title: Variable Names
+    source: nl/understanding/_content/python/variable-names.md
+
+  number-types:
+    id: python.number-types
+    title: Number Types
+    source: nl/understanding/_content/python/number-types.md
+
+  converting-input:
+    id: python.converting-input
+    title: Converting Input
+    source: nl/understanding/_content/python/converting-input.md
+
+  arithmetic-operators:
+    id: python.arithmetic-operators
+    title: Arithmetic Operators
+    source: nl/understanding/_content/python/arithmetic-operators.md
+
   arithmetic-expressions:
     id: python.arithmetic-expressions
     title: Expressions
     source: nl/understanding/_content/python/arithmetic-expressions.md
-
   boolean-expressions:
     id: python.boolean-expressions
     title: Boolean Expressions
