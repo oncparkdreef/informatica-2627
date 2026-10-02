@@ -242,7 +242,7 @@
 </article>
 </div>
           
-  ﻿<aside aria-label="Externe tools" class="tool-dock" data-tool-dock="">
+  ﻿<aside aria-label="Externe tools" class="tool-dock" data-agenda-source="../../../../data/schedule.yml" data-tool-dock="">
 <button aria-controls="tool-dock-panel" aria-expanded="false" class="tool-dock__toggle" data-tool-dock-toggle="" type="button">
 <span aria-hidden="true" class="tool-dock__toggle-icon">‹</span>
 <span class="tool-dock__sr-only">Open externe tools</span>
@@ -257,6 +257,15 @@
 <a aria-label="Lucidchart" class="tool-dock__item" href="https://lucid.app/" rel="noopener noreferrer" target="_blank" title="Lucidchart">
 <img alt="" class="tool-dock__icon-image" src="../../../../assets/images/tool-dock/lucidchart.png"/>
 </a>
+<button aria-label="Open agenda" class="tool-dock__item" data-agenda-open="" title="Agenda" type="button">
+<span aria-hidden="true" class="tool-dock__calendar-icon">
+<svg focusable="false" role="img" viewbox="0 0 48 48">
+<rect height="31" rx="7" width="34" x="7" y="10"></rect>
+<path d="M15 6v8M33 6v8M7 19h34"></path>
+<path d="M15 26h4M24 26h4M33 26h1M15 33h4M24 33h4"></path>
+</svg>
+</span>
+</button>
 <a aria-label="Think Python" class="tool-dock__item" href="https://greenteapress.com/thinkpython2/thinkpython2.pdf" rel="noopener noreferrer" target="_blank" title="Think Python">
 <img alt="" class="tool-dock__icon-image" src="../../../../assets/images/tool-dock/think-python.png"/>
 </a>
@@ -289,6 +298,66 @@
 </form>
 </section>
 </div>
+<div class="agenda-modal" data-agenda-modal="" hidden="">
+<div class="agenda-modal__backdrop" data-agenda-close=""></div>
+<section aria-labelledby="agenda-title" aria-modal="true" class="agenda-modal__dialog" role="dialog">
+<button aria-label="Sluiten" class="agenda-modal__close" data-agenda-close="" type="button">
+      ×
+    </button>
+<!-- =====================================================
+         HEADER
+         ===================================================== -->
+<header class="agenda-modal__header">
+<span aria-hidden="true" class="agenda-modal__header-icon">
+<svg focusable="false" role="img" viewbox="0 0 48 48">
+<rect height="31" rx="7" width="34" x="7" y="10"></rect>
+<path d="M15 6v8M33 6v8M7 19h34"></path>
+<path d="M15 26h4M24 26h4M33 26h1M15 33h4M24 33h4"></path>
+</svg>
+</span>
+<div class="agenda-modal__heading">
+<h2 class="agenda-modal__title" id="agenda-title">
+          Jouw planning
+        </h2>
+<p class="agenda-modal__subtitle">
+          Alle lesmomenten en deadlines uit Module 01.
+        </p>
+<p class="agenda-modal__class" data-agenda-class-label="" hidden=""></p>
+</div>
+</header>
+<!-- =====================================================
+         KLAS KIEZEN
+         ===================================================== -->
+<div class="agenda-modal__class-picker" data-agenda-class-picker="">
+<p class="agenda-modal__intro">
+        Kies je klas om jouw planning te zien.
+      </p>
+<div class="agenda-modal__classes" data-agenda-class-buttons=""></div>
+<p class="agenda-modal__hint">
+        Deze keuze wordt alleen in deze browser onthouden.
+      </p>
+</div>
+<!-- =====================================================
+         PLANNING
+         ===================================================== -->
+<div class="agenda-modal__content" data-agenda-content="" hidden="">
+<div class="agenda-modal__tabs">
+<button class="agenda-modal__tab is-active" data-agenda-view="upcoming" type="button">
+          Komende activiteiten
+        </button>
+<button class="agenda-modal__tab" data-agenda-view="all" type="button">
+          Volledige agenda
+        </button>
+</div>
+<div class="agenda-modal__items" data-agenda-items=""></div>
+<div class="agenda-modal__footer">
+<button class="agenda-modal__change-class" data-agenda-change-class="" type="button">
+          Klas wijzigen
+        </button>
+</div>
+</div>
+</section>
+</div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
 </div>
@@ -314,6 +383,7 @@
 <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tracking", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": null}</script>
 <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
 <script src="../../../../assets/js/page-toc.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
 <script src="../../../../assets/js/tool-dock.js"></script>
 <script src="https://unpkg.com/mermaid@11/dist/mermaid.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

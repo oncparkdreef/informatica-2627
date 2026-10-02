@@ -427,7 +427,12 @@ Vakflex: Python - Print() en Input()</p>
               </article>
             </div>
           
-  ﻿<aside class="tool-dock" data-tool-dock aria-label="Externe tools">
+  ﻿<aside
+  class="tool-dock"
+  data-tool-dock
+  data-agenda-source="../../data/schedule.yml"
+  aria-label="Externe tools"
+>
 
   <button
     class="tool-dock__toggle"
@@ -484,6 +489,22 @@ Vakflex: Python - Print() en Input()</p>
         alt=""
       >
     </a>
+
+    <button
+      class="tool-dock__item"
+      type="button"
+      data-agenda-open
+      aria-label="Open agenda"
+      title="Agenda"
+    >
+      <span class="tool-dock__calendar-icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48" role="img" focusable="false">
+          <rect x="7" y="10" width="34" height="31" rx="7"></rect>
+          <path d="M15 6v8M33 6v8M7 19h34"></path>
+          <path d="M15 26h4M24 26h4M33 26h1M15 33h4M24 33h4"></path>
+        </svg>
+      </span>
+    </button>
 
     <a
       class="tool-dock__item"
@@ -592,6 +613,133 @@ Vakflex: Python - Print() en Input()</p>
   </section>
 </div>
 
+
+<div class="agenda-modal" data-agenda-modal hidden>
+  <div class="agenda-modal__backdrop" data-agenda-close></div>
+
+  <section
+    class="agenda-modal__dialog"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="agenda-title"
+  >
+
+    <button
+      class="agenda-modal__close"
+      type="button"
+      data-agenda-close
+      aria-label="Sluiten"
+    >
+      ×
+    </button>
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="agenda-modal__header">
+
+      <span class="agenda-modal__header-icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48" role="img" focusable="false">
+          <rect x="7" y="10" width="34" height="31" rx="7"></rect>
+          <path d="M15 6v8M33 6v8M7 19h34"></path>
+          <path d="M15 26h4M24 26h4M33 26h1M15 33h4M24 33h4"></path>
+        </svg>
+      </span>
+
+      <div class="agenda-modal__heading">
+        <h2 class="agenda-modal__title" id="agenda-title">
+          Jouw planning
+        </h2>
+
+        <p class="agenda-modal__subtitle">
+          Alle lesmomenten en deadlines uit Module 01.
+        </p>
+
+        <p
+          class="agenda-modal__class"
+          data-agenda-class-label
+          hidden
+        ></p>
+      </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         KLAS KIEZEN
+         ===================================================== -->
+
+    <div
+      class="agenda-modal__class-picker"
+      data-agenda-class-picker
+    >
+      <p class="agenda-modal__intro">
+        Kies je klas om jouw planning te zien.
+      </p>
+
+      <div
+        class="agenda-modal__classes"
+        data-agenda-class-buttons
+      ></div>
+
+      <p class="agenda-modal__hint">
+        Deze keuze wordt alleen in deze browser onthouden.
+      </p>
+    </div>
+
+
+    <!-- =====================================================
+         PLANNING
+         ===================================================== -->
+
+    <div
+      class="agenda-modal__content"
+      data-agenda-content
+      hidden
+    >
+
+      <div class="agenda-modal__tabs">
+        <button
+          class="agenda-modal__tab is-active"
+          type="button"
+          data-agenda-view="upcoming"
+        >
+          Komende activiteiten
+        </button>
+
+        <button
+          class="agenda-modal__tab"
+          type="button"
+          data-agenda-view="all"
+        >
+          Volledige agenda
+        </button>
+      </div>
+
+
+      <div
+        class="agenda-modal__items"
+        data-agenda-items
+      ></div>
+
+
+      <div class="agenda-modal__footer">
+        <button
+          class="agenda-modal__change-class"
+          type="button"
+          data-agenda-change-class
+        >
+          Klas wijzigen
+        </button>
+      </div>
+
+    </div>
+
+  </section>
+</div>
+
           
   <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
@@ -633,6 +781,8 @@ Vakflex: Python - Print() en Input()</p>
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="../../assets/js/page-toc.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
       
         <script src="../../assets/js/tool-dock.js"></script>
       
