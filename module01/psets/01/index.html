@@ -399,13 +399,13 @@
 </ul>
 <p>Gebruik bij <strong>Python User Input</strong> alleen het gedeelte tot <strong>Input Number</strong>. De onderdelen daarna komen later in de module aan bod.</p>
 <h2 id="wanneer-moet-het-af-zijn">Wanneer moet het af zijn?</h2>
-<p>Lever Problem Set 1 uiterlijk <strong>2026-09-11 23:59</strong> in.</p>
+<p>Lever Problem Set 1 uiterlijk <strong>2026-09-28 23:59</strong> in.</p>
 <h2 id="hulp-nodig">Hulp nodig?</h2>
 <p>Tijdens de Vakflexuren kun je extra uitleg en ondersteuning krijgen.</p>
-<p><strong>2026-09-08</strong><br />
-Vakflex</p>
-<p><strong>2026-09-10</strong><br />
-Vakflex</p>
+<p><strong>2026-09-24 08:30</strong><br />
+Vakflex: Getting started with Codespaces</p>
+<p><strong>2026-09-24 09:10</strong><br />
+Vakflex: Python - Print() en Input()</p>
 
 
 
@@ -544,7 +544,10 @@ Vakflex</p>
       Open jouw omgeving
     </h2>
 
-    <p class="tool-access-modal__intro">
+    <p
+      class="tool-access-modal__intro"
+      data-tool-access-intro
+    >
       Vul je leerlingnummer in.
     </p>
 
@@ -552,23 +555,22 @@ Vakflex</p>
 
       <label
         class="tool-access-modal__label"
-        for="tool-access-student-number"
+        data-tool-access-label
+        for="tool-access-username"
       >
-        Leerlingnummer
+        GitHub-gebruikersnaam
       </label>
 
-      <input
-        class="tool-access-modal__input"
-        id="tool-access-student-number"
-        data-tool-access-input
-        type="text"
-        inputmode="numeric"
-        pattern="[0-9]+"
-        autocomplete="off"
-        spellcheck="false"
-        placeholder="Bijvoorbeeld 123456"
-        required
-      >
+        <input
+          class="tool-access-modal__input"
+          id="tool-access-username"
+          data-tool-access-input
+          type="text"
+          autocomplete="username"
+          spellcheck="false"
+          placeholder="Bijvoorbeeld onc-123456"
+          required
+        >
 
       <p
         class="tool-access-modal__error"

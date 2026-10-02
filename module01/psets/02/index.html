@@ -409,13 +409,13 @@
 <li><a href="https://www.w3schools.com/python/python_operators_arithmetic.asp">Python Arithmetic Operators</a></li>
 </ul>
 <h2 id="wanneer-moet-het-af-zijn">Wanneer moet het af zijn?</h2>
-<p>Lever Problem Set 2 uiterlijk <strong>2026-09-18 23:59</strong> in.</p>
+<p>Lever Problem Set 2 uiterlijk <strong>2026-10-05 23:59</strong> in.</p>
 <h2 id="hulp-nodig">Hulp nodig?</h2>
 <p>Tijdens de Vakflexuren kun je extra uitleg en ondersteuning krijgen.</p>
-<p><strong>2026-09-15</strong><br />
-Vakflex</p>
-<p><strong>2026-09-17</strong><br />
-Vakflex</p>
+<p><strong>2026-10-01 08:30</strong><br />
+Vakflex: Getting started with Codespaces</p>
+<p><strong>2026-10-01 09:10</strong><br />
+Vakflex Python - Variabele</p>
 
 
 
@@ -554,7 +554,10 @@ Vakflex</p>
       Open jouw omgeving
     </h2>
 
-    <p class="tool-access-modal__intro">
+    <p
+      class="tool-access-modal__intro"
+      data-tool-access-intro
+    >
       Vul je leerlingnummer in.
     </p>
 
@@ -562,23 +565,22 @@ Vakflex</p>
 
       <label
         class="tool-access-modal__label"
-        for="tool-access-student-number"
+        data-tool-access-label
+        for="tool-access-username"
       >
-        Leerlingnummer
+        GitHub-gebruikersnaam
       </label>
 
-      <input
-        class="tool-access-modal__input"
-        id="tool-access-student-number"
-        data-tool-access-input
-        type="text"
-        inputmode="numeric"
-        pattern="[0-9]+"
-        autocomplete="off"
-        spellcheck="false"
-        placeholder="Bijvoorbeeld 123456"
-        required
-      >
+        <input
+          class="tool-access-modal__input"
+          id="tool-access-username"
+          data-tool-access-input
+          type="text"
+          autocomplete="username"
+          spellcheck="false"
+          placeholder="Bijvoorbeeld onc-123456"
+          required
+        >
 
       <p
         class="tool-access-modal__error"

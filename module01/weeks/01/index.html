@@ -514,7 +514,10 @@
       Open jouw omgeving
     </h2>
 
-    <p class="tool-access-modal__intro">
+    <p
+      class="tool-access-modal__intro"
+      data-tool-access-intro
+    >
       Vul je leerlingnummer in.
     </p>
 
@@ -522,23 +525,22 @@
 
       <label
         class="tool-access-modal__label"
-        for="tool-access-student-number"
+        data-tool-access-label
+        for="tool-access-username"
       >
-        Leerlingnummer
+        GitHub-gebruikersnaam
       </label>
 
-      <input
-        class="tool-access-modal__input"
-        id="tool-access-student-number"
-        data-tool-access-input
-        type="text"
-        inputmode="numeric"
-        pattern="[0-9]+"
-        autocomplete="off"
-        spellcheck="false"
-        placeholder="Bijvoorbeeld 123456"
-        required
-      >
+        <input
+          class="tool-access-modal__input"
+          id="tool-access-username"
+          data-tool-access-input
+          type="text"
+          autocomplete="username"
+          spellcheck="false"
+          placeholder="Bijvoorbeeld onc-123456"
+          required
+        >
 
       <p
         class="tool-access-modal__error"

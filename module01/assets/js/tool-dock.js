@@ -1,10 +1,12 @@
-﻿document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const dock = document.querySelector("[data-tool-dock]");
   const toggle = document.querySelector("[data-tool-dock-toggle]");
 
   const modal = document.querySelector("[data-tool-access-modal]");
   const modalLogo = document.querySelector("[data-tool-access-logo]");
   const modalTitle = document.querySelector("[data-tool-access-title]");
+  const modalIntro = document.querySelector("[data-tool-access-intro]");
+  const modalLabel = document.querySelector("[data-tool-access-label]");
   const modalForm = document.querySelector("[data-tool-access-form]");
   const modalInput = document.querySelector("[data-tool-access-input]");
   const modalSubmit = document.querySelector("[data-tool-access-submit]");
@@ -15,7 +17,12 @@
 
   let activeTool = null;
   let lastFocusedElement = null;
-  let lastStudentNumber = "";
+  let lastGithubUsername = "";
+
+
+  /* =======================================================
+     TOOLS
+     ======================================================= */
 
   const tools = {
     github: {
@@ -23,8 +30,8 @@
       submitLabel: "Open GitHub",
       logo: "assets/images/tool-dock/github.png",
 
-      buildUrl(studentNumber) {
-        return `https://github.com/oncparkdreef/informatica-2627-onc-${studentNumber}`;
+      buildUrl(githubUsername) {
+        return `https://github.com/oncparkdreef/informatica-2627-${githubUsername}`;
       }
     },
 
@@ -33,8 +40,8 @@
       submitLabel: "Open Codespace",
       logo: "assets/images/tool-dock/codespaces.png",
 
-      buildUrl(studentNumber) {
-        return `https://codespaces.new/oncparkdreef/informatica-2627-onc-${studentNumber}?quickstart=1`;
+      buildUrl(githubUsername) {
+        return `https://onc-informatica-codespaces.j-henze.workers.dev/login?github_user=${encodeURIComponent(githubUsername)}`;
       }
     }
   };
@@ -76,11 +83,25 @@
     lastFocusedElement = triggerElement;
 
     const triggerLogo = triggerElement.querySelector(".tool-dock__icon-image");
+
     modalLogo.src = triggerLogo ? triggerLogo.src : "";
     modalTitle.textContent = tool.title;
     modalSubmit.textContent = tool.submitLabel;
 
-    modalInput.value = lastStudentNumber;
+    modalIntro.textContent = "Vul je GitHub-gebruikersnaam in.";
+    modalLabel.textContent = "GitHub-gebruikersnaam";
+
+    modalInput.type = "text";
+    modalInput.inputMode = "text";
+    modalInput.removeAttribute("pattern");
+    modalInput.autocomplete = "username";
+    modalInput.placeholder = "Bijvoorbeeld onc-123456";
+
+    modalInput.value = lastGithubUsername;
+
+    modalError.textContent =
+      "Vul een geldige GitHub-gebruikersnaam in.";
+
     modalError.hidden = true;
 
     modal.hidden = false;
@@ -121,12 +142,19 @@
   }
 
 
+  /* =======================================================
+     TOOL-KNOPPEN
+     ======================================================= */
+
   studentToolButtons.forEach((button) => {
     button.addEventListener("click", () => {
       openModal(button.dataset.studentTool, button);
     });
   });
 
+  /* =======================================================
+     MODAL SLUITEN
+     ======================================================= */
 
   closeButtons.forEach((button) => {
     button.addEventListener("click", closeModal);
@@ -134,12 +162,15 @@
 
 
   /* =======================================================
-     ALLEEN CIJFERS
+     GITHUB-GEBRUIKERSNAAM
      ======================================================= */
 
   if (modalInput) {
     modalInput.addEventListener("input", () => {
-      modalInput.value = modalInput.value.replace(/\D/g, "");
+      modalInput.value = modalInput.value
+        .replace(/[^A-Za-z0-9-]/g, "")
+        .slice(0, 39);
+
       modalError.hidden = true;
     });
   }
@@ -153,9 +184,9 @@
     modalForm.addEventListener("submit", (event) => {
       event.preventDefault();
 
-      const studentNumber = modalInput.value.trim();
+      const githubUsername = modalInput.value.trim();
 
-      if (!/^\d+$/.test(studentNumber)) {
+      if (!/^[A-Za-z0-9-]{1,39}$/.test(githubUsername)) {
         modalError.hidden = false;
         modalInput.focus();
         return;
@@ -167,9 +198,9 @@
         return;
       }
 
-      lastStudentNumber = studentNumber;
+      lastGithubUsername = githubUsername;
 
-      const url = tool.buildUrl(studentNumber);
+      const url = tool.buildUrl(githubUsername);
 
       window.open(url, "_blank", "noopener,noreferrer");
 
@@ -188,4 +219,3 @@
     }
   });
 });
-
